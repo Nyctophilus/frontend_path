@@ -1,0 +1,155 @@
+<!-- DOCTYPE => to render the page in standard mode, otherwise it will render in quirks mode and may not support some elements -->
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>My Book Store!</title>
+        <meta charset="UTF-8" />
+        <meta name="description"
+            content="A personal website made by me for education purpose. I'll use it to showcase of collection of books i'm reading and also taking interest in." />
+        <link rel="stylesheet" href="">
+    </head>
+
+    <body>
+        <h1>Book Store</h1>
+        <p>Welcome to my book realm</p>
+
+
+
+
+
+
+
+
+
+        <!-- Form -->
+        <form method="get">
+            <!-- action="path totarget file , the data sent to it" -->
+            <div>
+                <label> Username</label>
+                <input type="text" placeholder="write ur name" name="username">
+            </div>
+            <br>
+            <div>
+                <label> Password </label>
+                <input type="password" required placeholder="write complex pw" name="pw">
+            </div>
+            <div>
+                <label> Email</label>
+                <input type="email" required placeholder="write a valid mail" value="mo@22" name="email">
+            </div>
+            <div>
+                <label> Color</label>
+                <input type="color" name="color">
+            </div>
+            <div>
+                <label> Range</label>
+                <input type="range" name="range" min="0" max="10" step="2" value="2">
+            </div>
+            <div>
+                <label> Number</label>
+                <input type="number" name="number" min="50" max="150" step="50" value="2">
+            </div>
+            <input type="submit" value="save">
+            <input type="reset" value="Reset">
+        </form>
+
+        <!-- video -->
+        <video controls width="600" height="400" loop muted poster="0C:\Users\Kimo Store\Desktop\icons\report.png">
+            <source src="0C:\Users\Kimo Store\Downloads\Video\[EgyBest].The.Witcher.S02E04.WEB-DL.1080p.x264.mp4"
+                type="video/mp4">
+            <source src="C:\Users\Kimo Store\Downloads\Video\[EgyBest].The.Witcher.S02E04.WEB-DL.1080p.x264.ogg"
+                type="video/ogg">
+            Your Browser doesn't support Video.
+            <track src="my_file_en.vtt" kind="subtitles" srclang="en" label="english">
+            <track src="my_file_it.vtt" kind="subtitles" srclang="it" label="italian">
+        </video>
+        <!-- Audio -->
+        <audio controls autoplay loop muted>
+            <source src="0C:\Users\Kimo Store\Downloads\Music\b7bk kol yom aktr.mp3" type="audio/mpeg">
+            <source src="fasklfa.odp" type="application/vnd.oasis.opendocument.presentation">
+            This browser doesn't support audio.
+        </audio>
+
+
+        <!-- html  Semantic Element -->
+        <header></header>
+        <nav></nav>
+        <main></main>
+        <section></section>
+        <aside></aside> <!-- ex: side bar -->
+        <article></article>
+
+        <figure>
+            <img src="" alt="">
+            <figcaption>asdsa</figcaption>
+        </figure>
+
+        <footer></footer>
+
+
+        <!-- html entities -->
+        <div>asd aloo &copy; &lt;&gt; &radic;</div>
+
+
+        <!-- Div -->
+        <!-- div howa counter ll elements  -->
+
+        <!-- Span And Break And Horizontal Rule -->
+
+        <!-- span to catch a word or element and isolate it to take fully control on it   -->
+
+        <p>Welcome to my <span> book</span> realm</p>
+
+        <!-- br => new line  -->
+        <br>
+        <!-- hr => Horizontal Rule -->
+        <hr>
+        <!-- tables -->
+        <table border="1">
+            <caption>Witcher Collection</caption>
+            <th>Name</th>
+            <th>Icon</th>
+            <th>release date</th>
+            <tr>
+                <td>Blood&Wine</td>
+                <td>Blood</td>
+                <td>2012</td>
+            </tr>
+            <tr>
+                <td>Blood&Wine</td>
+                <td>Blood</td>
+                <td>2012</td>
+            </tr>
+            <tr>
+                <td>Blood&Wine</td>
+                <td>Blood</td>
+                <td>2012</td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Rate</td>
+                    <td colspan="1">22</td>
+                </tr>
+            </tfoot>
+
+        </table>
+
+
+
+        <!-- tags part II  -->
+        <p>We <u>have</u> a <mark>big</mark> sale.</p>
+        <a href="https://www.google.com" target="_blank" title="go to google">Google</a> <br>
+        <a href="assignment2.html" target="_blank" title="go to assignment2 page">Assignment2</a>
+
+
+        <!-- tags -->
+        <p>Welcome to my <b><i> book <small>realm</small></i></b>!! ^^ </p>
+        <p>100% <del>60$</del> <ins>sale</ins>.</p>
+        <p hidden>hidden paragraph...</p>
+        <p>h<sub>2</sub>o</p>
+        <p>2<sup>2</sup></p>
+    </body>
+
+</html>

@@ -1,0 +1,38 @@
+<html>
+
+    <body>
+        <form method="post" action="test.py">
+            <div>
+                <label>Username:</label><br>
+                <input type="text" name="Username" placeholder="write ur name" required>
+            </div>
+            <hr>
+            <div>
+                <label>Password:</label><br>
+                <input type="password" placeholder="write a complex pw" name="Password">
+            </div>
+            <hr>
+            <div>
+                <label>Mobile:</label><br>
+                <input type="tel" name="Mobile" placeholder="write ur mob number"
+                    pattern="[+]{1}[0-9]{3} [0-9]{4} [0-9]{3} [0-9]{3}" required> <br>
+                <small>format: +020 1125 595 287</small>
+            </div>
+            <hr>
+            <div>
+                <label>Email:</label><br>
+                <input type="email" placeholder="write ur email" name="Email" required>
+            </div>
+            <hr>
+            <div>
+                <label>Subject:</label><br>
+                <input type="text" placeholder="write the subject" name="Subject">
+            </div>
+            <hr>
+            <input type="number" hidden value="22">
+            <input type="reset" value="Empty Form">
+            <input type="submit" value="Send Data">
+        </form>
+    </body>
+
+</html>
