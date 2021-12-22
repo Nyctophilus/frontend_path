@@ -23,21 +23,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- Form -->
-        <form method="get">
+        <form method="get" novalidate target="_blank">
             <!-- action="path totarget file , the data sent to it" -->
             <div>
                 <label> Username</label>
-                <input type="text" placeholder="write ur name" name="username">
+                <input type="text" placeholder="write ur name" name="username" readonly>
             </div>
             <br>
             <div>
                 <label> Password </label>
-                <input type="password" required placeholder="write complex pw" name="pw">
+                <input type="password" required placeholder="write complex pw" name="pw" autofocus minlength="6"
+                    maxlength="20">
             </div>
             <div>
                 <label> Email</label>
-                <input type="email" required placeholder="write a valid mail" value="mo@22" name="email">
+                <input type="email" required placeholder="write a valid mail" value="mo@22" name="email" disabled>
             </div>
             <div>
                 <label> Color</label>
@@ -51,9 +66,170 @@
                 <label> Number</label>
                 <input type="number" name="number" min="50" max="150" step="50" value="2">
             </div>
+
+            <!-- radio -->
+
+            <div>
+                <input type="radio" name="os" id="win" value="windows" checked>
+                <label for="win">windows</label>
+            </div>
+            <div>
+                <input type="radio" name="os" id="linux" value="linux">
+                <label for="linux">linux</label>
+            </div>
+            <div>
+                <input type="radio" name="os" id="mac" value="mac">
+                <label for="mac">mac</label>
+            </div>
+            <hr>
+
+            <!-- checkbox -->
+
+            <div>
+                <input type="checkbox" name="os" id="win1" value="windows" checked>
+                <label for="win1">windows</label>
+            </div>
+            <div>
+                <input type="checkbox" name="os" id="linux1" value="linux">
+                <label for="linux1">linux</label>
+            </div>
+            <div>
+                <input type="checkbox" name="os" id="mac1" value="mac">
+                <label for="mac1">mac</label>
+            </div>
+
+
+
+            <!-- select -->
+            <hr>
+            <div>
+                <label for="book">Pick a book:</label>
+                <select name="books" id="book" multiple>
+                    <optgroup label="The Witcher">
+                        <option value="1">Blood</option>
+                        <option value="1">Wine</option>
+                        <option value="1" selected>Witchery</option>
+                    </optgroup>
+                    <optgroup label="The Witcher2">
+                        <option value="1">Hearts</option>
+                        <option value="1">Of</option>
+                        <option value="1">Stones</option>
+                    </optgroup>
+                </select>
+            </div>
+            <br>
+            <!-- textarea -->
+            <textarea name="Subject" id="test_subject" cols="30" rows="10" novalidate
+                placeholder="test text"></textarea>
+            <hr>
+
+
+
+            <!-- file -->
+            <div>
+                <label for="file">file</label>
+                <input type="file" name="file" id="file">
+            </div>
+            <hr>
+
+            <!-- search -->
+            <div>
+                <label for="search">search</label>
+                <input type="search" name="search" id="search">
+            </div>
+            <hr>
+
+            <!-- url -->
+            <div>
+                <label for="url">url</label>
+                <input type="url" name="url" id="url">
+            </div>
+            <hr>
+
+            <!-- time -->
+            <div>
+                <label for="time">time</label>
+                <input type="time" name="time" id="time">
+            </div>
+            <hr>
+
+            <!-- month -->
+            <div>
+                <label for="month">month</label>
+                <input type="month" name="month" id="month">
+            </div>
+            <hr>
+
+            <!-- date -->
+            <div>
+                <label for="date">date</label>
+                <input type="date" name="date" id="date">
+            </div>
+            <hr>
+
+            <!-- datalist -->
+            <div>
+                <input name="witchers" list="WID">
+                <datalist id="WID">
+                    <option value="Galert">
+                    <option value="ciri">
+                    <option value="lambard">
+                    <option value="axiel">
+                    <option value="vazimier">
+                </datalist>
+            </div>
+
+            <!-- submit inputs -->
             <input type="submit" value="save">
             <input type="reset" value="Reset">
         </form>
+
+
+
+
+
+
+
+
+
+        <!-- quotes and blockquotes -->
+        <q>This is wisdom!!</q>
+        <blockquote>WISDOM!!!!!!!!!!!!</blockquote>
+
+        <!-- buttons -->
+        <button> Click😅</button>
+
+        <!-- word break & bi directional  -->
+        <p style="max-width: 50px;">asdsadsadasdsadasdasdas<wbr> 22222222222222222222222222<wbr>2222223333333333fasfas
+        </p>
+
+        <p>الووووووو 2 amed</p>
+        <p><bdi>الووووووو</bdi> 2 amed</p>
+
+
+
+
+
+        <!-- code & pre  -->
+        <p>this is
+            shit
+            lol
+        </p>
+        <pre>this is 
+            shit
+            lol pre
+        </pre>
+        <pre><code>
+            var x =10;
+            var y = 20;
+            console.log(x+y);
+        </code></pre>
+
+
+        <!-- iframeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+        <iframe src="https://nyctophilus.github.io/Portfolio-Website/" width="800" height="600"
+            frameborder="0"></iframe>
+
 
         <!-- video -->
         <video controls width="600" height="400" loop muted poster="0C:\Users\Kimo Store\Desktop\icons\report.png">

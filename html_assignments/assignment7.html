@@ -1,0 +1,93 @@
+<html>
+
+    <body>
+        <form action="assignment7.html">
+            <div>
+                <div>
+                    <label for="name">Username:</label>
+                    <input type="text" name="username" id="name" autofocus minlength="5" maxlength="20" required>
+                </div><br>
+                <div>
+                    <label for="mail">Email:</label>
+                    <input type="email" name="email" id="mail" value="o@o.com" readonly>
+                    <div>
+                        <label hidden for="token">Token:</label>
+                        <input hidden type="text" name="token" id="token" value="b92f1fc2fce391ad7af633723afd3055">
+                    </div>
+                </div>
+            </div><br>
+            <section class="checkbox22">
+                <label for="checkbox22">Programming Skills</label>
+
+                <div>
+                    <input type="checkbox" checked value="Problem Solving" name="P-skills" id="Problem Solving">
+                    <label for="Problem Solving">Problem Solving</label>
+                </div>
+                <div>
+                    <input type="checkbox" value="Logical Thinking" name="P-skills" id="Logical Thinking">
+                    <label for="Logical Thinking">Logical Thinking</label>
+                </div>
+                <div>
+                    <input type="checkbox" value="Advanced Search" name="P-skills" id="Advanced Search">
+                    <label for="Advanced Search">Advanced Search</label>
+                </div>
+                <div>
+                    <input type="checkbox" value="Analysis" name="P-skills" id="Analysis">
+                    <label for="Analysis">Analysis</label>
+                </div>
+                <div>
+                    <input type="checkbox" value="Planning" name="P-skills" id="Planning">
+                    <label for="Planning">Planning</label>
+                </div>
+            </section>
+            <br>
+
+            <section id="radio22">
+                <label for="radio22">Job Description</label>
+                <div>
+                    <input type="radio" checked value="Front-End Developer" name="job" id="job1">
+                    <label for="job1">Front-End Developer</label>
+                </div>
+                <div>
+                    <input type="radio" value="Back-End Developer" name="job" id="job2">
+                    <label for="job2">Back-End Developer</label>
+                </div>
+                <div>
+                    <input type="radio" value="Project Manager" name="job" id="job3">
+                    <label for="job3">Project Manager</label>
+                </div>
+                <div>
+                    <input type="radio" value="Business Analyst" name="job" id="job4">
+                    <label for="job4">Business Analyst</label>
+                </div>
+                <div>
+                    <input type="radio" value="Scrum Master" name="job" id="job5">
+                    <label for="job5">Scrum Master</label>
+                </div>
+            </section>
+            <br>
+            <section id="langs-releases">
+                <select name="book" id="Pbooks">
+                    <optgroup label="HTML">
+                        <option value="v3.0">v3.0</option>
+                        <option value="v4.0">v4.0</option>
+                        <option value="v5.0">v5.0</option>
+                    </optgroup>
+                    <optgroup label="CSS">
+                        <option value="v5.0">v5.0</option>
+                        <option value="v7.0">v7.0</option>
+                        <option value="v9.0">v9.0</option>
+                    </optgroup>
+                </select>
+                <hr>
+                <textarea name="brief" id="textbrief" cols="30" rows="10"
+                    placeholder="Write Here Why You Want To Learn Programming"></textarea>
+            </section>
+            <br>
+
+            <input type="reset" value="Empty">
+            <input type="submit" value="Send">
+        </form>
+    </body>
+
+</html>
