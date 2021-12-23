@@ -1,0 +1,34 @@
+div{
+    color: white;
+    background-image: url("https://elzero.org/wp-content/uploads/2021/02/css-assignment-5-8.png");
+    background-color: rgb(177, 175, 175);
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+}
+
+
+.assign-4-shape-1{
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+
+.assign-4-shape-2{
+    background-repeat: repeat-y;
+    background-position-x: 50px;
+    background-size: 100%;
+    
+}
+
+.assign-4-shape-3{
+    background-repeat: repeat-x;
+    background-position-y: 50px;
+    background-size: 100%;
+   
+}
+
+.assign-4-shape-4{
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 50%;
+}

@@ -1,0 +1,51 @@
+.dad{
+    margin-top: 100px;
+    display: block;
+}
+
+div{
+    background-color: rgb(200, 193, 193);
+    display: inline;
+    padding: 30px;
+    margin-left: 10px;
+    outline: black solid 5px;
+
+}
+
+.d1{
+    border: 10px solid red;
+}
+
+.d2{
+    border: 10px solid;
+    border-color: blue green;
+}
+.d3{
+    border: 10px dashed;
+    border-color: red green blue yellow;
+}
+
+
+.d4, .d6, .d5 {
+    display: block;
+    width: 400px;
+    margin: 100px auto;
+    outline: none;
+}
+
+.d5{
+    visibility: hidden;
+}
+
+.quoter{
+    outline: none;
+    margin-right: 15px;
+    padding: 20px 4px;
+
+}
+.q1{
+    background-color: rgb(189, 61, 82);
+}
+.q3{
+    background-color: rgb(72, 189, 61);
+}

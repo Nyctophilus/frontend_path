@@ -1,0 +1,112 @@
+/* Any Element With Class Title */
+.title {
+}
+
+/* id="nav" */
+#nav {
+}
+
+/* div element */
+div {
+}
+
+/* h2 element */
+h2 {
+}
+
+
+
+
+/* assign 2 */
+
+/* <!-- external css --> */
+/* <link rel="stylesheet" href="css/file.css" /> */
+
+/* <!-- internal/Embedded css --> */
+/* <style>
+p {
+  color: red;
+}
+</style> */
+
+/* <!-- inline css --> */
+/* <p style="color: blue;">This Is Our Paragraph</p> */
+
+
+/* assign 3 */
+/* <link rel="stylesheet" href=".././css/master.css" /> */
+
+/* assign 4 */
+/* <!-- Write Path --> */
+/* <link rel="stylesheet" href="./source/main.css" /> */
+
+
+
+/* _____________________________________________________________________ */
+
+
+
+
+/* assign 5 */
+/* valid */
+._user-name {
+}
+
+/* valid */
+.-user-name {
+}
+
+/* valid */
+.-user-name {
+}
+
+/* invalid */
+.1user-name {
+}
+
+/* invalid */
+.@user-name {
+}
+
+/* invalid */
+.user@name {
+}
+
+/* valid */
+._user10name {
+}
+
+/* valid */
+.u {
+}
+
+
+
+
+
+/* _____________________________________________________________________ */
+
+
+
+
+/* assign 6 */
+
+/* bad */
+.USERNAME {
+}
+
+/* bad */
+.UserName {
+}
+
+/* good */
+.user-name {
+}
+
+/* good */
+.userName {
+}
+
+/* bad */
+.usernameprofile {
+}

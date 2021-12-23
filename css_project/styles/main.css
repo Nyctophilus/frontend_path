@@ -1,0 +1,84 @@
+/*
+CLEAN CODE!
+Name Conventions
+                 .user-name #me-do 
+*/
+
+    
+p{
+    color: rgb(65, 49, 29);
+    font-size: 60px;
+}
+
+div22{
+    background-color: chartreuse;  /* color name*/ 
+    background-color: rgb(00, 255 , 00); /*rgb color*/
+    background-color: #5858ec; /*hex code color*/
+    background-image: url("C:/Users/Kimo Store/Desktop/icons/twitter icon.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* behaivor of the img while scrolling */
+    background-position: center center;
+    background-size: cover;  /* 100% ... 50px*50px ...  contain => flexable stretch ... cover => widen may crop some of it   */
+}
+
+
+/* margin: accepts negative values */
+/* padding */
+div22{
+    background-color: salmon;
+    /* every value take from the oppositting one top-->bottom right-->left */
+    padding: 20px 10px;
+
+                                                    /* ------------------------------ centering with margin -----------------------------*/
+    width: 60%;
+    margin: auto;
+
+    /* border */
+    border-width: 5px;
+    border-style: dashed dotted solid;
+    border-color: teal;
+    /* border: 10px solid slateblue ; */
+}
+
+        /* outline .... 
+                        useless . border is better 
+         difference is outline is out of the element but the border is part of the element itself
+        */
+div22{
+    background-color: thistle;
+    width: 300px;
+    padding: 10px;
+    outline: 10px solid yellow;
+    border: 10px solid rgb(56, 8, 56);
+}
+
+
+
+/* 
+    Block
+
+    - take full width if no width
+    - add line break
+    - respect every atribute padding,margin , width , height
+
+    Inline
+
+    - Surely, put elements align side by side in the same line.
+    - Don't respect width , height
+    - Don't add line break
+    - Respect margin , padding just [right,left] only
+    
+    Inline-Block
+
+    - Allow elements before and after it.
+    - respect padding, margin, width, height
+    
+*/
+span{
+    background-color: thistle;
+    display: inline-block;
+}
+.first{
+    display: none;              /* don't recieve a place for the element at all */
+    visibility: hidden;         /* holds places for the element in the UI */
+}
