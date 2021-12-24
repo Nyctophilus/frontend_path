@@ -1,0 +1,43 @@
+div{
+    text-align: center;
+    border: 1px solid orangered;
+    margin: 10px;
+}
+
+p{
+    background-color: rgb(204, 201, 201);
+    border: inherit;
+    margin: inherit;
+}
+
+.p2{
+    border-color: cyan;
+}
+
+
+
+/* part 2 */
+.s1{
+    font-family: 'Open Sans', sans-serif;
+}
+.s2{
+    font-family: 'Cairo', sans-serif;
+}
+.s3{
+    font-family: 'Jomhuria', cursive;
+}
+
+
+/* part 3 */
+html{
+    font-size: 20px;
+}
+.s1{
+    font-size: 2.5rem;
+}
+.s2{
+    font-size: 2rem;
+}
+.s3{
+    font-size: 1.5rem;
+}

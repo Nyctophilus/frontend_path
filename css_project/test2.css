@@ -1,0 +1,47 @@
+/* Mouse Cursor */
+button{
+    cursor: pointer;
+}
+p{
+    cursor: grab;
+}
+
+
+/* 
+
+    Font style
+    Font variant
+    Font weight
+
+*/
+
+div{
+    font-style: italic;
+    font-variant: small-caps;   /* capital letters but smaller than normal letters */
+    font-weight: bold;
+}
+
+
+
+
+/*
+
+    CSS Units
+    - px
+    - em => Time    1em = mra wa7da 1time 
+    - rem => Root Time 
+    - percentage => % of the parent 
+    - vw => View port width
+
+    Read
+    - vmin
+    - vh
+
+
+
+    Default font size for web page is 16px
+*/
+
+div{
+    font-size: 2vw;
+}

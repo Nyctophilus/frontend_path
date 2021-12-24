@@ -1,3 +1,24 @@
+/* family font */
+div{
+    font-family: 'Pushster', cursive;
+}
+
+/* inherit */
+
+div {
+    text-align: center;
+    padding: 20px;
+    background-color: #EEE;
+    font-size: 20px;
+    /* border: 2px solid blue; */
+  }
+  div p {
+    /* border: 2px solid; */
+    border-color: inherit;
+    padding: inherit;
+  }
+
+
 /* text shadow */
 div {
     background-color: #f9f9f9;
