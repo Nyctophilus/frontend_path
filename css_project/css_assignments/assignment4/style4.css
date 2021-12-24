@@ -1,0 +1,29 @@
+.parent .child .title{
+    color: red;
+}
+.parent .title{
+    color: blue;
+}
+/* .parent p {
+    color: green;
+}
+
+.title{
+    color: green;
+} */
+
+.title,
+.parent p {
+    color: green;
+}
+
+
+/* part 2 */
+.d2 p{
+    background-color: red;
+    color: burlywood;
+    width: fit-content;
+    padding: 5px 10px;
+    max-height: 40px;
+    overflow:hidden ;
+}

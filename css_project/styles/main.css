@@ -1,3 +1,58 @@
+
+
+/* Nesting */
+
+div .special{
+    color: red;
+    background-color: #EEE;
+    width: fit-content;   /* min-max width,height */ 
+
+    /* overflow */
+    height: 150px;
+    /* overflow-y -x */
+    overflow: auto;
+    width: 150px;
+}
+
+
+
+
+
+
+/* grouping selectors */
+.one{
+    border-bottom: 2px solid red;
+    color: red;
+}.two{
+    border-bottom: 2px solid green;
+    color: green;
+}.three{
+    border-bottom: 2px solid blue;
+    color: blue;
+}
+.four{
+    border-bottom: 2px solid black;
+    color: black;
+}
+.one,
+.two,
+.three,
+.four{
+    background-color: #EEE;
+    padding: 10px;
+    margin: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
 /*
 CLEAN CODE!
 Name Conventions
@@ -5,7 +60,7 @@ Name Conventions
 */
 
     
-p{
+p22{
     color: rgb(65, 49, 29);
     font-size: 60px;
 }
@@ -74,11 +129,11 @@ div22{
     - respect padding, margin, width, height
     
 */
-span{
+span22{
     background-color: thistle;
     display: inline-block;
 }
-.first{
+.first22{
     display: none;              /* don't recieve a place for the element at all */
     visibility: hidden;         /* holds places for the element in the UI */
 }
