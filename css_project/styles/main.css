@@ -1,4 +1,42 @@
+/* text shadow */
+div {
+    background-color: #f9f9f9;
+    color: rebeccapurple;
+    text-shadow: 1px 1px 1px red;
+    /* alginment */
+    text-align: center;
+  direction: ltr;
+  }
+  img {
+    vertical-align: middle;
+  }
 
+  /* text decoration */
+  a{
+      text-decoration: none;  /* underline ... overline */
+
+      /* text transform */
+      text-transform: uppercase;
+  }
+  /* text spacing */
+  code{
+      letter-spacing: 2px;
+      text-indent: 10px;
+      line-height: 1.6;
+      word-spacing: 5px;
+      white-space: nowrap;
+      word-break: break-word;
+  }
+
+
+  /* Text - Overflow  */
+  div{
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+  div:hover{
+      overflow: visible;
+  }
 
 /* Nesting */
 
