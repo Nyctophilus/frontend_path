@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+}
+
+.parent {
+    background-color: red;
+    padding: 10px;
+  }
+
+
+
+  /* float btsl7o bel overflow hidden  */
+  .parent div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #eee;
+    float: left;
+    /* width: calc(94%/5); */
+    /* margin-left: 1%; */
+
+    width: calc((100%-90px) / 5);
+    margin-left: 15px;          /* 5 spaces * 15px = 90px */
+    
+
+  }
+  .clear {
+    clear: both;
+  }
+
+
+
+
+  /* OPACITY */
+  .d1{
+      background-color: red;
+      opacity: .2;
+  }
+  .d2{
+      background-color: rgba(255, 0, 0, 0.15);
+      
+  }
