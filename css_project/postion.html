@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>CSS</title>
+
+        <style>
+            body {
+                min-height: 2000px;
+            }
+
+            div {
+                color: white;
+                width: 100px;
+                padding: 10px;
+            }
+
+            .one {
+                background-color: red;
+                /*
+                position: relative;                     relative by7rk bl nsba l nfso
+                */
+                /* position: absolute;                  el element bytwz3 bna2n 3l el saf7a
+                                                        bottom 0 hyro7 nazl ll bottom kda!
+                */
+                /* position: absolute; */
+                /* relative dad >> absolute child to make the child move inside the dad element*/
+
+                /* position: fixed; */
+                /* 
+                    element simply doesnt move in your website... it can potentially cover other element.
+
+                The position: fixed mean fixed to the viewport. We tell it where to position itself (top, bottom, right, or left) and it will stay there when user scrolling.
+                based on the render screen, fixed on it regarding of the parent
+                                    and stays fixed visiable while scrolling 
+                */
+                /* position: sticky; */
+                /* 
+                    When you want that element scrolling into view and then stop at certain point
+
+                Meanwhile, when using position: sticky it won't affect until we define offset, like top: 10px. So the element will scroll like others until it reaches the offset and then stay on its position. And it stay within its parent, once the parent scroll off the page it leaves with it. */
+                top: 10px;
+                left: 50px;
+
+            }
+
+            .two {
+                background-color: green;
+            }
+
+            .three {
+                background-color: blue;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                z-index: -1;
+                /* z index  ..have to be postion to work  */
+            }
+
+            .parent {
+                width: 500px;
+                height: 400px;
+                background-color: grey;
+                position: relative;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="two">Two</div>
+        <div class="parent">
+            <div class="one">One</div>
+        </div>
+        <div class="three">Three</div>
+
+    </body>
+
+</html>

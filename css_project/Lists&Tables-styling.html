@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>List&tables styling</title>
+
+        <style>
+            /* list styling */
+            ul {
+                list-style-type: lower-greek;
+                list-style-position: inside;
+                list-style-image: url("");
+
+                /* 
+                common use:
+                list-style: none;
+                to start customize it urself
+                */
+            }
+
+
+
+            /* table styling */
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            table {
+                width: 100%;
+                border: 1px solid #CCC;
+                border-spacing: 0;
+            }
+
+            table td {
+                padding: 15px;
+                background-color: #EEE;
+                border: 1px solid #CCC;
+            }
+
+            table thead td {
+                background-color: #f44336;
+                color: #FFF;
+                font-weight: bold;
+                text-align: center;
+                border-color: #F35246;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <ul>
+            <li>html</li>
+            <li>css</li>
+            <li>JS
+                <ul>
+                    <li>react</li>
+                    <li>vuejs</li>
+                    <li>angular</li>
+                </ul>
+            </li>
+        </ul>
+        <hr>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Age</td>
+                    <td>Email</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Muhammed</td>
+                    <td>25</td>
+                    <td>o@nn.sa</td>
+                </tr>
+                <tr>
+                    <td>Ahmed</td>
+                    <td>11</td>
+                    <td>o@nn.sa</td>
+                </tr>
+                <tr>
+                    <td>medo</td>
+                    <td>2</td>
+                    <td>o@nn.sa</td>
+                </tr>
+                <tr>
+                    <td>lana</td>
+                    <td>12</td>
+                    <td>o@nn.sa</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+
+</html>

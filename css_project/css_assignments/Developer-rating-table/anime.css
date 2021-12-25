@@ -1,0 +1,24 @@
+table{
+    width: 700px;
+    margin: auto;
+    text-align: center
+}
+
+thead td{
+    background-color: rgba(0, 0, 0, 0.699);
+    color: white;
+}
+td{
+    background-color: #eee;
+}
+
+span{
+    margin-left: 8px;
+    padding: 1px 10px;
+}
+.s1{
+    background-color: #008fcc94;
+}
+.s2{
+    background-color: rgba(220, 20, 60, 0.493);
+}

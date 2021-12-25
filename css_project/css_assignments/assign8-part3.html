@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assign8 part3</title>
+        <style>
+            ul {
+                width: 400px;
+                margin: auto;
+            }
+
+            li {
+                list-style: none;
+                background-color: #eee;
+                padding-right: 10px;
+                margin: 20px 0;
+            }
+
+            .parent {
+                padding-bottom: 10px;
+            }
+
+            .inside {
+                background-color: white;
+                margin-bottom: 2px;
+                margin-left: -5px;
+            }
+
+            .i1 {
+                list-style-type: decimal;
+            }
+
+            .i2 {
+                list-style-type: lower-roman;
+            }
+
+            .i3 {
+                list-style-type: circle;
+                list-style-position: inside;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <ul>
+            <li class="parent">
+                HTML
+                <ol start="10">
+                    <li class="inside i1">Slim</li>
+                    <li class="inside i1">Pugjs</li>
+                    <li class="inside i1">HAML</li>
+                </ol>
+            </li>
+            <li class="parent">
+                CSS
+                <ol start="10">
+                    <li class="inside i2">SASS</li>
+                    <li class="inside i2">LESS</li>
+                    <li class="inside i2">PostCSS</li>
+                </ol>
+            </li>
+            <li class="parent">
+                JavaScript
+                <ul>
+                    <li class="inside i3">Vuejs</li>
+                    <li class="inside i3">Sveltejs</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+
+</html>
