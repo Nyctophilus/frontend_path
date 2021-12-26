@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>assign9 part2</title>
+        <style>
+            div {
+                background-color: #ccc;
+                padding: 20px;
+                margin: auto;
+                width: fit-content;
+
+                position: relative;
+
+            }
+
+            div::first-letter {
+                background-color: red;
+                color: white;
+                position: absolute;
+                padding: 10px;
+                margin-left: -35px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            /* part 3 */
+            p {
+                background-color: #eee;
+                padding: 15px;
+                width: 400px;
+                position: relative;
+                float: right;
+                border-left: 3px solid rgb(212, 27, 89);
+            }
+
+            p::before {
+                content: attr(data-person);
+                background-color: #ccc;
+                position: absolute;
+                left: -80px;
+                text-align: center;
+                width: 60px;
+            }
+
+            p::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                left: -21px;
+                border-width: 9px;
+                border-style: solid;
+                border-color: transparent rgb(212, 27, 89) transparent transparent;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div>1 Hello, Welcome To Elzero Web School</div>
+
+        <!-- part 3 -->
+        <hr>
+        <p data-person="Osama">This Is Very Very Long Comment Number One</p>
+        <p data-person="Ahmed">This Is Very Very Long Comment Number Two</p>
+        <p data-person="Sayed">This Is Very Very Long Comment Number Three</p>
+
+
+
+    </body>
+
+</html>

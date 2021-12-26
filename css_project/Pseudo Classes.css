@@ -1,0 +1,133 @@
+/* Pseudo Classes */
+a {
+    color: green;
+    text-decoration: none;
+  }
+  a:hover {
+    color: red;
+  }
+  a:visited {
+    color: blue;
+  }
+  :empty {
+    border: 10px solid red;
+  }
+  .ch:checked {
+    display: none;
+  }
+  .in:focus {
+    border-color: red;
+    outline: none
+  }
+
+
+  /* Pseudo Elements */
+
+  .two::first-letter {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+  }
+  .three::first-line {
+    font-weight: bold;
+    color: green;
+  }
+
+  ::selection {         /* when selecting the text "element" */
+    background-color: black;
+    color: yellow;
+  }
+
+
+
+  /* Pseudo Elements - Before, After, Content */
+  .one::after {  /* hcreate element after this */
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    right: -10px;
+    top: 0;
+    background-color: #009688;
+  }
+
+  .one::before {
+    content: "";        /* lazm 3shan el ::before,after yshtghlo */
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;      /* margin nos el height 3shan yfdl fel nos     top el50% w b3dan bn2s el top to center */
+    left: -20px;
+    width: 0;
+    height: 0;
+    background-color: white;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent #009688 transparent transparent;
+  }
+
+
+  /* Pseudo Elements - Content And Trainings */
+  
+  /* counter */
+  .parent {
+    counter-increment: members-counter;
+  }
+  .one::after {
+    content: counter(members-counter);
+}
+
+
+/* taking attribute from the html element 
+<div class="one" data-text="Something">  */
+.one::before {
+    content: attr(data-text);
+    display: none;
+}
+
+/* use case: tool tip */
+.one:hover::before{
+    display: block;
+}
+
+/* url inside content */
+.one::before{
+    content: url("");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* styling ul with pseudos */
+ul {
+    list-style: none;
+  }
+  ul li {
+    position: relative;
+  }
+  ul li::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #009688 transparent transparent;
+  }

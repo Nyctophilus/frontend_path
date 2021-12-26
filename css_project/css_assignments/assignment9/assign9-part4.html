@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assign9 part4</title>
+        <style>
+            p {
+                counter-increment: CC2;
+                background-color: #eee;
+                padding: 15px 85px 15px 15px;
+                text-align: center;
+                width: fit-content;
+                margin-left: 25%;
+                border-right: 4px solid orangered;
+            }
+
+            p::before {
+                content: counter(CC2);
+                font-weight: bold;
+                line-height: 3;
+                color: white;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                left: calc(25% - 44px);
+                margin-top: -15px;
+                background-color: orangered;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+        <p>This Is Very Very Long Product Title</p>
+    </body>
+
+</html>
