@@ -1,0 +1,39 @@
+/* !important */   /* this will override any styles even the inline styles */
+
+
+
+/*
+  The Margin Collapse
+  [1] Only Vertical Margin Collapse
+  [2] Bigger Margin Wins
+  [3] Margin Collapsing With Elements Without Anything Between
+  [4] Nesting Does Not Prevent Collapse
+*/
+
+
+
+/*  CSS Variables And Trainings */
+
+/*
+  CSS Variables
+  - Global Variable
+  - Local Variable
+  var(Variable Name, Fall Back Value)
+*/
+
+:root {
+  --mainColor: blue;
+  --mainPadding: 10px;
+}
+_______________
+.main {
+  background-color: var(--mainColor, black);
+  color: white;
+  padding: calc(20px + var(--mainPadding));
+}
+/* spasific*/
+.local {
+  --mainColor: black;
+  background-color: var(--mainColor);
+  color: white;
+}

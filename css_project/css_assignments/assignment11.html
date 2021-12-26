@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment11</title>
+        <style>
+            .dad {
+                background-color: #eee;
+                width: 400px;
+                height: 200px;
+                margin: 20% auto;
+                transition-duration: .5s;
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            .dad:hover {
+                margin-top: 15%;
+            }
+
+            p {
+                padding-top: 20px;
+            }
+
+            .child {
+                background-color: #ccc;
+                width: fit-content;
+                padding: 10px 50px;
+                margin: 0 auto;
+                transition-delay: .5s;
+                transition-duration: 1s;
+            }
+
+            .dad:hover .child {
+                margin-top: 40px
+            }
+
+            /* part2 */
+            .d2 {
+                width: 400px;
+                margin: auto;
+                font-size: 20px !important;
+                background-color: #eee !important;
+                color: black !important;
+                border: none !important;
+                font-weight: bold;
+                text-indent: 150%;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .d2::before {
+                content: "ElMedo";
+                width: 400px;
+                position: absolute;
+                text-indent: 0px;
+                left: 37%;
+
+            }
+
+
+
+            /* part3 */
+
+            /* :root {
+                --mainColor: #009688;
+                --mainPadding: 10px;
+            } */
+
+            .d3 {
+                border: 2px solid var(--mainColor, black);
+                margin: 10px 10%;
+                padding: var(--mainPadding, 2%);
+                color: var(--mainColor, red);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="dad">
+            <p>Will Go up on hover in half second</p>
+            <div class="child">
+                Will Go down after half second
+            </div>
+        </div>
+
+        <hr>
+
+
+        <div class="d2" style="
+                background-color: red;
+                color: white;
+                padding: 20px;
+                border: 1px solid blue;
+                font-size: 80px;">
+            Hello Div
+        </div>
+
+        <hr>
+        <div class="d3">Element</div>
+        <div class="d3">Element</div>
+        <div class="d3">Element</div>
+
+
+
+    </body>
+
+</html>
