@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assign10 part2</title>
+        <style>
+            div {
+                width: 550px;
+                margin: 30% auto;
+                text-align: center;
+            }
+
+            .item {
+                width: 250px;
+                display: inline-block;
+                margin-left: 10px;
+                background-color: #eee;
+            }
+
+            .b {
+                margin-left: 0;
+            }
+
+            p {
+                background-color: rgb(22, 173, 223);
+                color: white;
+                border-radius: 10px;
+                width: fit-content;
+                padding: 5px 40px;
+                display: inline-block;
+                margin: 20px auto;
+                font-weight: bold;
+            }
+
+            h2 {
+                background-color: #ccc;
+                border-radius: 50%;
+                width: 102px;
+                height: 102px;
+                line-height: 102px;
+                margin: 0 auto 20px;
+            }
+
+            .divier {
+                background-color: white;
+                display: inline-block;
+                width: 30px;
+                height: 190.5px;
+                margin: -10% auto;
+            }
+
+            .divier-line {
+                background-color: rgb(22, 173, 223);
+                width: 1px;
+                height: 190.5px;
+            }
+
+            .divier-line::before {
+                content: "Or";
+                width: fit-content;
+                height: fit-content;
+                color: white;
+                position: fixed;
+                background-color: rgb(22, 173, 223);
+                border-radius: 50%;
+                padding: .5vw;
+                bottom: 30vw;
+                left: 48.7vw;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <div class="item">
+                <p>Basic</p>
+                <h2>Free</h2>
+            </div>
+            <div class="divier">
+                <div class="divier-line"></div>
+            </div>
+            <div class="item b">
+                <p>Pro</p>
+                <h2>30$</h2>
+            </div>
+        </div>
+    </body>
+
+</html>

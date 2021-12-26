@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment10</title>
+
+        <style>
+            div {
+                counter-increment: C;
+                width: 100px;
+                height: 100px;
+                display: inline-block;
+                margin-left: 10%;
+                margin-top: 10%;
+                border: 1px solid black;
+                border-radius: 50%;
+                -webkit-box-shadow: 10px 2px lightskyblue, -9px -4px deeppink;
+                -moz-box-shadow: 10px 2px lightskyblue, -9px -4px deeppink;
+                box-shadow: 10px 2px lightskyblue, -9px -4px deeppink;
+            }
+
+            div::after {
+                content: counter(C);
+                display: inline-block;
+                text-align: center;
+                background-color: black;
+                color: white;
+                width: 20px;
+                border-radius: 50%;
+                position: fixed;
+                margin-left: 3%;
+                top: 15.5%;
+            }
+
+            div::before {
+                content: "Element";
+                display: inline-block;
+                position: fixed;
+                top: 21%;
+                margin-left: 2%;
+            }
+
+
+            /* part2 */
+
+            span {
+                display: block;
+                height: 100px;
+                width: 100px;
+                margin: auto;
+                border: 1px solid black;
+                border-top-left-radius: 20px 35px;
+                border-top-right-radius: 50px;
+                border-bottom-left-radius: 50px;
+                border-bottom-right-radius: 10px 21px;
+                box-shadow: inset 5px 5px 12px grey, inset -4px -5px 9px grey;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <hr>
+
+        <span></span>
+        <hr>
+    </body>
+
+</html>
