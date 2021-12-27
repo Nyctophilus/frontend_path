@@ -1,0 +1,65 @@
+CSS Flexbox: What I learned from Flexbox Zombies
+https://levelup.gitconnected.com/css-flexbox-what-i-learned-from-flexbox-zombies-850b1f2f6d23
+
+
+
+
+
+
+Flexbox Zombies
+I started playing an educational game called Flexbox Zombies, which has been teaching me the fundamentals of flexbox in a fun way. In the game, you fight zombies by using features of flexbox to aim your crossbow at the zombies.
+MDN docs explain flexbox as:
+a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces.
+The Flexbox Zombies game teaches flexbox through a story, with each lesson building on the previous, thus reinforcing the fundamentals of flexbox in a fun and effective way.
+Here are the steps that I’ve learned so far:
+display:flex
+This corresponds to turning on the crossbow.
+This causes the parent to become a flex container and its children to become flex items.
+This is achieved by using display:flex; in the parent element.
+
+
+
+flex-direction
+This corresponds to aiming the crossbow in the appropriate direction.
+The flex-direction defines the main axis on which the items are located.
+The default if unspecified is flex-direction:row. Other options are row-reverse, column, and column-reverse.
+
+
+justify-content
+This corresponds to lining up the zombies along the red justify laser.
+justify-content controls how the items are spaced within the main axis (or flex-direction).
+The default if unspecified is justify-content:flex-start. Other options are center, flex-end, space-between, space-around.
+
+Justify content explanation from W3Schools
+
+
+align-items
+This corresponds to lining up the zombies along the blue alignment laser.
+align-items controls how the items are spaced in the cross axis, or the axis perpendicular to the main axis.
+The default if unspecified is align-items:stretch. This will fill up the whole space in the alignment axis. Other options are center, flex-start, flex-end.
+
+
+Align items explanation from W3Schools
+
+
+align-self
+This corresponds to taking care of any individual alignments that are different from the others.
+Unlike the others properties mentioned thus far, align-self is specified on the item itself (as opposed to the parent element). It has the same options as align-items: stretch, center, flex-start, flex-end.
+The MDN docs explain that:
+the align-self CSS property overrides flex item's align-items value.
+
+
+flex-grow
+This corresponds to the zombies growing to occupy more of the space.
+flex-grow determines the flex grow factor, or ratio of how items will grow to fill all available space as the container grows along the main axis. flex-grow is specified on the item itself.
+The default if unspecified is flex-grow:0, which means the item will not grow even as the parent element size grows. Given the space of the parent element, the items with grow factors will grow to fill the space in accordance with the ratio specified by their flex-grow property.
+When an item has flex-grow property with a value greater than 0, it will grow to fill all space (in the main axis) rendering the justify-content property unnecessary. (Unless there is flex-wrap, but we will leave that for another time.)
+
+
+
+flex-shrink
+This corresponds to the zombies shrinking when there is not enough space.
+flex-shrink is like flex-grow except it determines the ratio with which the items will shrink as the parent container shrinks. flex-shrink is specified on the item itself.
+The default if unspecified is flex-shrink:1. Items with flex-shrink:0 will keep their size no matter what and will not shrink.
+Since it uses ratios, setting all of the items to flex-shrink:1 is the same as setting them all to flex-shrink:2 or flex-shrink:20.
+I haven’t finished the game yet, and there are more properties that are taught in the course. If you’d like to continue learning with me, check out part 2 where I discuss some more flexbox properties that I have learned.
