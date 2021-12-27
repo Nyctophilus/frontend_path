@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS</title>
+    <style>
+                                                    /*
+                                                Flexible Box
+                                                For Parent
+                                                - display: flex => To Start Flexible Box
+                                                - flex-direction: row => Default Value
+                                                - flex-wrap: controlling the excess "el zyada" element   nowrap => Default Value
+                                                - flex-flow: [Flex-Direction] + [Flex-Wrap]
+
+                                                display: flex;
+                                                flex-direction: column;
+                                              */
+
+
+                                              /* 
+                                              Justify Content >> alignment horizontally
+                                              justify-content: space-evenly;
+                                              */
+                                              /* 
+                                              Flex Box Parent - Align Items Vertically
+                                                  align-items: center;
+                                              */
+                                              /* 
+                                              Flex Box Parent - Align Content
+                                                  align-content: space-between;
+                                              */
+                                              /* 
+                                              For Child
+                                              flex-grow: 2;
+                                              flex-shrink: 3;
+                                              order: -1;
+                                              */
+                                              /* child
+                                                Flex Basis  width or height inside flexbox depends on direction
+                                                basis respects the max-width and can't go beyond it
+                                                
+                                                align-self:
+                                                */
+                                                /* 
+                                                Flex Shorthand
+                                                  flex: [grow] [shrink] [basis] 0 1 auto
+                                                */
+                                                /* inline-flex to get the next element beside the flex */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.flex {
+  background-color: #eee;
+  width: 600px;
+  height: 500px;
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-evenly;
+  /* flex-flow: row wrap;
+  flex-direction: row;
+  align-items: center; */
+}
+.flex div {
+  background-color: #f00;
+  color: white;
+  width: calc( 95% / 6);
+  text-align: center;
+  padding: 20px;
+}
+/* .grow{
+  flex-grow: 3;
+ 
+}
+.shrink{
+  flex-shrink: 3;
+  order: -1;
+} */
+
+.three{
+  align-self: flex-end;
+}
+
+
+
+
+
+
+
+
+
+.float {
+  overflow: hidden;
+  background-color: #eee;
+  width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+}
+.float div {
+  background-color: #f00;
+  color: white;
+  float: right;
+  width: 25%;
+  text-align: center;
+  padding: 20px;
+}
+    </style>
+  </head>
+  <body>
+    <h3>Flex</h3>
+    <div class="flex">
+      <div>One</div>
+      <div>Two</div>
+      <div class="three">Three</div>
+      <div class="grow">Four</div>
+      <div>Five</div>
+      <div class="shrink">six</div>
+    </div>
+    <hr />
+    <h3>Float</h3>
+    <div class="float">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+    </div>
+  </body>
+</html>
