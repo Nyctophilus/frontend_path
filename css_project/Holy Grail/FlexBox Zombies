@@ -5,7 +5,6 @@ https://levelup.gitconnected.com/css-flexbox-what-i-learned-from-flexbox-zombies
 
 
 
-
 Flexbox Zombies
 I started playing an educational game called Flexbox Zombies, which has been teaching me the fundamentals of flexbox in a fun way. In the game, you fight zombies by using features of flexbox to aim your crossbow at the zombies.
 MDN docs explain flexbox as:
@@ -63,3 +62,8 @@ flex-shrink is like flex-grow except it determines the ratio with which the item
 The default if unspecified is flex-shrink:1. Items with flex-shrink:0 will keep their size no matter what and will not shrink.
 Since it uses ratios, setting all of the items to flex-shrink:1 is the same as setting them all to flex-shrink:2 or flex-shrink:20.
 I haven’t finished the game yet, and there are more properties that are taught in the course. If you’d like to continue learning with me, check out part 2 where I discuss some more flexbox properties that I have learned.
+
+
+
+
+try commit count success 
