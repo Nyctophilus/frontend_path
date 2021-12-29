@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+}
+
+.part-1 {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 10px 0px 5px orangered, -10px 0px 5px rgb(0, 162, 255);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  color: orangered;
+}
+
+/* part-2 */
+.parent {
+  width: 600px;
+  height: 300px;
+  margin: auto;
+  background-color: #eee;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+  align-content: space-between;
+  text-align: center;
+}
+.parent div {
+  flex: 0 30%;
+  background-color: orangered;
+  margin: 10px 0;
+  color: white;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+/* part3 */
+.parent2 {
+  width: 600px;
+  height: 300px;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #eee;
+  justify-content: space-evenly;
+  /* text-align: center; */
+}
+.parent2 div {
+  background-color: teal;
+  flex: 0 30%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.three {
+  order: 1;
+  align-self: flex-start;
+}
+.four {
+  order: 2;
+}
+.five {
+  order: 3;
+}
+.two {
+  order: 4;
+}
+.one {
+  align-self: flex-end;
+  order: 5;
+}
+
+/* part4 */
+.parent3 {
+  width: 600px;
+  height: 300px;
+  margin: auto;
+  padding: 10px;
+  background-color: #eee;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+}
+.parent3 div {
+  background-color: rgb(3, 206, 206);
+  min-height: 30%;
+  min-width: 5%;
+  text-align: center;
+  padding-top: calc(18% / 3);
+}
+.one- {
+  align-self: flex-end;
+  flex: 0 5%;
+}
+.three- {
+  align-self: flex-end;
+  flex: 0 5%;
+}
+
+/* part5 */
+.parent4 {
+  width: 600px;
+  height: 300px;
+  margin: auto;
+  padding: 10px;
+  background-color: #eee;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+.parent4 div {
+  flex: 0 calc(75% / 4);
+  height: 50%;
+  color: white;
+  text-align: center;
+  padding-top: calc(150px / 3);
+}
+.one-- {
+  background-color: coral;
+  order: 1;
+}
+.two-- {
+  background-color: chartreuse;
+  order: 2;
+  align-self: flex-end;
+}
+.three-- {
+  background-color: rgb(100, 74, 9);
+  order: 3;
+}
+.four-- {
+  background-color: darkmagenta;
+  align-self: flex-end;
+}
+
+/* part6 */
+
+:root {
+  --out-padding: 10px 0;
+  --bg-color: rgb(224, 222, 222);
+  --Fbg: #eee;
+  --in-padding: 10px;
+  --font-s: 2vw;
+  --font: "Vujahday Script", cursive;
+}
+
+/* header section */
+article {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--Fbg);
+  padding: var(--in-padding);
+  font-size: var(--font-s);
+  font-family: var(--font);
+  font-weight: bold;
+  --shadow: 1px 3px 5px grey;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+img {
+  background-color: var(--bg-color);
+  height: 3.9vw;
+  width: 6vw;
+  box-shadow: var(--shadow);
+
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+ul {
+  direction: rtl;
+  list-style: none;
+  flex: 0 85%;
+  margin: 0;
+  padding: var(--in-padding);
+  background-color: var(--bg-color);
+}
+li {
+  display: inline-block;
+  margin: 0 5px;
+  box-shadow: var(--shadow);
+  padding: 0 5px;
+  background-color: var(--bg-color);
+}
+
+/* main section */
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--out-padding);
+}
+.content {
+  background-color: var(--bg-color);
+  flex: 0 70%;
+  min-height: 70vh;
+  padding: var(--in-padding);
+}
+aside {
+  background-color: var(--bg-color);
+  padding: var(--in-padding);
+  flex: 0 27%;
+}
+/* footer */
+footer {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--in-padding);
+}
+footer div {
+  display: inline-block;
+}
