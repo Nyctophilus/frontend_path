@@ -1,0 +1,60 @@
+.holy-grail {
+  display: grid;
+  text-align: center;
+  min-height: 90vh;
+  margin: auto;
+  grid-template: 10% auto 10%/ 10% auto auto auto 10% ;
+  padding: 5%;
+  gap: 1vh 1vh;
+}
+
+
+header{
+  grid-area: 1/1 /1/6;  
+  background-color: rgba(0, 204, 255, 0.3);
+  padding-top: 3.5vh;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  border: 2px solid rgb(6, 84, 104);
+}
+.left-sidebar{
+  grid-area: 2/1 /3/1;
+}
+aside{
+  background-color: rgba(255, 192, 203, 0.3);
+  padding-top: 35vh;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  border: 2px solid rgb(245, 118, 139);
+}
+main{
+  grid-area: 2/2/ 3/5;
+  background-color: rgba(188, 143, 143, 0.5);
+  padding: 4vh;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border: 2px solid rgb(139, 67, 79)
+}
+.right-sidebar{
+  grid-area: 2/5 /3/6;
+}
+footer{
+  background-color: rgba(0, 204, 255, .3);
+  grid-area: 3/1 /4/6;
+  padding-top: 3.5vh;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  border: 2px solid rgb(6, 84, 104);
+}
