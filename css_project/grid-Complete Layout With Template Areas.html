@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .page{
+            display: grid;
+            height: 90vh;
+            background-color: #eee;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 50px auto 20px;
+            grid-template-areas: "logo nav nav nav nav"
+            "cont cont cont cont side"
+            "foot foot foot foot foot"
+            ;
+        }
+        nav{
+            grid-area: nav;
+            direction: rtl;
+            padding: 0 10vw 0 0;
+            background-color: #683ab723;
+        }
+        h2{
+            grid-area: logo;
+            padding: 1vh 7vw;
+            background-color: rgba(255, 0, 0, 0.198);
+        }
+        section{
+            grid-area: cont;
+            padding: 10vh;
+            background-color: #4caf4f1e;
+        }
+        aside{
+            grid-area: side;
+            padding: 10vh;
+            background-color: #2195f33f;
+}
+        footer{
+            padding: 0 50%;
+            grid-area: foot;
+            background-image: linear-gradient(to right, #f4433626 20%,#2195f32d 40%, #4caf4f2d 60%,#e91e6234 80%, #683ab738 95%);
+        }
+        ul li{
+            list-style: none;
+            display: inline-block;
+            margin-right: 1vw;
+            margin-top: 1vh;
+            padding: 1vh;
+            box-shadow: inset -1px 1px 10px rgba(255, 0, 0, 0.205);
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h2>Medo</h2>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Conteact</li>
+            </ul>
+        </nav>
+        <section>Content</section>
+        <aside>Sidebar</aside>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
