@@ -13,6 +13,30 @@
   - gap: [Row Gap] [Column Gap]
   - justify-content
   - align-content
+
+
+
+  Child
+  - grid-column: [Grid-Column-Start] [Grid-Column-End]        grid-column: span 3 
+  - grid-row: [Grid-Row-Start] [Grid-Row-End]                 grid-row: span 2        grid-row: 2 /span 2
+                                                            grid-row: 1 / 5      "start / end"
+
+
+
+
+  - grid-area: [Grid-Row-Start] [Grid-Column-Start] [Grid-Row-End] [Grid-Column-End]
+          grid-row-start: 2;
+          grid-column-start: 2;
+          grid-row-end: 5;
+          grid-column-end: 6;
+                                =>  grid-area: 2 / 2 / 5 / 6;   !important
+
+
+
+
+
+  -grid Min, Max And Auto Fill
+                                        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));     *****RESPONSIVENESS!!*****
 */
 
 * {
