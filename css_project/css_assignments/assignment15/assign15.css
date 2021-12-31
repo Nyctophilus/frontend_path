@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: consolas;
+}
+
+
+
+/* part1 */
+
+.part1{
+    width: 300px;
+    height: 200px;
+    margin: 10vh auto;
+    background-color: #eee;
+    color: #03a9f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.part1::before{
+    content: "";
+    background-color: #e91e63;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    z-index: -1;
+    transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+}
+.part1::after{
+    content: "";
+    background-color: #03a9f4;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    z-index: -2;
+    transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+}
+
+
+
+/* part2 */
+.part2{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+}
+.part2::before{
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 10px solid #e91e63;
+    border-left: 10px solid transparent;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.part2::after{
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 10px solid #03a9f4;
+    border-right: 10px solid transparent;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    transition-delay: .5s;
+}
+
+
+
+/* rotating the circles on hover🎊 */
+.part2:hover::before{
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+}
+.part2:hover::after{
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+}

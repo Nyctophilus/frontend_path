@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>CSS</title>
+
+        <style>
+            div {
+                margin: 200px auto;
+                width: 200px;
+                height: 200px;
+                background-color: rgb(255 0 0 / 39%);
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                font-size: 30px;
+                /* scale */
+                transform: scale(1.3);
+
+                /* rotate */
+                transform: rotate(45deg);
+                transform: rotate(1turn);
+                transform: rotate(0.5turn);
+                transform: rotate(0.25turn);
+
+                /* translate                                *** best preformance animation */
+                transform: translate(100px);
+                /* centering with translate */
+                /*
+                    left: 50%;
+                    top: 50%;
+                    
+                    /*
+                    Nope =(
+                    margin-left: -25%;
+                    margin-top: -25%;
+                    */
+
+                /* 
+                    Yep!
+                    */
+
+                /* postions: absolute; */
+                transform: translate(-50%, -50%);
+            }
+
+            .image {
+                overflow: hidden;
+                width: 720px;
+                height: 350px;
+            }
+
+            .image img {
+                transition: .5s;
+            }
+
+            .image:hover img {
+                transform: scale(1.3) rotate(5deg);
+                opacity: .7;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div>Transform</div>
+    </body>
+
+</html>
