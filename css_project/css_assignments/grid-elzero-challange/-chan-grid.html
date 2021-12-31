@@ -7,10 +7,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Elzero Grid challange</title>
         <link rel="stylesheet" href="./-chan-grid.css">
+        <link rel="stylesheet" href="./anime.css">
     </head>
+    <script>
+        function toggleText() {
+            var x = document.getElementById("cards");
+            if (x.style.display === "none") {
+                x.style.display = "grid";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
 
     <body>
-        <div class="grid">
+
+        <!-- loading icon -->
+        <div class="loading">
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <button onclick="toggleText()">Show</button>
+            <p>Loading...</p>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- witcher cards -->
+        <div class="grid" id="cards" style="display: none;">
             <div class="gelart">
                 <h2>Geralt of Rivia</h2>
                 <h5>Blaviken Witcher</h5>

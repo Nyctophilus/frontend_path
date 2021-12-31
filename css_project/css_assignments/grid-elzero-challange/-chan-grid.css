@@ -116,3 +116,23 @@ h5{
     right: 15px;
     bottom: -22px;
 }
+
+
+
+
+/* hide btn  */
+.loading button{
+    position: absolute;
+    color: #000;
+    font-size: 1.5em;
+    font-family: consolas;
+    bottom: -90px;
+    letter-spacing: 0.15em;
+    border: none;
+    background: linear-gradient(to right, #24ecff75, #93ff2d75 , #e41cf875);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
