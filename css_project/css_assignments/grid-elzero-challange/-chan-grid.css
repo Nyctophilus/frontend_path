@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+.grid{
+    display: grid;
+    background-color: #eee;
+    margin: auto;
+    padding: 30px;
+    grid-template: repeat(4, 300px) / repeat(4, 1fr);
+    grid-gap: 10px;
+}
+.grid>*{
+    background-color: white;
+    border-bottom: 3px solid #fa744a;
+    padding: 20px;
+    position: relative;
+
+}
+.unique{
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+/* grid postions */
+.me{
+    grid-column-start: 3;
+}
+.gelart{
+    grid-column: 1/3;
+}
+.ciri{
+    grid-row-start: span 3;
+}
+.yennefer{
+    grid-row: 2/ span 2 ;
+}
+.Triss{
+    grid-column: 2/ span 2;
+    grid-row-start: 2;
+}
+.Triss p {
+    -webkit-line-clamp: 2;
+}
+.Dandelion{
+    grid-column: 2/ span 2;
+    grid-row-start: 3;
+}
+
+
+
+
+
+
+/* text overflow */
+p{
+    overflow: hidden;
+    display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+}
+.gelart p,
+.elf p,
+.Foltest p{
+    -webkit-line-clamp: 4;
+}
+.ciri p {
+    -webkit-line-clamp: 10;
+}
+.yennefer p {
+    -webkit-line-clamp: 15;
+}
+.me p,
+.Emhyr p,
+.Dandelion p,
+.Triss p{
+    -webkit-line-clamp: 3;
+}
+
+
+
+
+
+
+/* sublines */
+h2{
+    margin-bottom: 0;
+}
+h5{
+    margin-top: 0;
+    color: #a0a2a2;
+}
+.unique h5{
+    color: #a0a2a290;
+}
+
+
+
+
+
+
+/* quotes */
+.grid>*::after{
+    content: '"';
+    position: absolute;
+    font-size: 4vw;
+    color: #a0a2a2;
+    transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+    right: 15px;
+    bottom: -22px;
+}
