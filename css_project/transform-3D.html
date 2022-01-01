@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Transform-3D</title>
+        <style>
+            .shape {
+                perspective: 300px;
+                /* the starting point in z perspective */
+                perspective-origin: left center;
+            }
+
+            .shape div {
+                margin: 200px auto;
+                width: 200px;
+                height: 200px;
+                background-color: rgb(255 0 0 / 39%);
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                font-size: 30px;
+                transition: .5s;
+                /* transform: rotateX(50deg);
+                transform: rotateY(50deg);
+                transform: rotateZ(50deg);
+                transform: rotate3d(0, 1, 1, 65deg); */
+                transform-origin: left center;
+                transform: rotateX(90deg);
+
+
+
+                /* translate3d u have to put perspective in the parent element to move a child in Z-axis with translate3d */
+                transform: translate3d(0, 0, 100px);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="shape">
+            <div>Transform</div>
+        </div>
+    </body>
+
+</html>
