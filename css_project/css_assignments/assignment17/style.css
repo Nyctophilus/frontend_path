@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --pink: #e91e63;
+  --blue: #2196f3;
+  --yellow: #ffc107;
+}
+/* part1 */
+.part1 {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 20% auto;
+  border: 3px solid var(--pink);
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  animation: spin 1s infinite linear;
+  -webkit-animation: spin 1s infinite linear;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+  }
+}
+.part1:hover {
+  animation-play-state: paused;
+}
+
+div.part1::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border: 3px solid var(--blue);
+  border-bottom: 3px solid transparent;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  left: -8px;
+  top: -8px;
+}
+div.part1::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border: 3px solid var(--yellow);
+  border-left: 3px solid transparent;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  left: -13px;
+  top: -13px;
+}
+
+/* part2 */
+.part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.part2 > span {
+  position: absolute;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  animation: spin 1s infinite linear paused;
+  -webkit-animation: spin 0.5s infinite linear paused;
+}
+.part2 span:nth-child(1) {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--blue);
+  border-bottom: 3px solid transparent;
+  left: 25px;
+  top: 110px;
+}
+.part2 span:nth-child(2) {
+  width: 60px;
+  height: 60px;
+  border: 3px solid var(--yellow);
+  border-bottom: 3px solid transparent;
+  left: 20px;
+  top: 105px;
+  animation-duration: 1s;
+}
+
+.part2 span:nth-child(3) {
+  width: 70px;
+  height: 70px;
+  border: 3px solid black;
+  border-bottom: 3px solid transparent;
+  left: 15px;
+  top: 100px;
+  animation-duration: 1.5s;
+}
+.part2:hover span {
+  animation-play-state: running;
+}
