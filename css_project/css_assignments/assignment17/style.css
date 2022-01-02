@@ -11,7 +11,7 @@
   position: relative;
   width: 50px;
   height: 50px;
-  margin: 20% auto;
+  margin: 20% auto 5%;
   border: 3px solid var(--pink);
   border-top: 3px solid transparent;
   border-radius: 50%;
@@ -67,12 +67,7 @@ div.part1::after {
 }
 
 /* part2 */
-.part2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 50px;
-}
+
 .part2 > span {
   position: absolute;
   border-radius: 50%;
@@ -88,16 +83,16 @@ div.part1::after {
   height: 50px;
   border: 3px solid var(--blue);
   border-bottom: 3px solid transparent;
-  left: 25px;
-  top: 110px;
+  left: 325px;
+  top: 260px;
 }
 .part2 span:nth-child(2) {
   width: 60px;
   height: 60px;
   border: 3px solid var(--yellow);
   border-bottom: 3px solid transparent;
-  left: 20px;
-  top: 105px;
+  left: 320px;
+  top: 255px;
   animation-duration: 1s;
 }
 
@@ -106,10 +101,46 @@ div.part1::after {
   height: 70px;
   border: 3px solid black;
   border-bottom: 3px solid transparent;
-  left: 15px;
-  top: 100px;
+  left: 315px;
+  top: 250px;
   animation-duration: 1.5s;
 }
 .part2:hover span {
   animation-play-state: running;
+}
+
+/* part3 */
+.part3 {
+  display: block;
+  width: 50px;
+  height: 50px;
+
+  left: 50%;
+  position: absolute;
+  top: 50%;
+
+  background-color: #eaeafd;
+
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.part3::before {
+  content: "";
+  width: 44px;
+  height: 44px;
+
+  position: absolute;
+
+  border: 3px solid black;
+  border-left-color: transparent;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  /* animation: spin 1s infinite;
+  -webkit-animation: spin 1s infinite; */
 }

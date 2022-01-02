@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amine</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #000;
+      }
+      .loader {
+        position: relative;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(
+          45deg,
+          transparent,
+          transparent 40%,
+          #e5f403
+        );
+        animation: spin 1.5s linear infinite;
+      }
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+          filter: hue-rotate(360deg);
+        }
+      }
+
+      .loader::before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        left: 6px;
+        bottom: 6px;
+        background: #000;
+        border-radius: 50%;
+        z-index: 2;
+      }
+      .loader::after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+        background: linear-gradient(
+          45deg,
+          transparent,
+          transparent 40%,
+          #e5f403
+        );
+        border-radius: 50%;
+        z-index: 1;
+        filter: blur(30px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader"></div>
+  </body>
+</html>
