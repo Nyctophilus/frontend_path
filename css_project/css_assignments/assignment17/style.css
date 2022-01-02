@@ -22,7 +22,7 @@
   animation: spin 1s infinite linear;
   -webkit-animation: spin 1s infinite linear;
 }
-@keyframes spin {
+/* @keyframes spin {
   100% {
     transform: rotate(1turn);
     -webkit-transform: rotate(1turn);
@@ -30,7 +30,7 @@
     -ms-transform: rotate(1turn);
     -o-transform: rotate(1turn);
   }
-}
+} */
 .part1:hover {
   animation-play-state: paused;
 }
@@ -141,6 +141,6 @@ div.part1::after {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  /* animation: spin 1s infinite;
-  -webkit-animation: spin 1s infinite; */
+  animation: spin 1s infinite;
+  -webkit-animation: spin 1s infinite;
 }
