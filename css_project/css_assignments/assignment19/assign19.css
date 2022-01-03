@@ -1,0 +1,101 @@
+/* part1 */
+
+@media print {
+  .assign-one {
+    font-size: 40px;
+  }
+}
+
+/* part2 */
+* {
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.part2 {
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.part2 div {
+  background-color: #eee;
+
+  width: calc(25% - 25px);
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.part2 div h3 {
+  color: #09998c;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.part2 div p {
+  color: grey;
+}
+
+/* small and mobs */
+@media (max-width: 991px) {
+  .part2 div {
+    width: calc(100% - 30px);
+  }
+  .part2 div h3 {
+    color: black;
+  }
+}
+
+/* meduim */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .part2 div {
+    width: calc(50% - 30px);
+  }
+  .part2 div h3 {
+    color: red;
+  }
+}
+
+/* large */
+@media (min-width: 1200px) {
+  /* Defult applies! */
+}
+
+/* part3 */
+.part3 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px;
+  justify-content: space-between;
+}
+.part3 div {
+  width: 100%;
+  background-color: #eee;
+  margin: 10px 0;
+  padding: 10px;
+}
+.part3 div p {
+  margin-top: 5px;
+  color: grey;
+}
+
+/* meduim */
+@media (min-width: 991px) and (max-width: 1199px) {
+  .part3 div:not(div:first-child) {
+    width: calc(33.3% - 15px);
+  }
+  .part3 div h3 {
+    color: red;
+  }
+}
+
+/* large */
+@media (min-width: 1200px) {
+  .part3 div:not(div:first-child, div:last-child) {
+    width: calc(50% - 10px);
+  }
+  .part3 div h3 {
+    color: #09998c;
+  }
+}
