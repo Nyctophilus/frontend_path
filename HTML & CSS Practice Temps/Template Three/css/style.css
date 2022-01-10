@@ -1,0 +1,143 @@
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #2196f3;
+  --main-color-alt: #1787e0;
+  --main-transition: 0.3s;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+  --section-background: #ececec;
+  --light-bg: #fafafa;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: initial;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* Components classes */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Header */
+header {
+  box-shadow: 1px 1px 5px #999;
+}
+header .logo {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 20px;
+  height: 72px;
+}
+header .hul li {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+header ul.hul {
+  display: flex;
+}
+header .hul a {
+  height: 72px;
+  line-height: 72px;
+  position: relative;
+  color: black;
+  padding: 0 30px;
+  font-size: 18px;
+  transition: var(--main-transition);
+}
+header .hul > li > a::before {
+  content: "";
+  position: absolute;
+  width: 121%;
+  height: 4px;
+  background-color: var(--main-color);
+  top: -19px;
+  left: -121%;
+  transition: var(--main-transition);
+}
+header .hul > li > a:hover {
+  color: var(--main-color);
+  background-color: var(--light-bg);
+}
+header .hul > li > a:hover::before {
+  left: 0;
+}
+
+/* mega-menu */
+.mega-menu {
+  top: 80px;
+  position: fixed;
+  right: 10%;
+  display: none;
+  justify-items: center;
+  grid-template-columns: 500px 250px 250px;
+  background-color: white;
+  border-bottom: 3px solid var(--main-color);
+}
+.mega-menu .links {
+  flex-direction: column;
+  height: 70%;
+}
+.mega-menu .links a {
+  color: var(--main-color);
+  font-weight: bold;
+  padding: 0;
+}
+.mega-menu .links li {
+  width: 100%;
+  text-align: start;
+  border-bottom: 1px solid var(--section-background);
+}
+
+header .hul > li:nth-child(4) > a:hover + .mega-menu {
+  display: grid;
+}
+
+/* landing */
