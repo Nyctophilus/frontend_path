@@ -7,7 +7,7 @@
 :root {
   --main-color: #2196f3;
   --main-color-alt: #1787e0;
-  --pragph-clr: #666;
+  --pragph-clr: #888;
   --main-transition: 0.3s;
   --main-padding-top: 100px;
   --main-padding-bottom: 100px;
@@ -88,6 +88,22 @@ ul {
     linear-gradient(225deg, white 25%, transparent 25%);
   background-size: 30px 30px;
 }
+
+.dots {
+  background-image: url(../images/dots.png);
+  height: 186px;
+  width: 204px;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+.dots.dots-down {
+  bottom: 18%;
+}
+.dots.dots-up {
+  right: 0;
+  top: 20%;
+}
+
 @keyframes up-and-down {
   50% {
     transform: translateY(-30px);
@@ -1070,12 +1086,14 @@ header .hul > li:nth-child(4) > a:hover + .mega-menu {
 
 /* Events */
 .events {
+  position: relative;
   padding: var(--main-padding-top) 0 var(--main-padding-bottom);
 }
 .events .container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: var(--main-padding-top);
 }
 .events .container > img {
   max-width: 450px;
@@ -1090,7 +1108,7 @@ header .hul > li:nth-child(4) > a:hover + .mega-menu {
 }
 .events .container .event-main .time {
   display: flex;
-  gap: 2em;
+  gap: 1em;
 }
 
 .events .container .event-main .time .unit {
@@ -1127,6 +1145,7 @@ header .hul > li:nth-child(4) > a:hover + .mega-menu {
 }
 .events .container .sub {
   flex: 1;
+  margin-top: var(--main-padding-top);
 }
 .events .container .sub form {
   width: 600px;
@@ -1156,4 +1175,222 @@ header .hul > li:nth-child(4) > a:hover + .mega-menu {
 }
 .events .container .sub form a:hover {
   background-color: var(--main-color-alt);
+}
+
+/* Pricing */
+.pricing {
+  padding: var(--main-padding-top) 0 var(--main-padding-bottom);
+  background-color: var(--light-bg);
+  position: relative;
+}
+.pricing .container {
+  margin-top: var(--main-padding-top);
+  gap: 30px;
+  flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+  .pricing .container {
+    padding: 0 50px;
+  }
+  .pricing .container .box {
+    min-width: 300px;
+  }
+}
+.pricing .container .box {
+  background-color: white;
+  z-index: 1;
+  flex-grow: 1;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  transition: var(--main-transition);
+}
+.pricing .container .box h3 {
+  font-weight: bold;
+  margin: 30px 0;
+  font-size: 25px;
+  letter-spacing: -1px;
+}
+.pricing .container .box img {
+  width: 80px;
+  margin-bottom: 30px;
+}
+.pricing .container .box .price {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--main-color);
+}
+.pricing .container .box .amount {
+  color: var(--pragph-clr);
+  margin-bottom: 20px;
+}
+.pricing .container .box ul {
+  text-align: left;
+}
+.pricing .container .box ul li {
+  padding: 20px;
+  border-top: 1px solid var(--light-bg);
+}
+.pricing .container .box a {
+  display: block;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  padding: 10px;
+  width: fit-content;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: var(--main-transition);
+  margin: 30px auto 40px;
+}
+.pricing .container .box a:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+.pricing .container .box:nth-child(2) {
+  transform: translateY(-20px);
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -o-transform: translateY(-20px);
+}
+
+.pricing .box .popular {
+  position: absolute;
+  writing-mode: vertical-rl;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  padding: 10px 10px 35px 10px;
+  font-size: 18px;
+  right: 20px;
+  top: 0;
+  width: 40px;
+}
+.pricing .box .popular::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-color: transparent transparent white;
+  border-width: 20px;
+}
+
+/* Top Videos */
+.videos {
+  padding: var(--main-padding-top) 0 var(--main-padding-bottom);
+}
+.videos .container {
+  margin-top: var(--main-padding-top);
+  background-color: var(--light-bg);
+  padding: 5px;
+  gap: 10px;
+}
+.videos .container .titles {
+  background-color: white;
+}
+.videos .container .titles .head {
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.videos .container .titles .subtitles {
+  padding: 20px;
+  border-top: 1px solid var(--light-bg);
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.videos .container .titles .subtitles h4 {
+  margin: 0;
+}
+.videos .container .titles .subtitles p {
+  display: block;
+  margin: 10px 0 0;
+  color: var(--pragph-clr);
+}
+
+.videos .container .preview {
+  max-width: 100%;
+  position: relative;
+  padding: 5px;
+}
+
+.videos .container .preview > div {
+  bottom: 10px;
+  left: 5px;
+  position: absolute;
+  background-color: white;
+  width: 99%;
+  padding: 20px;
+}
+
+/* Our Stats */
+.a-stats {
+  padding: var(--main-padding-top) 0 var(--main-padding-bottom);
+}
+.a-stats h2 {
+  font-weight: bold;
+  font-size: 40px;
+  width: fit-content;
+  margin: 0 auto 50px;
+  position: relative;
+}
+.a-stats .container {
+  margin-top: var(--main-padding-top);
+  gap: 20px;
+}
+.a-stats .container .stats-box {
+  flex: 1;
+  text-align: center;
+  opacity: 0.75;
+  position: relative;
+}
+.a-stats .container .stats-box::before,
+.a-stats .container .stats-box::after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color-alt);
+  width: 2px;
+  height: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.a-stats .container .stats-box::before {
+  bottom: 0;
+  left: 0;
+}
+.a-stats .container .stats-box::after {
+  top: 0;
+  right: 0;
+}
+.a-stats .container .stats-box:hover {
+  opacity: 1;
+}
+.a-stats .container .stats-box:hover::before,
+.a-stats .container .stats-box:hover::after {
+  height: 100%;
+}
+
+.a-stats .container .stats-box p:first-of-type {
+  display: block;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.a-stats .container .stats-box p:last-of-type {
+  color: var(--main-color);
+  font-style: italic;
+  font-size: 20px;
+  font-weight: bold;
 }
