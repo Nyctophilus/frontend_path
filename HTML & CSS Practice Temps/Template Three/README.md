@@ -13,4 +13,7 @@ Second Dev session:     01:18 PM    ~   04:21 PM        ~ 06h 06m
 
 3th Day: 12/1/22
 first Dev session:      11:08 AM    ~   12:48 AM
+Second Dev session:     02:13 PM    ~   05:08 PM        ~ 04h 35m
 </pre>
+
+<h2>Challenge Completed in   15h 21m</h2>
