@@ -417,8 +417,7 @@ header .hul > li:nth-child(4) > a:hover + .mega-menu {
   align-items: center;
   min-height: calc(95vh - 72px);
 }
-.landing .container .text {
-}
+
 .landing .container .text h2 {
   font-size: 40px;
   letter-spacing: -2px;
@@ -1335,10 +1334,6 @@ header .hul > li:nth-child(4) > a:hover + .mega-menu {
 @media (max-width: 991px) {
   .videos .container {
     flex-direction: column;
-  }
-  .videos .container .preview {
-  }
-  .videos .container .preview img {
   }
   .videos .container .preview div {
     position: relative !important;
