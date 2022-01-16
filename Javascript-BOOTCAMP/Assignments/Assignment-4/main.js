@@ -19,3 +19,26 @@ console.log(
   parseInt(Number.MAX_VALUE / Number.MAX_SAFE_INTEGER) *
     Math.pow(true + true, true + true + true + true)
 ); // 16
+
+// part4
+let myVar = "100.56789 Views";
+
+console.log(parseInt(myVar)); // 100
+console.log(+parseFloat(myVar).toFixed(2)); // 100.57
+
+// Part5
+let num = 10;
+
+console.log(+Number.isInteger(num) + true); // 2
+
+// part6
+let flt = 10.4;
+
+console.log(Math.floor(flt)); // 10
+console.log(Math.round(flt)); // 10
+console.log(Math.trunc(flt)); // 10
+console.log(parseInt(flt)); // 10
+console.log(Math.ceil(flt) - true); // 10
+
+// part7 random number between 0~4
+console.log(Math.random() * 4);
