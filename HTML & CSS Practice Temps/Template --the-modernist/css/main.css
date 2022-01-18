@@ -77,7 +77,10 @@ ul {
 
 .grid-4 {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  );
 }
 
 .line {
@@ -230,7 +233,9 @@ footer .box a::after {
   right: 0;
   left: initial;
   filter: drop-shadow(-10px 2px 5px var(--main-clr));
-  -webkit-filter: drop-shadow(-10px 2px 5px var(--main-clr));
+  -webkit-filter: drop-shadow(
+    -10px 2px 5px var(--main-clr)
+  );
 }
 
 .landing .landing-img {
@@ -316,7 +321,8 @@ footer .box a::after {
   background-color: var(--main-clr);
   color: white;
   cursor: pointer;
-  box-shadow: 5px 5px 15px var(--light-bg), 1px 1px 15px var(--light-bg);
+  box-shadow: 5px 5px 15px var(--light-bg),
+    1px 1px 15px var(--light-bg);
   transform: translate(-10px, -40px) scale(1.1);
   -webkit-transform: translate(-10px, -40px) scale(1.1);
   -moz-transform: translate(-10px, -40px) scale(1.1);
@@ -364,12 +370,15 @@ footer .box a::after {
 }
 .gallery-sec .gallery {
   margin-top: var(--bot-pad);
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(350px, 1fr)
+  );
   grid-gap: 35px;
 }
 .gallery-sec .gallery img {
   width: 100%;
-  height: 100%;
+  height: 250px;
 }
 .gallery-sec .gallery .imgs-displays {
   padding: 6px;
