@@ -124,3 +124,47 @@ for (;;) {
   i++;
   if (i === products.length) break;
 }
+
+/*
+  Loop
+  - While
+*/
+
+let products = [
+  "Keyboard",
+  "Mouse",
+  "Pen",
+  "Pad",
+  "Monitor",
+  "iPhone",
+];
+
+let index = 0;
+
+while (index < products.length) {
+  console.log(products[index]);
+  index += 1;
+}
+
+/*
+  Loop
+  - Do / While
+*/
+
+let products = [
+  "Keyboard",
+  "Mouse",
+  "Pen",
+  "Pad",
+  "Monitor",
+  "iPhone",
+];
+
+let i = 0;
+
+do {
+  console.log(i);
+  i++;
+} while (false);
+
+console.log(i);
