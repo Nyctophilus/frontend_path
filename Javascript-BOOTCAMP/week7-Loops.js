@@ -168,3 +168,38 @@ do {
 } while (false);
 
 console.log(i);
+
+/*
+    Loop Performance 🔥
+
+      --Secrets of js loops
+*/
+
+/* 
+
+    Decreasing the work per iteration:
+      do a **property lookup** for arr.length each loop is so wasteful, 
+      as this value won’t change during the execution of the loop and is therefore an unnecessary performance hit. 
+      You can improve the loop performance easily by doing the property lookup once, storing the value in a local variable
+
+      Reversing loop order is a common performance optimization
+    
+    Decreasing the number of iterations
+      Duff’s Device. 
+        :  technique of unrolling loop bodies so that each iteration does the job of many iterations.
+        img of implementation: https://miro.medium.com/max/700/1*Au0uNRb46Z_diW6yibumAQ.png
+        performance improvement will start to raise after 1000 iterations, before that u wont see significant amount of performance improvement  
+
+
+
+A summary of what we have learned
+            *-* There are four loop types provided by JavaScript.
+            *-* The first statement(initialize) can be defined outside the for loop.
+            *-* The last statement(increment) can also be moved into the curly brackets
+            *-* We can merge the second and third statements
+            *-* If there is a false value in the test, the for loop, it will end immediately.
+            *-* for-in loop is slowest of all due to property lookup.
+            *-* Work done per iteration and Number of iterations determines the performance of any loop.
+            *-* Duff’s Device history and its practical implementation in JavaScript.
+            *-* Using Duff’s Device in larger iterations, the execution time is up to 70% less than a regular loop
+*/
