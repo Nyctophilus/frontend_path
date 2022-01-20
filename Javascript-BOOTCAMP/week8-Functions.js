@@ -60,3 +60,39 @@ function generate(start, end) {
 }
 
 generate(10, 20);
+
+/*
+  Function
+  - Default Function Parameters
+  - Function Parameters Default [Undefined]
+  - Old Strategies [Condition + Logical Or]
+  - ES6 Method
+*/
+
+function sayHello(username = "Unknown", age = "Unknown") {
+  // if (age === undefined) {
+  //   age = "Unknown";
+  // }
+  // age = age || "Unknown";
+  return `Hello ${username} Your Age Is ${age}`;
+}
+
+console.log(sayHello());
+
+/*
+  Function
+  - Rest Parameters
+  - Only One Allowed
+  - Must Be Last Element
+*/
+
+function calc(...numbers) {
+  // console.log(Array.isArray(numbers));
+  let result = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    result += numbers[i]; // result = result + numbers[i]
+  }
+  return `Final Result Is ${result}`;
+}
+
+console.log(calc(10, 20, 10, 30, 50, 30));
