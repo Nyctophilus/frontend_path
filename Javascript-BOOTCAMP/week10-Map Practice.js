@@ -73,3 +73,71 @@ console.log(ign);
 //   .join("");
 
 // console.log(ign);
+
+// ------------------------------------------------------
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+
+// ================================= Filter Practice
+// -----------------------------------------------------------------
+/*
+  Filter
+  - Filter Longest Word By Number
+*/
+
+// Filter Words More Than 4 Characters
+let sentence = "I Love Foood Code Too Playing Much";
+
+let lng = sentence
+  .split(" ")
+  .filter((word) => word.length <= 4)
+  .join(" ");
+console.log(lng);
+
+// .
+// .
+// .
+// .
+// Ignore Numbers
+ignoreNumbers = "Elz123er4o";
+
+ign = ignoreNumbers
+  .split("")
+  .filter((c) => isNaN(parseInt(c)))
+  .join("");
+
+console.log(ign);
+
+// .
+// ..
+// .
+// .
+// .
+// .
+// .
+
+// Filter Strings + Multiply
+let mix = "A13BS2ZX";
+
+let mlt = mix
+  .split("")
+  .filter((n) => !isNaN(parseInt(n)))
+  .map((n) => n * n);
+
+console.log(mlt);
