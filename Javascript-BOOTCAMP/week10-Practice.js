@@ -141,3 +141,65 @@ let mlt = mix
   .map((n) => n * n);
 
 console.log(mlt);
+
+// ------------------------------------------------------
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+
+/*
+  Reduce
+  - Longest Word
+  - Remove Characters + Use Reduce
+*/
+
+let theBiggest = [
+  "Bla",
+  "Propaganda",
+  "Other",
+  "AAA",
+  "Battery",
+  "Test",
+  "Propaganda_Two",
+];
+
+let lng2 = theBiggest.reduce((acc, curr, i, arr) =>
+  curr.length > acc.length ? curr : acc
+);
+
+console.log(lng2);
+
+let removeChars = [
+  "E",
+  "@",
+  "@",
+  "L",
+  "Z",
+  "@",
+  "@",
+  "E",
+  "R",
+  "@",
+  "O",
+];
+
+let rmvchar = removeChars
+  .filter((x) => x !== "@")
+  .reduce((acc, curr) => `${acc} ${curr}`);
+
+console.log(rmvchar);
