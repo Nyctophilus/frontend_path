@@ -132,3 +132,86 @@ myElement.appendChild(myText);
 
 // Append Element To Body
 document.body.appendChild(myElement);
+
+/*
+  DOM [Create Elements]
+  - Practice Product With Heading And Paragraph
+*/
+
+let myMainElement = document.createElement("div");
+let myHeading = document.createElement("h2");
+let myParagraph = document.createElement("p");
+
+let myHeadingText =
+  document.createTextNode("Product Title");
+let myParagraphText = document.createTextNode(
+  "Product Description"
+);
+
+// Add Heading Text
+myHeading.appendChild(myHeadingText);
+
+// Add Heading To Main Element
+myMainElement.appendChild(myHeading);
+
+// Add Paragraph Text
+myParagraph.appendChild(myParagraphText);
+
+// Add Paragraph To Main Element
+myMainElement.appendChild(myParagraph);
+
+myMainElement.className = "product";
+
+document.body.appendChild(myMainElement);
+
+/*
+  DOM [Deal With Childrens]
+  - children
+  - childNodes
+  - firstChild
+  - lastChild
+  - firstElementChild
+  - lastElementChild
+*/
+
+let myElement = document.querySelector("div");
+
+console.log(myElement);
+console.log(myElement.children);
+console.log(myElement.children[0]);
+console.log(myElement.childNodes);
+console.log(myElement.childNodes[0]);
+
+console.log(myElement.firstChild);
+console.log(myElement.lastChild);
+
+console.log(myElement.firstElementChild);
+console.log(myElement.lastElementChild);
+
+/*
+  DOM [Events]
+  - Use Events On HTML
+  - Use Events On JS
+  --- onclick
+  --- oncontextmenu       **Click Right**
+  --- onmouseenter
+  --- onmouseleave
+
+  --- onload
+  --- onscroll
+  --- onresize
+
+  --- onfocus           **inputs focus**
+  --- onblur            **inputs leave**
+  --- onsubmit
+*/
+
+let myBtn = document.getElementById("btn");
+
+myBtn.onmouseleave = function () {
+  console.log("Clicked");
+};
+
+window.onresize = function () {
+  console.log("Scroll");
+};
