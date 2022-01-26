@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Assignment 17</title>
+    <script>
+      // Your Code Here
+
+      window.onload = () => {
+        let links = document.getElementsByTagName("a");
+        console.log(links[0].classList);
+        console.log(links[0].textContent);
+
+        for (i = 0; i < links.length; i++) {
+          links[i].classList.contains("open") &&
+          links[i].textContent === "Elzero"
+            ? links[i].click()
+            : "";
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <a class="open" href="https://google.com">Google</a>
+    <a class="open" href="https://elzero.org">Elzero</a>
+    <a class="not" href="https://facebook.com">Facebook</a>
+    <a class="linked" href="https://linkedin.com">Elzero</a>
+
+    <script src="main.js"></script>
+  </body>
+</html>
