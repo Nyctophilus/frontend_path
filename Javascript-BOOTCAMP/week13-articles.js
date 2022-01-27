@@ -31,3 +31,16 @@
 
 // Return value
 // The new Node cloned. The cloned node has no parent and is not part of the document, until it is added to another node that is part of the document, using Node.appendChild() or a similar method.
+
+// .
+// .
+// .
+// .
+// .
+// .
+
+//                  What is event Bubbling and capturing in JavaScript?
+
+// "TRUE" Event bubbling is the order in which event handlers are called when one element is nested inside a second element, and both elements have registered a listener for the same event (a click, for example). With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
+
+// "FALSE" With capturing, the event is first captured by the outermost element and propagated to the inner elements.
