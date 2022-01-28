@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800;900&family=Open+Sans:wght@400;700;800&family=Roboto:wght@400;900&display=swap");
+
+select:nth-child(2) option:first-child {
+  background: #0081cf;
+}
+select:nth-child(2) option:nth-child(2) {
+  background: #975896;
+}
+select:nth-child(2) option:nth-child(3) {
+  background: #7679bd;
+}
+select:nth-child(2) option:nth-child(4) {
+  background: #5ec2bf;
+}
+select:nth-child(2) option:nth-child(5) {
+  background: #9ceb97;
+}
+
+select:nth-child(2) option:last-child {
+  background: #f9f871;
+}
+
+.test-text {
+  margin-top: 30px;
+}
