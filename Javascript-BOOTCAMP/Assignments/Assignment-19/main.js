@@ -1,32 +1,65 @@
-const font = document.getElementById("fonts");
-const color = document.getElementById("clrs");
-const size = document.getElementById("fSize");
-const opts = document.querySelectorAll("option");
-const sels = document.querySelectorAll("select");
-const box = document.getElementsByClassName("test-text");
+let font = document.getElementById("fonts");
+let size = document.getElementById("fSize");
+let clr = document.getElementById("clrs");
 
-const attr = function () {
-  box.style.cssText = localStorage.css;
-  opts.forEach((opt) => opt.removeAttribute("selected"));
-  sels.forEach((sel) =>
-    document
-      .querySelector(
-        `[value="${localStorage[`${sel.id}`]}"]`
-      )
-      .setAttribute("selected", "")
-  );
-};
+let opts = document.querySelectorAll("option");
 
-const changes = function () {
-  sels.forEach(
-    (sel) => (localStorage[`${sel.id}`] = sel.value)
-  );
-  localStorage.css = `font-family: "${font.value}"; color: ${color.value}; font-size: ${size.value}`;
+let test = document.querySelector(".test-text");
+
+if (localStorage.length == 0) {
+  populateStorage();
+} else {
+  setStyles();
   attr();
-};
+}
 
-if (localStorage.css) attr();
+function populateStorage() {
+  if (this === size)
+    localStorage.setItem("font-size", size.value);
+  if (this === font)
+    localStorage.setItem("font-family", font.value);
+  if (this === clr)
+    localStorage.setItem("color", clr.value);
 
-font.onchange = changes;
-color.onchange = changes;
-size.onchange = changes;
+  setStyles();
+}
+
+function setStyles() {
+  var currentClr = localStorage.getItem("color");
+  var currentFont = localStorage.getItem("font-family");
+  var currentSize = localStorage.getItem("font-size");
+
+  test.style.cssText = `color: ${currentClr}; font-family: ${currentFont}; font-size: ${currentSize}; `;
+}
+
+function attr() {
+  // remove selected attr
+  opts.forEach((el) => {
+    el.removeAttribute("selected");
+  });
+
+  // set selected on font family
+  document
+    .querySelector(
+      `[value="${localStorage.getItem("font-family")}"]`
+    )
+    .setAttribute("selected", "");
+
+  // set selected on font size
+  document
+    .querySelector(
+      `[value="${localStorage.getItem("font-size")}"]`
+    )
+    .setAttribute("selected", "");
+
+  // set selected on color
+  document
+    .querySelector(
+      `[value="${localStorage.getItem("color")}"]`
+    )
+    .setAttribute("selected", "");
+}
+
+size.addEventListener("change", populateStorage);
+font.addEventListener("change", populateStorage);
+clr.addEventListener("change", populateStorage);

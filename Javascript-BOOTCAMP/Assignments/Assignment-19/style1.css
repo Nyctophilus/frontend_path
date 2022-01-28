@@ -21,5 +21,28 @@ select:nth-child(2) option:last-child {
 }
 
 .test-text {
-  margin-top: 30px;
+  width: 50%;
+  margin: 30px auto;
+  padding: 10px 20px;
+  border: 1px dotted;
+  border-top-color: #975896;
+  border-bottom-color: #5ec2bf;
+  border-left-color: #7679bd;
+  border-right-color: #0081cf;
+}
+
+select:nth-child(2) {
+  background: linear-gradient(
+    to right,
+    #0081cf 0%,
+    #975896 20%,
+    #7679bd 40%,
+    #5ec2bf 60%,
+    #9ceb97 80%,
+    #f9f871 100%
+  );
+}
+
+.control-panel {
+  text-align: center;
 }
