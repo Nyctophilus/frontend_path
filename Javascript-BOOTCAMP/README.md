@@ -166,17 +166,17 @@ Learnt Videos => [ 122 From 200 ]
 
 ### More Methods And New Data Types
 
-- [ ] `Soon!` - 123 - Set Data Type And Methods
-- [ ] `Soon!` - 124 - Set vs WeakSet And Garbage Collector
-- [ ] `Soon!` - 125 - Map Data Type vs Object Full Comparison
-- [ ] `Soon!` - 126 - Map Methods
-- [ ] `Soon!` - 127 - Map vs WeakMap
-- [ ] `Soon!` - 128 - Array.from Method
-- [ ] `Soon!` - 129 - Array.copyWithin Method
-- [ ] `Soon!` - 130 - Array.some Method
-- [ ] `Soon!` - 131 - Array.every Method
-- [ ] `Soon!` - 132 - Spread Syntax And Use Cases
-- [ ] `Soon!` - 133 - Section Challenge
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+) `Done!` - 123 - Set Data Type And Methods
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+) `Done!` - 124 - Set vs WeakSet And Garbage Collector
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+) `Done!` - 125 - Map Data Type vs Object Full Comparison
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+) `Done!` - 126 - Map Methods
+- [ ] `Yet` - 127 - Map vs WeakMap
+- [ ] `Yet` - 128 - Array.from Method
+- [ ] `Yet` - 129 - Array.copyWithin Method
+- [ ] `Yet` - 130 - Array.some Method
+- [ ] `Yet` - 131 - Array.every Method
+- [ ] `Yet` - 132 - Spread Syntax And Use Cases
+- [ ] `Yet` - 133 - Section Challenge
 
 ### Regular Expressions
 
