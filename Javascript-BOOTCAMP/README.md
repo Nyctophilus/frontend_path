@@ -2,9 +2,9 @@
 
 # JavaScript Bootcamp Progress
 
-Learnt Videos => [ 122 From 200 ]
+Learnt Videos => [ 133 From 200 ]
 
-![61%](https://progress-bar.dev/61/?title=Done)
+![67%](https://progress-bar.dev/67/?title=Done)
 
 ### Introduction
 
@@ -170,13 +170,13 @@ Learnt Videos => [ 122 From 200 ]
 - [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+) `Done!` - 124 - Set vs WeakSet And Garbage Collector
 - [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+) `Done!` - 125 - Map Data Type vs Object Full Comparison
 - [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+) `Done!` - 126 - Map Methods
-- [ ] `Yet` - 127 - Map vs WeakMap
-- [ ] `Yet` - 128 - Array.from Method
-- [ ] `Yet` - 129 - Array.copyWithin Method
-- [ ] `Yet` - 130 - Array.some Method
-- [ ] `Yet` - 131 - Array.every Method
-- [ ] `Yet` - 132 - Spread Syntax And Use Cases
-- [ ] `Yet` - 133 - Section Challenge
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+) `Done!` - 127 - Map vs WeakMap
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+) `Done!` - 128 - Array.from Method
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+) `Done!` - 129 - Array.copyWithin Method
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+) `Done!` - 130 - Array.some Method
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+) `Done!` - 131 - Array.every Method
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+) `Done!` - 132 - Spread Syntax And Use Cases
+- [x] ![#ff5722](https://via.placeholder.com/12/ff5722/000000?text=+) `Done!` - 133 - Section Challenge
 
 ### Regular Expressions
 
