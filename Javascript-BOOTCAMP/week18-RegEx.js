@@ -151,3 +151,91 @@ console.log(re.test(names));
 console.log(/(\bspam|spam\b)/gi.test("Osama"));
 console.log(/(\bspam|spam\b)/gi.test("1Spam"));
 console.log(/(\bspam|spam\b)/gi.test("Spam1"));
+
+/*
+  Regular Expression
+
+  Quantifiers
+  n+    => One Or More
+  n*    => zero or more
+  n?    => zero or one
+*/
+
+let mails =
+  "o@nn.sa osama@gmail.com elzero@gmail.net osama@mail.ru"; // All Emails
+// let mailsRe = /\w+@\w+.(com|net)/ig;
+let mailsRe = /\w+@\w+.\w+/gi;
+console.log(mails.match(mailsRe));
+
+let nums = "0110 10 150 05120 0560 350 00"; // 0 Numbers Or No 0
+let numsRe = /0\d*0/gi;
+console.log(nums.match(numsRe));
+
+let urls =
+  "https://google.com http://www.website.net web.com"; // http + https
+let urlsRe = /(https?:\/\/)?(www.)?\w+.\w+/gi;
+console.log(urls.match(urlsRe));
+
+/*
+  Regular Expression
+
+  Quantifiers
+  n{x}   => Number of
+  n{x,y} => Range
+  n{x,}  => At Least x
+*/
+
+let serials = "S100S S3000S S50000S S950000S";
+
+console.log(serials.match(/s\d{3}s/gi)); // S[Three Number]S
+console.log(serials.match(/s\d{4,5}s/gi)); // S[Four Or Five Number]S
+console.log(serials.match(/s\d{4,}s/gi)); // S[At Least Four]S
+
+/*
+  Regular Expression
+
+  Quantifiers
+  $  => End With Something
+  ^  => Start With Something
+  ?= => Followed By Something
+  ?! => Not Followed By Something
+*/
+
+let myString = "We Love Programming";
+let names = "1OsamaZ 2AhmedZ 3Mohammed 4MoustafaZ 5GamalZ";
+
+console.log(/ing$/gi.test(myString));
+console.log(/^we/gi.test(myString));
+console.log(/lz$/gi.test(names));
+console.log(/^\d/gi.test(names));
+
+console.log(names.match(/\d\w{5}(?=Z)/gi));
+console.log(names.match(/\d\w{8}(?!Z)/gi));
+
+/*
+  Regular Expression
+
+  - replace
+  - replaceAll
+*/
+
+let txt = "We Love Programming And @ Because @ Is Amazing";
+console.log(txt.replace("@", "JavaScript"));
+console.log(txt.replaceAll("@", "JavaScript"));
+let re = /@/gi;
+console.log(txt.replaceAll(re, "JavaScript"));
+console.log(txt.replaceAll(/@/gi, "JavaScript"));
+
+/*
+  Regular Expression
+  - Input Form Validation Practice
+*/
+
+document.getElementById("register").onsubmit = () => {
+  let phoneValue = document.getElementById("phone").value;
+  let phonePattern = /\(\d{4}\)\s\d{3}-\d{4}/g;
+
+  if (!phonePattern.test(phoneValue)) return false;
+
+  return true;
+};
