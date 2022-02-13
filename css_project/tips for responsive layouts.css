@@ -1,0 +1,20 @@
+/* 
+        ===============
+        === MindSet ===
+        ===============
+
+        before u wrote any singel line of css code it was responsive.. I have to emprase that 
+
+
+        Tips:
+
+        1- Avoid fixed sizes
+            use: em, rem .... max-width instead of width .... min-height instead of height
+
+        2- MediaQuery to add complixity .. start from mobile veiw first
+
+        3- Modern apportices like clamp(min, amount of increase by ,max)
+
+    free responsive layout course!
+    https://courses.kevinpowell.co/conquering-responsive-layouts
+        */
