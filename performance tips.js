@@ -14,8 +14,8 @@
 // ----------------------------
 // Convert the Website to ***PWA***
 // - add manifest.json
-// https://www.altexsoft.com/blog/engineering/12-techniques-of-website-speed-optimization-performance-testing-and-improvement-practices/
-// https://moz.com/learn/seo/page-speed
+// [ ] https://www.altexsoft.com/blog/engineering/12-techniques-of-website-speed-optimization-performance-testing-and-improvement-practices/
+// [ ] https://moz.com/learn/seo/page-speed
 
 // unnecessary renders
 // ex: react represnted:virtual DOM >> split the dom to components .. able to update the component u want to change only without touching the other components
