@@ -6,6 +6,8 @@
     row -> grid 12 
     col -> column
 
+    container -> with margin
+    container-fluid -> full width
 
     lg -> large screen
     md -> Meduim screen
@@ -23,4 +25,33 @@
     -clearfix
 
     clearix visible-md-block
+
+    Column Offset
+    EX: col-lg-offset-4
+
+    Column Ordering `postioning`
+    col-log-push-6
+    col-log-pull-6
+    --reset
+    col-log-pull-0
+
+    image!!!:
+    img-responsive
+
+    centering block
+    center-block
+
+ */
+
+/* 
+    ==============
+    === NavBar ===
+    ==============
+
+    navber
+    navbar-inverse  -> color black
+    navbar-fixed-top
+
+    navbar-right
+    navbar-left
  */
