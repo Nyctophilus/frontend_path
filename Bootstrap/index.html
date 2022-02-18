@@ -10,6 +10,10 @@
     <title>Bootstrap</title>
 
     <link rel="stylesheet" href="css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="css/bootstrap-override.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- html5shiv for IE identifing simantic elements -->
@@ -103,9 +107,365 @@
       <!-- /.container -->
     </nav>
 
+    <!-- carousel -->
+    <div
+      id="myswipper"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li
+          data-target="#myswipper"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#myswipper" data-slide-to="1"></li>
+        <li data-target="#myswipper" data-slide-to="2"></li>
+        <li data-target="#myswipper" data-slide-to="3"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img
+            src="https://wallpapercave.com/wp/wp7992445.jpg"
+            alt="..."
+          />
+          <div class="carousel-caption hidden-xs">
+            <h1>Web Development</h1>
+            <p class="lead">
+              Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Ad vitae voluptatibus aut
+              ullam error voluptatem accusamus odio nobis
+              ipsam, unde natus porro praesentium beatae?
+              Explicabo non deleniti eligendi quod
+              voluptatibus.
+            </p>
+            <div class="btn btn-primary">Read More</div>
+            <div class="btn btn-danger">Buy Now</div>
+          </div>
+        </div>
+        <div class="item">
+          <img
+            src="https://i.pinimg.com/originals/d5/e1/bf/d5e1bf9c7156e464f5e656b93cd5c632.jpg"
+            alt="..."
+          />
+          <div class="carousel-caption hidden-xs">
+            anime two
+          </div>
+        </div>
+
+        <div class="item">
+          <img
+            src="https://i0.wp.com/recommendmeanime.com/wp-content/uploads/2017/04/best-sites-to-find-free-anime-wallpapers.jpg?fit=816%2C459&ssl=1"
+            alt="..."
+          />
+          <div class="carousel-caption hidden-xs">
+            anime three
+          </div>
+        </div>
+
+        <div class="item">
+          <img
+            src="https://wallpaperfordesktop.com/wp-content/uploads/2021/05/Anime-Wallpaper-scaled.jpg"
+            alt="..."
+          />
+          <div class="carousel-caption hidden-xs">
+            anime four
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a
+        class="left carousel-control"
+        href="#myswipper"
+        role="button"
+        data-slide="prev"
+      >
+        <span
+          class="glyphicon glyphicon-chevron-left"
+          aria-hidden="true"
+        ></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="right carousel-control"
+        href="#myswipper"
+        role="button"
+        data-slide="next"
+      >
+        <span
+          class="glyphicon glyphicon-chevron-right"
+          aria-hidden="true"
+        ></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <!-- About section -->
+    <section class="about text-center">
+      <div class="container">
+        <h1>Meet Our New Template <span>Fayy TM.</span></h1>
+        <p class="lead">
+          Hello Let Me Introduce Our Template Fayy TM.
+          Created With All The Love With
+          <strong>Bootstrap</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features text-center">
+      <div class="container">
+        <h1>Features</h1>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="feat">
+              <span class="glyphicon glyphicon-ok"></span>
+              <h4>100% responsive</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Culpa quidem nemo vitae
+                doloremque dolorum similique inventore
+                aliquid consequatur optio animi neque
+                maxime, porro deleniti in repellendus a sed,
+                delectus magni?
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="feat">
+              <span
+                class="glyphicon glyphicon-thumbs-up"
+              ></span>
+              <h4>Freelance</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Culpa quidem nemo vitae
+                doloremque dolorum similique inventore
+                aliquid consequatur optio animi neque
+                maxime, porro deleniti in repellendus a sed,
+                delectus magni?
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="feat">
+              <span
+                class="glyphicon glyphicon-eye-open"
+              ></span>
+              <h4>Awesome Display</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Culpa quidem nemo vitae
+                doloremque dolorum similique inventore
+                aliquid consequatur optio animi neque
+                maxime, porro deleniti in repellendus a sed,
+                delectus magni?
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="feat">
+              <span
+                class="glyphicon glyphicon-pencil"
+              ></span>
+              <h4>Well Docemented</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Culpa quidem nemo vitae
+                doloremque dolorum similique inventore
+                aliquid consequatur optio animi neque
+                maxime, porro deleniti in repellendus a sed,
+                delectus magni?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials text-center">
+      <div class="container">
+        <h1>What Our Customers Say About Us</h1>
+
+        <div
+          id="test-swapper"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Sunt unde quasi illum
+                itaque nam ad voluptatibus pariatur corporis
+                quidem debitis, enim nesciunt amet mollitia
+                perferendis. Dolores tenetur optio natus
+                quaerat?
+              </p>
+              <span>Mohammed Yosry</span>
+            </div>
+            <div class="item">
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Sunt unde quasi illum
+                itaque nam ad voluptatibus pariatur corporis
+                quidem debitis, enim nesciunt amet mollitia
+                perferendis. Dolores tenetur optio natus
+                quaerat?
+              </p>
+              <span>Fayy</span>
+            </div>
+
+            <div class="item">
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Sunt unde quasi illum
+                itaque nam ad voluptatibus pariatur corporis
+                quidem debitis, enim nesciunt amet mollitia
+                perferendis. Dolores tenetur optio natus
+                quaerat?
+              </p>
+              <span>Ciri</span>
+            </div>
+
+            <div class="item">
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Sunt unde quasi illum
+                itaque nam ad voluptatibus pariatur corporis
+                quidem debitis, enim nesciunt amet mollitia
+                perferendis. Dolores tenetur optio natus
+                quaerat?
+              </p>
+              <span>Ninja</span>
+            </div>
+          </div>
+
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li
+              data-target="#test-swapper"
+              data-slide-to="0"
+              class="active"
+            >
+              <img
+                src="https://i.pinimg.com/originals/4f/34/c2/4f34c2555b66068a94a908c4df25b610.jpg"
+                alt="avatar one"
+              />
+            </li>
+            <li
+              data-target="#test-swapper"
+              data-slide-to="1"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7GHFch-T9Qg_oMVYu1FvV6OI5-O0gt9XtH6mLRqQQ2cD4tbQRhcTAaNOcdljK5p8OTGk&usqp=CAU"
+                alt="avatar two"
+              />
+            </li>
+            <li
+              data-target="#test-swapper"
+              data-slide-to="2"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkqAF65b3i6mn_AGKKs_wzwYtCFRPyT2crhcBkmcDRR9pccyGXZjDoIBBwPsjHZUPw1YY&usqp=CAU"
+                alt="avatar three"
+              />
+            </li>
+            <li
+              data-target="#test-swapper"
+              data-slide-to="3"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkNRzQrfM6dBnaycJfykwFAq7nHJj8yKYz6w&usqp=CAU"
+                alt="avatar four"
+              />
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="price_table text-center">
+      <div class="container">
+        <h1>Our Amazing Prices</h1>
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="price_box">
+              <h2 class="text-primary">Hosting</h2>
+              <p class="center-block">$40</p>
+              <ul class="list-unstyled">
+                <li>Space: 30GB</li>
+                <li>Emails: 20</li>
+                <li>lps: 2 IP</li>
+                <li>Databases: 10</li>
+                <li>Ftp Accounts: 5k</li>
+              </ul>
+              <a href="#" class="btn btn-primary"
+                >Order Now</a
+              >
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="price_box">
+              <h2 class="text-success">VPS</h2>
+              <p class="center-block">$50</p>
+              <ul class="list-unstyled">
+                <li>Space: 50GB</li>
+                <li>Emails: 30</li>
+                <li>lps: 5 IP</li>
+                <li>Databases: 20</li>
+                <li>Ftp Accounts: 10k</li>
+              </ul>
+              <a href="#" class="btn btn-success"
+                >Order Now</a
+              >
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="price_box">
+              <h2 class="text-info">Dedicated</h2>
+              <p class="center-block">$80</p>
+              <ul class="list-unstyled">
+                <li>Space: 80GB</li>
+                <li>Emails: 40</li>
+                <li>lps: 10 IP</li>
+                <li>Databases: 30</li>
+                <li>Ftp Accounts: 20k</li>
+              </ul>
+              <a href="#" class="btn btn-info">Order Now</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="price_box">
+              <h2 class="text-danger">Cloud</h2>
+              <p class="center-block">$100</p>
+              <ul class="list-unstyled">
+                <li>Space: Unlimited</li>
+                <li>Emails: 50</li>
+                <li>lps: 12 IP</li>
+                <li>Databases: 50</li>
+                <li>Ftp Accounts: 50k</li>
+              </ul>
+              <a href="#" class="btn btn-danger"
+                >Order Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- bootstrap.js -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-override.js"></script>
   </body>
 </html>

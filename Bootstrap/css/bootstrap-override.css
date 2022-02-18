@@ -1,0 +1,66 @@
+/* active link */
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: brown;
+}
+
+/* navbar link */
+.navbar-inverse .navbar-nav > li > a {
+  color: #bbb;
+}
+
+/* brand color */
+.navbar-inverse .navbar-brand {
+  color: #bbb;
+}
+.navbar-brand span {
+  color: brown;
+}
+
+/* dropdown menu */
+.dropdown-menu {
+  background-color: #101010;
+  border-top: 2px solid brown;
+  min-width: 180px;
+}
+.dropdown-menu > li > a {
+  color: #bbb;
+  padding-top: 6px;
+  transition: padding 0.5s ease;
+}
+
+.navbar-right .dropdown-menu {
+  left: 0;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color: brown;
+  color: #bbb;
+  padding-left: 30px;
+}
+
+.dropdown-menu .divider {
+  background-color: #3e0a0a;
+}
+
+/* Carousel */
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100vw;
+  max-height: 93vh;
+  margin: auto;
+}
+
+.carousel-caption {
+  bottom: 270px;
+}
+
+.carousel-indicators .active {
+  background-color: brown;
+  border-color: brown;
+}
