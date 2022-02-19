@@ -1,9 +1,20 @@
+body {
+  height: 6000px;
+}
+:root {
+  --theme-clr: brown;
+  --p-clr: #888;
+  --pad: 50px;
+  --off-bg: #eee;
+}
+
+/* About section */
 .about {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 .about .lead {
-  color: #888;
+  color: var(--p-clr);
   font-size: 25px;
   margin-top: 15px;
 }
@@ -11,14 +22,14 @@
   font-weight: bold;
 }
 .about h1 span {
-  color: brown;
+  color: var(--theme-clr);
 }
 
 /* features */
 .features {
-  background: #eee;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  background-color: var(--off-bg);
+  padding-top: var(--pad);
+  padding-bottom: var(--pad);
 }
 .features .feat {
   margin-bottom: 30px;
@@ -27,18 +38,18 @@
   line-height: 2em;
 }
 .features h1 {
-  margin-bottom: 50px;
+  margin-bottom: var(--pad);
 }
 .features .feat span.glyphicon {
   font-size: 32px;
   margin-bottom: 10px;
-  color: brown;
+  color: var(--theme-clr);
 }
 
 /* Testimonials */
 .testimonials {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: var(--pad);
+  padding-bottom: var(--pad);
 }
 .testimonials h1 {
   font-weight: bold;
@@ -49,7 +60,7 @@
 .testimonials span {
   font-size: 18px;
   font-weight: bold;
-  color: brown;
+  color: var(--theme-clr);
 }
 
 .testimonials .carousel-inner {
@@ -85,7 +96,7 @@
 
 /* table prices */
 .price_table {
-  background: #eee;
+  background: var(--off-bg);
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -123,4 +134,129 @@
 }
 .price_table .price_box a {
   margin-bottom: 5px;
+}
+
+/* Team */
+
+.our_team {
+  background-image: url(https://media.giphy.com/media/100PgquHm9j3sQ/giphy.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+  padding-top: var(--pad);
+  padding-bottom: var(--pad);
+  position: relative;
+}
+.our_team::before,
+.stats::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(3, 3, 3, 0.8);
+  z-index: 1;
+}
+.our_team .container,
+.stats .container {
+  z-index: 2;
+  color: #b6b5b5;
+  position: relative;
+}
+
+.our_team h1 {
+  margin-bottom: var(--pad);
+}
+
+.our_team .person {
+  margin-bottom: var(--pad);
+}
+.our_team .person img {
+  width: 200px;
+  height: 200px;
+}
+.our_team .person i {
+  margin-left: 10px;
+}
+
+/* Subscribe */
+.subscribe {
+  padding-top: var(--pad);
+  padding-bottom: var(--pad);
+  background-color: var(--off-bg);
+}
+.subscribe h1 {
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: var(--p-clr);
+}
+
+.subscribe p {
+  margin-bottom: 30px;
+}
+
+.subscribe .form-control {
+  margin-right: -10px;
+}
+.subscribe button {
+  border-radius: 0;
+}
+
+/* Statistics */
+
+.stats {
+  min-height: 300px;
+  background-image: url(https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: cover;
+  background-position: fixed;
+  position: relative;
+
+  padding-top: var(--pad);
+  padding-bottom: var(--pad);
+}
+
+.stats .stat {
+  margin-bottom: 30px;
+  transition: all 0.5s ease-in-out;
+}
+.stats .stat:hover {
+  color: white;
+}
+
+.stats h1 {
+  margin-bottom: var(--pad);
+}
+.stats i {
+  font-size: 60px;
+}
+
+.stats p {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.stats span {
+  font-size: 18px;
+}
+
+/* Skills */
+.our-skills {
+  padding-top: var(--pad);
+  padding-bottom: var(--pad);
+}
+
+.our-skills h1 {
+  margin-bottom: var(--pad);
+}
+
+.our-skills h2 {
+  margin-top: 0;
+}
+
+.our-skills .progress {
+  height: 30px;
+}
+.our-skills .progress-bar {
+  line-height: 30px;
 }

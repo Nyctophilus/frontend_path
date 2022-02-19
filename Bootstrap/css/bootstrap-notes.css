@@ -26,7 +26,7 @@
 
     clearix visible-md-block
 
-    Column Offset
+    Column Offset --> left margin 
     EX: col-lg-offset-4
 
     Column Ordering `postioning`
@@ -37,6 +37,7 @@
 
     image!!!:
     img-responsive
+    img-circle
 
     centering block
     center-block
@@ -54,4 +55,33 @@
 
     navbar-right
     navbar-left
+
+
+    *****
+    reset
+    list-unstyled
+
+
+
+    ---------------------------------
+    ============
+    === Form ===
+    ============
+
+    form: form-inline
+    input: form-control 
+    input size: input-lg
+
+    buttons: btn btn-danger btn-lg
+
+
+
+    -------------------------------------
+    ================
+    === Progress ===
+    ================
+
+    progress
+    progress-bar progress-bar-success 
+    progress-bar progress-bar-success progress-bar-striped active
  */
