@@ -57,7 +57,8 @@
 }
 
 .carousel-caption {
-  bottom: 270px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .carousel-indicators .active {
