@@ -41,11 +41,11 @@ $(".color-option ul li").click(function () {
 
 // loading screen
 window.onload = () => {
-  document.body.style.overflow = `auto`;
   setTimeout(() => {
     document.querySelector(
       ".loading-overlay .lds-ripple"
     ).style.opacity = 0;
+    document.body.style.overflow = `auto`;
 
     setTimeout(() => {
       document.querySelector(
@@ -58,3 +58,17 @@ window.onload = () => {
     }, 1000);
   }, 1000);
 };
+
+// scroll-up btn
+let scrollBtn = $("#scroll-top");
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 700) {
+    scrollBtn.show();
+  } else scrollBtn.hide();
+
+  // console.log($(this).scrollTop());
+});
+
+scrollBtn.click(function () {
+  $("html,body").animate({ scrollTop: 0 }, 600);
+});

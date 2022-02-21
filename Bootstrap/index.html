@@ -9,6 +9,24 @@
     />
     <title>Design One | Bootstrap</title>
 
+    <!-- Animate.css ...for Wow.js-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Hover.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
+      integrity="sha512-SJw7jzjMYJhsEnN/BuxTWXkezA2cRanuB8TdCNMXFJjxG9ZGSKOX5P3j03H6kdMxalKHZ7vlBMB4CagFP/de0A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- Google fonts -->
     <link
       rel="preconnect"
@@ -102,7 +120,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"
+          <a class="navbar-brand hvr-buzz" href="#"
             >Fayy <span>TM</span></a
           >
         </div>
@@ -286,7 +304,13 @@
     </div>
 
     <!-- About section -->
-    <section class="about text-center">
+    <section
+      class="about text-center wow animate__bounceIn"
+      data-wow-duration="2s"
+      data-wow-delay="0s"
+      data-wow-offset="300"
+      data-wow-iteration="1"
+    >
       <div class="container">
         <h1>Meet Our New Template <span>Fayy TM.</span></h1>
         <p class="lead">
@@ -300,11 +324,15 @@
     <!-- Features Section -->
     <section class="features text-center">
       <div class="container">
-        <h1>Features</h1>
+        <h2 class="h1">Features</h2>
 
         <div class="row">
           <div class="col-lg-3 col-md-6">
-            <div class="feat">
+            <div
+              class="feat wow animate__swing"
+              data-wow-offset="300"
+              data-wow-duration="2s"
+            >
               <span class="glyphicon glyphicon-ok"></span>
               <h4>100% responsive</h4>
               <p>
@@ -318,7 +346,11 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
-            <div class="feat">
+            <div
+              class="feat wow animate__rubberBand"
+              data-wow-offset="300"
+              data-wow-duration="2s"
+            >
               <span
                 class="glyphicon glyphicon-thumbs-up"
               ></span>
@@ -334,7 +366,11 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
-            <div class="feat">
+            <div
+              class="feat wow animate__jello"
+              data-wow-offset="300"
+              data-wow-duration="2s"
+            >
               <span
                 class="glyphicon glyphicon-eye-open"
               ></span>
@@ -350,7 +386,11 @@
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
-            <div class="feat">
+            <div
+              class="feat wow animate__heartBeat"
+              data-wow-offset="300"
+              data-wow-duration="2s"
+            >
               <span
                 class="glyphicon glyphicon-pencil"
               ></span>
@@ -370,9 +410,13 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials text-center">
+    <section
+      class="testimonials text-center wow animate__flipInY"
+      data-wow-offset="500"
+      data-wow-duration="1s"
+    >
       <div class="container">
-        <h1>What Our Customers Say About Us</h1>
+        <h2 class="h1">What Our Customers Say About Us</h2>
 
         <div
           id="test-swapper"
@@ -476,10 +520,14 @@
     <!-- Prices -->
     <section class="price_table text-center">
       <div class="container">
-        <h1>Our Amazing Prices</h1>
+        <h2 class="h1">Our Amazing Prices</h2>
         <div class="row">
           <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="price_box">
+            <div
+              class="price_box wow animate__fadeInUp"
+              data-wow-offset="500"
+              data-wow-duration="1s"
+            >
               <h2 class="text-primary">Hosting</h2>
               <p class="center-block">$40</p>
               <ul class="list-unstyled">
@@ -494,8 +542,13 @@
               >
             </div>
           </div>
+
           <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="price_box">
+            <div
+              class="price_box wow animate__fadeInDown"
+              data-wow-offset="500"
+              data-wow-duration="1s"
+            >
               <h2 class="text-success">VPS</h2>
               <p class="center-block">$50</p>
               <ul class="list-unstyled">
@@ -510,8 +563,13 @@
               >
             </div>
           </div>
+
           <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="price_box">
+            <div
+              class="price_box wow animate__fadeInUp"
+              data-wow-offset="500"
+              data-wow-duration="1s"
+            >
               <h2 class="text-info">Dedicated</h2>
               <p class="center-block">$80</p>
               <ul class="list-unstyled">
@@ -524,8 +582,13 @@
               <a href="#" class="btn btn-info">Order Now</a>
             </div>
           </div>
+
           <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="price_box">
+            <div
+              class="price_box wow animate__fadeInDown"
+              data-wow-offset="500"
+              data-wow-duration="1s"
+            >
               <h2 class="text-danger">Cloud</h2>
               <p class="center-block">$100</p>
               <ul class="list-unstyled">
@@ -547,11 +610,15 @@
     <!-- Team -->
     <section class="our_team text-center">
       <div class="container">
-        <h1>Meet Our Awesome Team</h1>
+        <h2 class="h1">Meet Our Awesome Team</h2>
 
         <div class="row">
           <div class="col-lg-3 col-sm-6">
-            <div class="person">
+            <div
+              class="person wow animate__pulse"
+              data-wow-offset="300"
+              data-wow-duration="1s"
+            >
               <img
                 class="img-circle"
                 src="https://avatars.githubusercontent.com/u/92796091?v=4"
@@ -569,7 +636,12 @@
             </div>
           </div>
           <div class="col-lg-3 col-sm-6">
-            <div class="person">
+            <div
+              class="person wow animate__pulse"
+              data-wow-offset="300"
+              data-wow-duration="1s"
+            >
+              >
               <img
                 class="img-circle"
                 src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY2MzU3OTcxMTUwODQxNTM1/steve-jobs--david-paul-morrisbloomberg-via-getty-images.jpg"
@@ -587,7 +659,12 @@
             </div>
           </div>
           <div class="col-lg-3 col-sm-6">
-            <div class="person">
+            <div
+              class="person wow animate__pulse"
+              data-wow-offset="300"
+              data-wow-duration="1s"
+            >
+              >
               <img
                 class="img-circle"
                 src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Brendan_Eich_Mozilla_Foundation_official_photo.jpg"
@@ -605,7 +682,12 @@
             </div>
           </div>
           <div class="col-lg-3 col-sm-6">
-            <div class="person">
+            <div
+              class="person wow animate__pulse"
+              data-wow-offset="300"
+              data-wow-duration="1s"
+            >
+              >
               <img
                 class="img-circle"
                 src="https://static01.nyt.com/images/2021/06/25/opinion/25Khan2/25Khan2-superJumbo-v4.jpg"
@@ -629,7 +711,7 @@
     <!-- Subscribe -->
     <section class="subscribe text-center">
       <div class="container">
-        <h1>Keep In Touch</h1>
+        <h2 class="h1">Keep In Touch</h2>
         <p class="lead">
           Sign up for newsletter. Don't worry about spam, We
           hate it too!
@@ -641,7 +723,9 @@
             class="form-control input-lg"
             placeholder="Write Your Email"
           />
-          <button class="btn btn-danger btn-lg">
+          <button
+            class="btn btn-danger btn-lg hvr-float-shadow"
+          >
             <i class="glyphicon glyphicon-edit"></i>
             Subscribe
           </button>
@@ -652,7 +736,7 @@
     <!-- Statistics -->
     <section class="stats text-center">
       <div class="container">
-        <h1>Our Statistics</h1>
+        <h2 class="h1">Our Statistics</h2>
 
         <div class="row">
           <div class="col-md-3 col-sm-6">
@@ -690,7 +774,7 @@
     <!-- Skills -->
     <section class="our-skills">
       <div class="container">
-        <h1 class="text-center">Our Skills</h1>
+        <h2 class="h1 text-center">Our Skills</h2>
 
         <div class="row">
           <div class="col-md-5">
@@ -778,11 +862,15 @@
     <section class="contact-us text-center">
       <div class="container">
         <i class="glyphicon glyphicon-headphones"></i>
-        <h1>Tell Us What You Feel</h1>
+        <h2 class="h1">Tell Us What You Feel</h2>
         <p class="lead">Feel Free To Contact Us Anytime</p>
 
-        <form role="form">
-          <div class="col-md-6">
+        <form>
+          <div
+            class="col-md-6 wow animate__bounceInLeft"
+            data-wow-offset="300"
+            data-wow-duration="2s"
+          >
             <div class="form-group">
               <input
                 type="text"
@@ -805,7 +893,11 @@
               />
             </div>
           </div>
-          <div class="col-md-6">
+          <div
+            class="col-md-6 wow animate__bounceInRight"
+            data-wow-offset="300"
+            data-wow-duration="2s"
+          >
             <div class="form-group">
               <textarea
                 class="form-control input-lg"
@@ -824,13 +916,16 @@
     </section>
 
     <!-- Our Clients -->
-    <section class="our-clients">
+    <div class="our-clients">
       <div class="container">
         <div class="row">
           <ul class="list-unstyled">
             <li class="col-xs-2">
               <img
-                class="img-responsive center-block"
+                class="img-responsive center-block wow animate__bounceIn"
+                data-wow-offset="200"
+                data-wow-duration=".5s"
+                data-wow-delay=".5s"
                 src="http://assets.stickpng.com/images/5842ab62a6515b1e0ad75b09.png"
                 alt="BBC logo"
               />
@@ -838,15 +933,21 @@
 
             <li class="col-xs-2">
               <img
-                class="img-responsive center-block"
-                src="http://assets.stickpng.com/images/5842ab75a6515b1e0ad75b0b.png"
+                class="img-responsive center-block wow animate__bounceIn"
+                data-wow-offset="200"
+                data-wow-duration=".5s"
+                data-wow-delay="1s"
+                src="https://external-preview.redd.it/rM3Y_e_9upnfHnj2gP5lCNafLIXvmYLvNescGXI-8E0.jpg?auto=webp&s=f7c28b717e050ea8bca3baf4669a48977c4dcb98"
                 alt="BBC logo"
               />
             </li>
 
             <li class="col-xs-2">
               <img
-                class="img-responsive center-block"
+                class="img-responsive center-block wow animate__bounceIn"
+                data-wow-offset="200"
+                data-wow-duration=".5s"
+                data-wow-delay="1.5s"
                 src="https://images-platform.99static.com/4htou35_63ej1iGG5mKwCyLL1ZI=/288x3:1763x1478/500x500/top/smart/99designs-contests-attachments/72/72573/attachment_72573259"
                 alt="BBC logo"
               />
@@ -854,7 +955,10 @@
 
             <li class="col-xs-2">
               <img
-                class="img-responsive center-block"
+                class="img-responsive center-block wow animate__bounceIn"
+                data-wow-offset="200"
+                data-wow-duration=".5s"
+                data-wow-delay="2s"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Wired_logo.svg/1280px-Wired_logo.svg.png"
                 alt="BBC logo"
               />
@@ -862,7 +966,10 @@
 
             <li class="col-xs-2">
               <img
-                class="img-responsive center-block"
+                class="img-responsive center-block wow animate__bounceIn"
+                data-wow-offset="200"
+                data-wow-duration=".5s"
+                data-wow-delay="2.5s"
                 src="https://www.pngkey.com/png/full/155-1550175_wall-street-journal-logo-png-wsj-logo-transparent.png"
                 alt="BBC logo"
               />
@@ -870,7 +977,10 @@
 
             <li class="col-xs-2">
               <img
-                class="img-responsive center-block"
+                class="img-responsive center-block wow animate__bounceIn"
+                data-wow-offset="200"
+                data-wow-duration=".5s"
+                data-wow-delay="3s"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/TechRadar_logo.svg/1200px-TechRadar_logo.svg.png"
                 alt="BBC logo"
               />
@@ -878,7 +988,7 @@
           </ul>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -1027,12 +1137,28 @@
     </footer>
 
     <!-- Loading Section -->
-    <section class="loading-overlay">
+    <!-- <section class="loading-overlay">
       <div class="lds-ripple fade">
         <div></div>
         <div></div>
       </div>
+    </section> -->
+
+    <!-- Scroll to Top button -->
+    <section id="scroll-top">
+      <i class="glyphicon glyphicon-chevron-up"></i>
     </section>
+
+    <!-- Wow.js ...show elements on reach -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+      integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      new WOW().init();
+    </script>
 
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
