@@ -5,6 +5,9 @@
   --off-bg: #eee;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   /* overflow: hidden; */
   transition: opacity 1s;
@@ -394,8 +397,7 @@ footer .copyright span {
 
 /* Loading Section */
 .loading-overlay {
-  background-color: #d8d7d7;
-  color: #fff;
+  background-color: white;
   position: fixed;
   left: 0;
   top: 0;
@@ -423,7 +425,7 @@ footer .copyright span {
 
 .lds-ripple div {
   position: absolute;
-  border: 4px solid #fff;
+  border: 4px solid var(--theme-clr);
   opacity: 1;
   border-radius: 50%;
   animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1)

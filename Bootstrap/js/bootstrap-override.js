@@ -1,3 +1,8 @@
+let themeClr;
+
+// active nice scroll plugin
+
+// carousel
 $(".carousel").carousel({
   interval: 6000,
 });
@@ -36,6 +41,7 @@ $(".color-option ul li").click(function () {
     $(this).attr("data-value")
   );
 
+  themeClr = $(this).attr("data-value");
   // console.log($(this).attr("data-value"));
 });
 

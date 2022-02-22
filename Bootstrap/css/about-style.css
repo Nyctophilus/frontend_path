@@ -1,0 +1,56 @@
+/* Global */
+i {
+  font-size: 45px;
+}
+
+img {
+  width: 100%;
+}
+
+/* About-us intro */
+.about-us {
+  padding: 70px 0;
+}
+.about-us h1 {
+  font-family: "Shizuru", cursive;
+  letter-spacing: -3px;
+  font-size: 60px;
+}
+.about-us hr {
+  width: 50%;
+}
+.about-us p {
+  width: 70%;
+  margin: auto;
+}
+.about-us img {
+  height: 30vh;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+/* About Features */
+.about-features {
+  padding: 0 0 70px;
+}
+
+.about-features h3 {
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+.about-features p {
+  margin-bottom: 15px;
+}
+
+/* CEO */
+.about-ceo {
+  background-color: #eee;
+  padding: 20px;
+}
+.about-ceo .h1 {
+  margin-top: 0;
+}
+.about-ceo .btn-primary {
+  background-color: #333;
+  border-color: #333;
+}
