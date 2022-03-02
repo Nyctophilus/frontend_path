@@ -7,6 +7,9 @@
 // import colors
 @import "./sass/variables/colors";
 
+// import helper mixins
+@import "./sass/helpers/mixins";
+
 header {
   background-color: $main-clr;
   color: $alt-clr;
@@ -29,10 +32,9 @@ $max-mobile: "max-width: 767px";
   }
 }
 
-/*
-    Nesting And Parent Element
-        --Pros: we do one combat block of code for parent 
-*/
+// Nesting And Parent Element
+// --Pros: we do one combat block of code for parent
+
 .parent {
   font-weight: bolder;
   .child {
@@ -98,4 +100,160 @@ $max-mobile: "max-width: 767px";
   [dir="rtl"] & {
     direction: rtl;
   }
+}
+
+// *********** Property Declarations And Placeholder
+
+.property {
+  background: {
+    image: url(google.com);
+    attachment: fixed;
+  }
+  font: {
+    weight: bold;
+  }
+}
+
+// placeholder class wont show in the actual main.css
+%placeholder {
+  background-color: #eee;
+  padding: 15px;
+  color: $main-clr;
+}
+
+article {
+  @extend %placeholder;
+  @extend .property;
+  font-size: 23px;
+}
+section {
+  margin: auto;
+  @extend %placeholder;
+}
+
+//  Control Flow ==> If And Else
+
+$theme: "light";
+
+.page {
+  @if ($theme == "light") {
+    background-color: $alt-clr;
+    color: rgb(116, 116, 116);
+  } @else {
+    background-color: black;
+    color: white;
+  }
+}
+
+$rounded: true;
+
+.circle {
+  border-radius: if($rounded, 50%, null);
+}
+
+.centtt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// **********************************************************
+// Create Triangle With If And Else
+
+$dirr: "left";
+
+.arrow-div {
+  @extend %placeholder, .centtt;
+  font-weight: bold;
+  font-size: 20px;
+  width: fit-content;
+  margin: 10% auto;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    border: 10px solid transparent;
+
+    @if $dirr == "top" {
+      border-bottom-color: $main-clr;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+    } @else if $dirr == "bottom" {
+      border-top-color: $main-clr;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+    } @else if $dirr == "right" {
+      border-left-color: $main-clr;
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+    } @else if $dirr == "left" {
+      border-right-color: $main-clr;
+      left: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+    } @else {
+      @error "This direction #{$dirr}is not valid";
+    }
+  }
+}
+
+// **********************************************************
+// Interpolation
+
+$company: "Fayy";
+$position: "top";
+
+.ads-#{$company} {
+  background-image: url("imgs/#{$company}.png");
+  #{$position}: 0;
+}
+
+.user-#{unique-id()} {
+  color: plum;
+}
+
+// **********************************************************
+// Comments
+
+// This comment wont be shown in the css file
+
+/* This one will be shown in the css file but not in the compressed one*/
+
+/*! This one will be shown in the css file but not in the compressed one*/
+
+/* you can use interpolation in the comment  ==> #{$company}*/
+
+/// Documenting
+
+/// Function To Do shit
+///
+/// @param {num}
+/// Number of customers
+/// @return {int}
+
+// **********************************************************
+// Mixin And Include
+
+ul.links {
+  @include list-reset;
+}
+
+.circle-100 {
+  @include circle(100px);
+  background-color: red;
+  color: white;
+}
+
+.circle-200 {
+  @include circle(200px);
+  background-color: red;
+  color: white;
+}
+
+.center-circle {
+  @include centering;
+  @include circle(400px);
 }

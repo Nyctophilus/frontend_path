@@ -7,3 +7,54 @@
         Folder: layout --> global rulers
                 pages  --> ..
 */
+
+/*
+    nesting
+    .parent{
+        .child{...}
+        >{...}
+        +{...}
+    }
+*/
+
+/*
+    refer to parent:
+    .parent{
+        ${...}    
+    }
+*/
+
+/*
+    Property Declarations:
+    .property {
+        ...
+        background: {
+            ...
+        }
+    }
+*/
+
+/*
+    placeholder class wont show in the actual css main file
+    %placeholder {
+        ...
+    }
+
+    extends a placeholder inside a class:
+    article {
+        @extend %placeholder;
+    }
+*/
+
+/* 
+    Control Flow ==> If And Else
+
+    for class:
+    .page {
+    @if ($theme == "light") 
+     @else
+    }
+
+    in single propery:
+    if($rounded, 50%, null);
+*/
