@@ -1,0 +1,101 @@
+// import global rulers ... will be replace @use in newer versions
+@import "./sass/layout/global-rulers";
+
+// import pages
+@import "./sass/pages/contact";
+
+// import colors
+@import "./sass/variables/colors";
+
+header {
+  background-color: $main-clr;
+  color: $alt-clr;
+}
+
+footer {
+  $alt-clr: lightblue !global;
+  background-color: $alt-clr;
+}
+
+.copyright {
+  color: $alt-clr;
+}
+
+$max-mobile: "max-width: 767px";
+
+@media ($max-mobile) {
+  .sidebar {
+    padding: 0.5rem;
+  }
+}
+
+/*
+    Nesting And Parent Element
+        --Pros: we do one combat block of code for parent 
+*/
+.parent {
+  font-weight: bolder;
+  .child {
+    color: $main-clr;
+    .grand-child {
+      background-color: $alt-clr;
+    }
+  }
+}
+
+.parent-one,
+.parent-two {
+  padding: $padd;
+  .child {
+    padding: $padd / 2;
+  }
+}
+
+// Direct Child .... .parent > div
+
+.parent > {
+  .child {
+    font-size: 2px;
+  }
+  .text {
+    font-size: 20px;
+  }
+}
+
+.parent {
+  > {
+    .child {
+      font-size: 2px;
+    }
+    .child-2 {
+      font-size: 2px;
+    }
+  }
+  .text {
+    font-size: 20px;
+  }
+  + p {
+    color: $main-clr;
+  }
+}
+
+.box {
+  .tile {
+    color: blue;
+  }
+  .desc {
+    font-weight: bold;
+  }
+  // refer to the parent itself
+  //   .box.red
+  &.red {
+    color: red;
+  }
+  &:hover {
+    background-color: #0ed10e;
+  }
+
+  [dir="rtl"] & {
+    direction: rtl;
+  }
+}
