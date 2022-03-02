@@ -2,9 +2,9 @@
 
 # JavaScript Bootcamp Progress
 
-Learnt Videos => [ 133 From 200 ]
+Learnt Videos => [ 146 From 200 ]
 
-![67%](https://progress-bar.dev/67/?title=Done)
+![73%](https://progress-bar.dev/73/?title=Done)
 
 ### Introduction
 
@@ -180,19 +180,19 @@ Learnt Videos => [ 133 From 200 ]
 
 ### Regular Expressions
 
-- [ ] 134 - Intro And What Is Regular Expression ?
-- [ ] 135 - RegExp Modifiers
-- [ ] 136 - RegExp Ranges Part 1
-- [ ] 137 - RegExp Ranges Part 2
-- [ ] 138 - RegExp Character Classes Part 1
-- [ ] 139 - RegExp Character Classes Part 2
-- [ ] 140 - RegExp Quantifiers Part 1
-- [ ] 141 - RegExp Quantifiers Part 2
-- [ ] 142 - RegExp Quantifiers Part 3
-- [ ] 143 - Replace With The RegExp Pattern
-- [ ] 144 - Form Validation Practice
-- [ ] 145 - Test Your RegExp And Discussions
-- [ ] 146 - RegExp Challenge
+- [x] 134 - Intro And What Is Regular Expression ?
+- [x] 135 - RegExp Modifiers
+- [x] 136 - RegExp Ranges Part 1
+- [x] 137 - RegExp Ranges Part 2
+- [x] 138 - RegExp Character Classes Part 1
+- [x] 139 - RegExp Character Classes Part 2
+- [x] 140 - RegExp Quantifiers Part 1
+- [x] 141 - RegExp Quantifiers Part 2
+- [x] 142 - RegExp Quantifiers Part 3
+- [x] 143 - Replace With The RegExp Pattern
+- [x] 144 - Form Validation Practice
+- [x] 145 - Test Your RegExp And Discussions
+- [x] 146 - RegExp Challenge
 
 ### Generators And Modules
 
