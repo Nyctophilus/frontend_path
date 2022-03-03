@@ -1,0 +1,110 @@
+/* part1 */
+
+$main: "school";
+$child: "box";
+$language: "ar";
+$gap: 20px;
+
+.#{$main} {
+  padding: $gap;
+  @if ($language == "en") {
+    direction: ltr;
+  } @else if($language == "ar") {
+    direction: rtl;
+  }
+  margin-left: $gap;
+}
+
+.#{$main} .#{$main}-#{$child} {
+  padding: $gap / 2;
+}
+
+.#{$main}:hover .#{$main}-#{$child} {
+  background-color: #eee;
+}
+
+// *********************************************
+/*  part2 */
+
+.content {
+  > .box {
+    padding: 15px;
+    > .title {
+      font-size: 18px;
+    }
+  }
+  .cat {
+    padding: 15px;
+  }
+  &.premium {
+    &::before {
+      content: "Premium Box";
+    }
+    &:hover {
+      background-color: #eee;
+    }
+  }
+}
+
+// *********************************************
+/* part3 */
+
+.class > .child {
+  padding: 10px;
+}
+
+.class > {
+  .child {
+    padding: 10px;
+  }
+}
+
+.class {
+  > .child {
+    padding: 10px;
+  }
+}
+
+// *********************************************
+/* part4 */
+
+.class {
+  font: {
+    weight: bold;
+    size: 20px;
+  }
+}
+
+.class {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+// *********************************************
+/* part5 */
+
+/*
+.parent + .sibling {
+  margin: auto;
+  margin-top: 10px;
+}
+
+.parent + .sibling  ~ .last {
+  padding: 10px;
+}
+*/
+
+.parent {
+  // refer to .sibling +Next to .parent
+  & + .sibling {
+    //   margin auto and nesting attributes yet
+    margin: auto {
+      // top which nested from margin
+      top: 10px;
+    }
+    // .last which sibiling~ to .parent+.siblings
+    & ~ .last {
+      padding: 10px;
+    }
+  }
+}

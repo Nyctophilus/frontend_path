@@ -1,7 +1,28 @@
 @mixin list-reset {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+@mixin button-reset {
+  button {
+    background-color: transparent;
+  }
+}
+
+@mixin a-reset {
+  a {
+    color: unset;
+    font-style: unset;
+  }
+}
+
+@mixin reset-all {
+  @include list-reset();
+  @include button-reset();
+  @include a-reset();
 }
 
 @mixin circle($dimensions) {
@@ -13,4 +34,48 @@
 @mixin centering {
   display: grid;
   place-items: center;
+}
+
+@mixin section-overlay($color, $opacity) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color, $opacity);
+}
+
+// add animations prefixes
+@mixin keyF($anim-name) {
+  @-webkit-keyframes #{$anim-name} {
+    @content;
+  }
+  @keyframes #{$anim-name} {
+    @content;
+  }
+}
+
+// Gird system >> Media Queries Mixin
+@mixin breakpoints($point) {
+  @if $point == "mobile" {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $point == "small" {
+    @media (min-width: 577px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == "medium" {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $point == "large" {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == "xlarge" {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
 }

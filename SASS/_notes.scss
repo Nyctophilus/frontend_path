@@ -1,7 +1,7 @@
 /*
     _ before file name to ignore compiling it. then include at main only... 
 
-    @import .....> @use                   ..will be replaced @use in newer versions
+    @import .....> @use .... as *                   ..will be replaced @use in newer versions
 
     Advanced Structure 
         Folder: layout --> global rulers
@@ -57,4 +57,47 @@
 
     in single propery:
     if($rounded, 50%, null);
+*/
+
+/*
+    mixins
+        @mixin name($.)  {..  $.   ..}
+
+        @mixin name($.)  {
+            @content;
+        }
+
+        then u can include it anywhere
+
+*/
+
+/*
+    Loop => For
+
+        @for $i from 1 to/through 10 {...} 
+*/
+
+/*
+    Each 
+        @each $ in $ {}
+
+
+    Each in Maps
+        $map: ();
+
+        @each $var in $map {...}
+*/
+
+/*
+    Loop - While
+
+    while condition {..}
+*/
+
+/*
+    function
+
+    @function name($){
+        @return $.... ;
+    }
 */

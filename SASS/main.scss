@@ -10,6 +10,9 @@
 // import helper mixins
 @import "./sass/helpers/mixins";
 
+// import functions from helper folder
+@import "./sass/helpers/functions";
+
 header {
   background-color: $main-clr;
   color: $alt-clr;
@@ -257,3 +260,134 @@ ul.links {
   @include centering;
   @include circle(400px);
 }
+
+// **********************************************************
+// Loop => For
+
+@for $i from 1 through 10 {
+  .class-#{$i} {
+    font-size: #{$i + 10px};
+  }
+}
+
+$dimension: 0;
+
+@for $i from 1 through 10 {
+  .class-#{$dimension + 100} {
+    height: $dimension + 100;
+    width: $dimension + 100;
+    @extend .circle;
+  }
+
+  $dimension: $dimension + 100;
+}
+
+// **********************************************************
+// Each + Maps
+
+$themes: red, green, blue, orange;
+
+@each $theme in $themes {
+  .#{$theme}-theme {
+    .product {
+      background-color: white;
+      border-bottom: 2px solid $theme;
+      .title {
+        color: $theme;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+$socials: (
+  "facebook": blue,
+  "youtube": red,
+  "github": black,
+  "twitter": indianred,
+);
+
+@each $name, $color in $socials {
+  .#{$name} {
+    color: $color;
+  }
+}
+
+$classes: "one" 25px pink, "two" 15px yellow,
+  "three" 18px black;
+
+@each $class, $font, $clr in $classes {
+  .#{$class} {
+    font-size: $font;
+    color: $clr;
+  }
+}
+
+// **********************************************************
+/* Loop - While */
+
+$start: 1;
+
+@while $start <= 10 {
+  .width-#{$start}00 {
+    width: $start * 100px;
+    height: $start * 50;
+  }
+  $start: $start + 1;
+}
+
+// **********************************************************
+/* Create Bootstrap Grid System */
+
+$grid-cols: 12;
+
+@for $i from 1 through $grid-cols {
+  .col-#{$i} {
+    width: percentage($i / $grid-cols);
+  }
+}
+
+// **********************************************************
+/* Function */
+
+$size: 200px;
+
+.element {
+  width: $size;
+  height: half($size);
+  top: calculate(200px, 12px, 215px);
+}
+
+// **********************************************************
+/*  Practice Mixin With Content */
+
+$overlay-clr: pink;
+
+.#{$overlay-clr}-overlay {
+  @include section-overlay($overlay-clr, 0.3);
+}
+
+@include keyF(fade-in) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@include keyF(go-up) {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 100px;
+  }
+}
+
+.media {
+  @include breakpoints(small) {
+    font-size: 0.5rem;
+  }
+}
+@include reset-all;

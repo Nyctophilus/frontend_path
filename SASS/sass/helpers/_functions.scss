@@ -1,0 +1,22 @@
+/// Function to get half the given number
+/// @param {num}
+///
+/// The given 'num' is the number required to execute the Function on!
+///
+/// @return {int}
+///
+/// returning the number divided by 2
+
+@function half($x) {
+  @return $x / 2;
+}
+
+// getting top position of element based on elements' height in px
+
+@function calculate($elements...) {
+  $total: 0;
+  @each $element in $elements {
+    $total: $element + $total;
+  }
+  @return $total / 2;
+}
