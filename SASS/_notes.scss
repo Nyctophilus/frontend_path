@@ -8,8 +8,7 @@
                 pages  --> ..
 */
 
-/*
-    nesting
+/*      nesting
     .parent{
         .child{...}
         >{...}
@@ -17,15 +16,13 @@
     }
 */
 
-/*
-    refer to parent:
+/*      refer to parent:
     .parent{
         ${...}    
     }
 */
 
-/*
-    Property Declarations:
+/*      Property Declarations:
     .property {
         ...
         background: {
@@ -34,7 +31,7 @@
     }
 */
 
-/*
+/*      placeholder
     placeholder class wont show in the actual css main file
     %placeholder {
         ...
@@ -46,8 +43,7 @@
     }
 */
 
-/* 
-    Control Flow ==> If And Else
+/*      Control Flow ==> If And Else
 
     for class:
     .page {
@@ -59,8 +55,7 @@
     if($rounded, 50%, null);
 */
 
-/*
-    mixins
+/*      mixins
         @mixin name($.)  {..  $.   ..}
 
         @mixin name($.)  {
@@ -71,14 +66,12 @@
 
 */
 
-/*
-    Loop => For
+/*      Loop => For
 
         @for $i from 1 to/through 10 {...} 
 */
 
-/*
-    Each 
+/*      Each 
         @each $ in $ {}
 
 
@@ -88,14 +81,12 @@
         @each $var in $map {...}
 */
 
-/*
-    Loop - While
+/*      Loop - While
 
     while condition {..}
 */
 
-/*
-    function
+/*      function
 
     @function name($){
         @return $.... ;
