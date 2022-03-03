@@ -36,17 +36,24 @@
   place-items: center;
 }
 
+// Overlay
 @mixin section-overlay($color, $opacity) {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba($color, $opacity);
+  & {
+    position: relative;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color, $opacity);
+  }
 }
 
 // add animations prefixes
-@mixin keyF($anim-name) {
+@mixin animationPrefixer($anim-name) {
   @-webkit-keyframes #{$anim-name} {
     @content;
   }
@@ -61,16 +68,40 @@
     @media (max-width: 576px) {
       @content;
     }
+  } @else if $point == "min-small" {
+    @media (min-width: 577px) {
+      @content;
+    }
   } @else if $point == "small" {
     @media (min-width: 577px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == "max-small" {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == "min-medium" {
+    @media (min-width: 768px) {
       @content;
     }
   } @else if $point == "medium" {
     @media (min-width: 768px) and (max-width: 991px) {
       @content;
     }
+  } @else if $point == "max-medium" {
+    @media (max-width: 991px) {
+      @content;
+    }
+  } @else if $point == "min-large" {
+    @media (min-width: 992px) {
+      @content;
+    }
   } @else if $point == "large" {
     @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == "max-large" {
+    @media (max-width: 1199px) {
       @content;
     }
   } @else if $point == "xlarge" {
@@ -78,4 +109,13 @@
       @content;
     }
   }
+}
+
+// prefixers
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-'+$prefix+'-'+$property}: $value;
+  }
+
+  #{$property}: $value;
 }
