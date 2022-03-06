@@ -1,3 +1,5 @@
+//- include includes/Vars
+
 doctype html
 html(lang="en")
 	head
@@ -13,3 +15,53 @@ html(lang="en")
 			p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia explicabo fuga omnis dignissimos vel sed aliquid quo esse delectus quas eaque blanditiis numquam, ut aperiam eos fugit neque officiis iusto.
 		//- end Comment
 		span: a: img(url= "google.com")
+		
+		//- WhiteSpace Control  
+		p
+			| I love 	
+			b SASS 
+			|  And 
+			b Pugjs
+		|
+		| This text belongs to ?
+		|
+	.
+		|
+		awesome shot
+		
+	//- Attributes 
+	div.container#id-soo
+	#soo
+	h2(class="main-title" data-set="heading")
+
+	form(action="")
+		h2.contact-title Contact Me 
+		input(type="text" 
+		name="user" 
+		class="f-c"
+		) 
+		input(type="email"
+		 name="email"
+		 class="f-c"
+		 style={'background-color': 'pink', color: 'white'}
+		 ) 
+		input(type="text"
+		 name="subject"
+		 class="f-c"
+		 ) 
+		button Send
+		button Reset
+
+		//- Include files
+		// include index.html
+
+		//- Code And JavaScript Power
+		- let className = 'font'
+		.parent 
+		div(class="child " + className)
+
+		//- Escaped buffed code
+		div= 'asdw2 <strong>ESCAPE!</strong>'
+
+		//- unEscaped buffed code
+		div!= 'asdw2 <strong>ESCAPE!</strong>'
