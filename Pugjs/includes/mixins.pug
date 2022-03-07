@@ -1,0 +1,16 @@
+mixin firstMixin
+	ul 
+		li mixin!! 
+		li ax 
+		li a2 
+		li #{brandName}
+
+mixin features(ic , featName , paragh)
+	i(class=`fa fa-${ic}`)
+	h2 #{featName}
+	p #{paragh}
+
+mixin products(id, ...items)
+	ul(id=id)
+		each item in items
+			li= item

@@ -1,5 +1,6 @@
 //- include includes/Vars
 include includes/variables
+include includes/mixins
 
 doctype html
 html(lang="en")
@@ -7,7 +8,8 @@ html(lang="en")
 		meta(charset="UTF-8")
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-		title Pugjs
+		block pageTitle
+			title Pugjs
 	body 
 		// Comment
 			multi lines
@@ -94,15 +96,37 @@ html(lang="en")
 				each val in values.length ? values : ['There are no values']
 					li= val
 		
-		//- Interpolation ********************
-		div #{brandName}
-		div #{brandName.toUpperCase()}
-		div \#{test}
-		div #{'#{test}'}
-		//- Escaped
-		div #{brandTag}
-		//- unEscaped
-		div !{brandTag}
+		// Interpolation ********************
+		block interpolation
+			div #{brandName}
+			div #{brandName.toUpperCase()}
+			div \#{test}
+			div #{'#{test}'}
+			//- Escaped
+			div #{brandTag}
+			//- unEscaped
+			div !{brandTag}
 
 		//- Tag Interpolation
 		.inter this is interpolation #[em Inter #[span icon]] after inter
+
+		//- Mixins
+		+firstMixin
+		
+		+features('home','Web Development','lorem asdsakcnasjkcnasjionhd' )
+
+		+products('my-products', 'shoo', 'x', 1, 3, 'z', 5)
+
+		//- Inheritance 
+		//- extends //file.path
+		
+
+		//- Case
+		- let friends = 4
+		case friends
+			when 0: p you have no friends
+			when 1: p you have a friend
+			when 2
+			when 3: p you have some friend
+			when 6: - break
+			default: p you have #{friends} friends
