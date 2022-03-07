@@ -1,4 +1,5 @@
 //- include includes/Vars
+include includes/variables
 
 doctype html
 html(lang="en")
@@ -56,7 +57,6 @@ html(lang="en")
 		// include index.html
 
 		//- Code And JavaScript Power
-		- let className = 'font'
 		.parent 
 		div(class="child " + className)
 
@@ -65,3 +65,44 @@ html(lang="en")
 
 		//- unEscaped buffed code
 		div!= 'asdw2 <strong>ESCAPE!</strong>'
+
+		//- For loop
+		- for(let i=0; i<10; i++)
+			li item #{i}
+
+		//- While Loop
+		- let n = 0;
+		ul
+			while n < 4
+				li= n++
+
+		//- Each
+		- let arr= []
+		each value, index in [1,32,5,7,'Mo','Fayy']
+			.product= value
+			a= `index: ${index}`
+
+		// Empty array 
+		each value in arr
+			div= value
+		else 
+			div arr is empty
+
+		//- check emptyness
+		- var values = [];
+			ul
+				each val in values.length ? values : ['There are no values']
+					li= val
+		
+		//- Interpolation ********************
+		div #{brandName}
+		div #{brandName.toUpperCase()}
+		div \#{test}
+		div #{'#{test}'}
+		//- Escaped
+		div #{brandTag}
+		//- unEscaped
+		div !{brandTag}
+
+		//- Tag Interpolation
+		.inter this is interpolation #[em Inter #[span icon]] after inter
