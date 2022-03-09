@@ -1,5 +1,5 @@
 # <a>✨Front-End Learning Process <img src="https://raw.githubusercontent.com/aemmadi/aemmadi/master/wave.gif" width="30px" style="max-width: 100%;"></a>
-<h3>👀 A walkthrough my web development journey </h3>
+<h3>👀 A walkthrough my web development journey --Frontend </h3>
 
 
 
@@ -14,11 +14,25 @@
 <br>
 <br>
 <br>
+
+<menu>
+	<li>HTML ✔️</li>
+	<li>CSS ✔️</li>
+	<li>JavaScript ✔️</li>
+	<li>Bootstrap ✔️</li>
+	<li>SASS ✔️</li>
+	<li>Pug.js ✔️</li>
+	<li>OOP principles</li>
+	<li>React</li>
+	<li>Gulp.js</li>
+	<li>JSON</li>
+	<li>AJAX</li>
+	<li>Canvas API</li>
+
+</menu>
+
 <br>
 <br>
-
-🌱 Please Leave a :star: &nbsp;if you like it! 🎄
-
 <br>
 
 
