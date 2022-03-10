@@ -274,3 +274,164 @@ for (let info in user) {
 console.log(finalData);
 
 document.getElementById("info").innerHTML = finalData;
+
+/*
+  Constructor Function
+*/
+
+function Phone(serial, color, price) {
+  this.serial = serial;
+  this.color = color;
+  this.price = price - 100;
+}
+
+let phone1 = new Phone(123, "Red", 500);
+let phone2 = new Phone(159, "Black", 500);
+let phone3 = new Phone(167, "Silver", 500);
+
+console.log(phone1.serial);
+console.log(phone1.color);
+console.log(phone1.price);
+
+console.log(phone2.serial);
+console.log(phone2.color);
+console.log(phone2.price);
+
+console.log(phone3.serial);
+console.log(phone3.color);
+console.log(phone3.price);
+
+// const phone1 = {
+//   serial: 123,
+//   color: "Red",
+//   price: 500,
+// };
+
+// const phone2 = {
+//   serial: 159,
+//   color: "Black",
+//   price: 500,
+// };
+
+// const phone3 = {
+//   serial: 167,
+//   color: "Silver",
+//   price: 500,
+// };
+
+/*
+  Constructor Function
+*/
+
+function Phone(serial) {
+  // this is The Created Object From The Constrcutor Function
+  console.log(this);
+  this.serial = `#${serial}`;
+}
+
+phone1 = new Phone(123456);
+phone2 = new Phone(528951);
+phone3 = Phone(125698);
+
+console.log(phone1.serial);
+console.log(phone2.serial);
+console.log(window.serial);
+
+console.log(phone1 instanceof Phone);
+console.log(phone2 instanceof Phone);
+console.log(phone3 instanceof Phone);
+
+console.log(phone1.constructor === Phone);
+console.log(phone2.constructor === Phone);
+// console.log(phone3.constructor === Phone); // Error
+
+function sayHelloTo(someone) {
+  // someone => Parameter
+  return `Hello ${someone}`;
+}
+
+console.log(sayHelloTo("Osama")); // Osama => Argument
+
+/*
+  Constructor Function
+  Dealing With Properties
+*/
+
+function User(fname, lname, age) {
+  this.fName = fname;
+  this.lName = lname;
+  this.age = age;
+
+  this.fullName = function () {
+    return `Full Name: ${this.fName} ${this.lName}`;
+  };
+
+  this.ageInDays = function () {
+    return `Age In Days: ${this.age * 365}`;
+  };
+}
+
+let user1 = new User("mohammed", "Yousry", 25);
+console.log(user1.fullName());
+console.log(user1.ageInDays());
+
+/*
+  Constructor Function
+  60% To 70%
+  Trainings
+*/
+
+function User(name, email, age, showEmail) {
+  this.name = name;
+  this.email = email;
+  this.age = age;
+  this.updateName = function (newName) {
+    if (this.age > 18) {
+      this.name = newName;
+    } else {
+      console.log(
+        `You Cant Update Name Because Of Age Restriction`
+      );
+    }
+  };
+  this.showEmail = function () {
+    if (showEmail === true) {
+      return `Email Is: ${this.email}`;
+    } else {
+      return `Data Is Private`;
+    }
+  };
+}
+
+user1 = new User("Osama", "o@nn.sa", 19, false);
+console.log(user1.name);
+user1.updateName("Ahmed");
+console.log(user1.name);
+console.log(user1.showEmail());
+
+/*
+  Constructor Function 80%
+  Built In Constructors
+*/
+
+function User(name) {
+  this.name = name;
+  this.welcome = function () {
+    return `Welcome ${this.name}`;
+  };
+}
+
+user1 = new User("Osama");
+let user2 = new User("Ahmed");
+
+// let obj1 = new Object({ a: 1 });
+// let obj2 = new Object({ b: 2 });
+let obj3 = { c: 3 };
+
+let num1 = new Number(1);
+let num2 = new Number(2);
+let num3 = 3;
+
+let str1 = new String("Osama");
+let str2 = new String("Ahmed");
+let str3 = "Mahmoud";
