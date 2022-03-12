@@ -19,3 +19,17 @@
 
 // unnecessary renders
 // ex: react represnted:virtual DOM >> split the dom to components .. able to update the component u want to change only without touching the other components
+
+/*
+	FIXME: Images tips!!:
+
+	inline in html
+	loading= "lazy" width= "" height=""
+
+	css.. max-width: 100%; height: auto
+
+	use webp instead
+
+	[ ] Kevin Powell Youtube vid about imgs in web
+
+*/
