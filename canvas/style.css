@@ -1,0 +1,9 @@
+body{
+	background-color: rgb(88, 82, 82);
+}
+
+canvas{
+	/* styles on the container only not insides */
+	border: 2px solid yellowgreen;
+	margin: 10% 30%;
+}
