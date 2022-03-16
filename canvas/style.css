@@ -5,5 +5,6 @@ body{
 canvas{
 	/* styles on the container only not insides */
 	border: 2px solid yellowgreen;
-	margin: 10% 30%;
+	margin: 10% auto;
+    display: block;
 }

@@ -13,11 +13,23 @@ cnxt.moveTo(0, 0);
 cnxt.lineTo(w / 2, h / 2);
 
 // second line
-cnxt.moveTo(w, 0);
-cnxt.lineTo(w / 2, h / 2);
+cnxt.moveTo(100, 100);
+cnxt.lineTo(100, 200);
+cnxt.lineTo(50, 100);
+cnxt.lineTo(150, 50);
+cnxt.lineTo(150, 150);
+
+// -HL close Path  === cnxt.lineTo(100, 100)
+cnxt.closePath();
+
+// extends lines
 
 // Adjust styles
-(cnxt.strokeStyle = `#f0f`), (cnxt.lineWidth = 5);
+(cnxt.strokeStyle = `#e91e63`), (cnxt.lineWidth = 5);
 
 // draw the path
 cnxt.stroke();
+
+// fill the path
+cnxt.fillStyle = `#00bcd4`;
+cnxt.fill();
