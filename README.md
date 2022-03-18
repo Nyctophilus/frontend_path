@@ -27,7 +27,7 @@
 	<li>Gulp.js</li>
 	<li>JSON ✔️</li>
 	<li>AJAX ✔️</li>
-	<li>Canvas API</li>
+	<li>Canvas API ✔️</li>
 
 </menu>
 
