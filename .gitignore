@@ -9,3 +9,6 @@ Pugjs/index.html
 Pugjs/includes/variables.html
 Pugjs/includes/mixins.html
 Pugjs/about-me.html
+Gulp/package-lock.json
+Gulp/node_modules/
+gulp/package.json

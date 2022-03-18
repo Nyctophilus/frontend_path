@@ -1,0 +1,15 @@
+header {
+  top: 0;
+}
+
+footer {
+  bottom: 0;
+  opacity: 0.5;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
