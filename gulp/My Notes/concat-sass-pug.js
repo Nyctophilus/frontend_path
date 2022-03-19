@@ -1,5 +1,5 @@
 // new es modular
-import { task, src, dest } from "gulp";
+import { src, dest, watch } from "gulp";
 import concat from "gulp-concat";
 
 // html task
@@ -29,4 +29,10 @@ export const jsTask = () => {
   return src("build/js/*.js")
     .pipe(concat("all.js"))
     .pipe(dest("dist/js"));
+};
+
+// watch task
+export const watch = () => {
+  require("./server.js");
+  return watch("./build/", ["html"]);
 };

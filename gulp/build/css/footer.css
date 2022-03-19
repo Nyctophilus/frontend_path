@@ -1,7 +1,0 @@
-footer {
-  bottom: 0;
-  opacity: 0.5;
-  transform: scale(2);
-  display: flex;
-  transition: all 0.3s ease;
-}

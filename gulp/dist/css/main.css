@@ -1,15 +1,2 @@
-header {
-  top: 0;
-}
-
-footer {
-  bottom: 0;
-  opacity: 0.5;
-  -webkit-transform: scale(2);
-          transform: scale(2);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
+.header{height:50px;display:grid;z-index:-888888888888888}footer{height:5rem;-webkit-transition:.5s ease-in-out;transition:.5s ease-in-out;color:crimson}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIl9oZWFkZXIuc2NzcyIsIl9mb290ZXIuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxRQUNFLFdBQUEsQ0FDQSxZQUFBLENBQ0Esd0JBQUEsQ0NIRixPQUNFLFdBQUEsQ0FDQSxrQ0FBQSxDQUFBLDBCQUFBLENBQ0EsYUFBQSIsImZpbGUiOiJtYWluLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5oZWFkZXIge1xyXG4gIGhlaWdodDogNTBweDtcclxuICBkaXNwbGF5OiBncmlkO1xyXG4gIHotaW5kZXg6IC04ODg4ODg4ODg4ODg4ODg7XHJcbn1cclxuIiwiZm9vdGVyIHtcclxuICBoZWlnaHQ6IDVyZW07XHJcbiAgdHJhbnNpdGlvbjogMC41cyBlYXNlLWluLW91dDtcclxuICBjb2xvcjogY3JpbXNvbjtcclxufVxyXG4iXX0= */

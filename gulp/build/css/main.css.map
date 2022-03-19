@@ -1,0 +1,11 @@
+{
+  "version": 3,
+  "sources": [
+    "_header.scss",
+    "main.css",
+    "_footer.scss"
+  ],
+  "names": [],
+  "mappings": "AAAA;EACE,YAAA;EACA,aAAA;ACCF;;ACHA;EACE,YAAA;EACA,4BAAA;ADMF",
+  "file": "main.css"
+}

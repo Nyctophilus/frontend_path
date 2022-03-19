@@ -1,0 +1,9 @@
+.header {
+  height: 50px;
+  display: grid;
+}
+
+.footer {
+  height: 5rem;
+  transition: 0.5s ease-in-out;
+} /*# sourceMappingURL=main.css.map */
