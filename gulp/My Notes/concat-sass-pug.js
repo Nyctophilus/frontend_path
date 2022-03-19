@@ -1,6 +1,11 @@
 // new es modular
 import { src, dest, watch } from "gulp";
 import concat from "gulp-concat";
+import autoprefixer from "gulp-autoprefixer";
+import dartSass from "sass";
+import gulpSass from "gulp-sass";
+const sass = gulpSass(dartSass);
+import pug from "gulp-pug";
 
 // html task
 export const html = () => {
@@ -34,5 +39,5 @@ export const jsTask = () => {
 // watch task
 export const watch = () => {
   require("./server.js");
-  return watch("./build/", ["html"]);
+  return watch("./build/**/*.sass", html);
 };
