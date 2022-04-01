@@ -24,7 +24,7 @@
 	<li>Pug.js ✔️</li>
 	<li>OOP principles ✔️</li>
 	<li>React</li>
-	<li>Gulp.js</li>
+	<li>Gulp.js ✔️</li>
 	<li>JSON ✔️</li>
 	<li>AJAX ✔️</li>
 	<li>Canvas API ✔️</li>
