@@ -23,12 +23,15 @@
 	<li>SASS ✔️</li>
 	<li>Pug.js ✔️</li>
 	<li>OOP principles ✔️</li>
-	<li>React</li>
 	<li>Gulp.js ✔️</li>
 	<li>JSON ✔️</li>
 	<li>AJAX ✔️</li>
 	<li>Canvas API ✔️</li>
-
+	<li>CMDER ✔️</li>
+	<li>Git & GitFlow</li>
+	<li>ES6</li>
+	<li>Jest.js</li>
+	<li>React</li>
 </menu>
 
 <br>
