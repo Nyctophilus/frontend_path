@@ -44,3 +44,32 @@
 // "TRUE" Event bubbling is the order in which event handlers are called when one element is nested inside a second element, and both elements have registered a listener for the same event (a click, for example). With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
 
 // "FALSE" With capturing, the event is first captured by the outermost element and propagated to the inner elements.
+
+// -HL my newer Understanding
+// 1st phase is capturing phase, transverse through elements till it finds the event target.
+// 2nd phase is bubbling phase, transverse back through elements till it reaches the top.
+
+// addEventListener(event, callback, useCapture)
+// useCapture default is false which using bubbling mode
+
+// to stop propagation -while bubbling- of an event, use the event.stopPropagation() method.
+
+//Deprecated: event.cancelBubble = true;
+
+// USE: event.stopPropagation();
+event.stopPropagation();
+
+/*
+	Custom Event
+*/
+
+// create
+const myEvent = new Event("Seen");
+// listen
+document
+  .getElementById("btn")
+  .addEventListener("Seen", function (e) {
+    console.log("Seen");
+  });
+// fire
+document.getElementById("btn").dispatchEvent(myEvent);
