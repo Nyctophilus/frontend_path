@@ -73,3 +73,6 @@ document
   });
 // fire
 document.getElementById("btn").dispatchEvent(myEvent);
+
+//  run eventlistener once only
+Element.addEventListener(event, callback, { once: true });
