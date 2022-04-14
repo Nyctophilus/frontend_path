@@ -28,7 +28,7 @@
 	<li>AJAX ✔️</li>
 	<li>Canvas API ✔️</li>
 	<li>CMDER ✔️</li>
-	<li>Git & GitFlow</li>
+	<li>Git & GitFlow ✔️</li>
 	<li>ES6</li>
 	<li>Jest.js</li>
 	<li>React</li>
