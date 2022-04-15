@@ -23,17 +23,3 @@ const emp1 = new Employee(
   "Frontend developer"
 );
 console.log(emp1.display());
-
-/*
-			polymorphism
-			
-	Prototype chaining & Overriding
-*/
-
-Employee.prototype.toString = function () {
-  return `
-		from overrided toString()..........
-	${this.name} ${this.id} ${this.title}`;
-};
-
-console.log(emp1.toString());
