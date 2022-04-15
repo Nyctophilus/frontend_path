@@ -20,3 +20,11 @@
 // creates a pipeline of functions with the output of one function connected to the input of the next.
 
 // Partial applications can take as many or as few arguments a time as desired. Curried functions on the other hand always return a unary function: a function which takes one argument.
+
+// -HL func expressions to avoid popluating the global scope with functions
+
+// Function declaration:
+function doStuff() {} // get hoisted and avaliable in all global scope
+
+// Function expression:
+const doStuff = function () {}; // avaliable to call below init and avaliable inside callerObject scope only
