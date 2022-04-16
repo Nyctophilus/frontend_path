@@ -21,6 +21,9 @@ let user2 = new User("Ahmed");
 console.log(user1);
 console.log(user2);
 
+user1.sayHello();
+user1.showEmail();
+
 /*
   Class
   Static Properties & Methods
@@ -28,6 +31,7 @@ console.log(user2);
 
 class User {
   // Static Properties
+  //   -HL belongs to the acutal class and not to each indv instance
   static counter = 0;
 
   constructor(name, email, counter) {
@@ -58,7 +62,7 @@ let user4 = new User("Muhammed", "o@nn.sa", 2);
 console.log(typeof User); // Function
 console.log(User === User.prototype.constructor); // True
 
-console.log(User.countObjects());
+console.log(User.countObjects()); //FIXME invoke static methods with the acutal CLASS... needless of creating instances
 
 /*
   Class
@@ -83,17 +87,20 @@ class User {
 
 class Admin extends User {
   constructor(name, email) {
-    super(name, email);
+    super(name, email); // inharit from super class props
   }
   adminMsg() {
     return `You Are Admin`;
   }
   writeMsg() {
+    super.showEmail(); // inharit from super class method
     return `Message From Child Class`;
   }
 }
 
 let admin1 = new Admin("Muhammed", "o@nn.sa");
+
+admin1.writeMsg(); // inharit from super class method
 
 /*
   JavaScript Accessors

@@ -31,3 +31,8 @@ empolyee1.setAge("2000");
 console.log(empolyee1.age());
 
 console.log(empolyee1.welcomeExuc());
+
+// static|class member
+EmpAge.vacationDays = 21;
+EmpAge.getVacationInfo = () =>
+  ` only ${EmpAge.vacationDays} allowed to every employee`;

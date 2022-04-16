@@ -9,6 +9,7 @@
 //   else reject(`rejected 2`);
 // });
 
+// will invoke the 2 resolves or thier rejects
 // Promise.all([myFirstPromise, mySecondPromise]).then(
 //   (result) => {
 //     console.log(result);
