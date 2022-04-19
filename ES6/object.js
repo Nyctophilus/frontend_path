@@ -23,6 +23,8 @@ for (const prop in object) {
 
 Object.keys(obj); // list all keys of an object in array
 
+// FIXME Js engine call [[SET]] [[GET]] [[PUT]] while handling props inside object
+
 /*
 	accessor properties
 */
