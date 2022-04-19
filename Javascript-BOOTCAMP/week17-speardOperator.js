@@ -48,3 +48,9 @@ let objTwo = {
 };
 
 console.log({ ...objOne, ...objTwo, e: 5 });
+
+// FIXME reference Value
+// if u want to copy obj props without affecting the other obj u could use speard for that
+const obj = { name: "meeeo" };
+const obj2 = { ...obj };
+obj2.name = "adjusted meooo"; // obj.name still not alerted

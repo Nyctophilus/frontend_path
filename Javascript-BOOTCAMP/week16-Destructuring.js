@@ -156,7 +156,8 @@ const {
   theAge: a,
   theCountry,
   theColor: co = "Red",
-  skills: { html: h, css },
+  skills: { html: h, css } = {}, // set default
+  a:1,b:2,c:3  // destruct em with ...o 'rest'
 } = user;
 
 console.log(n);
