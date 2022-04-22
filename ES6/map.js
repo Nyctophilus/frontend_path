@@ -10,7 +10,11 @@ let scores = new Map([
 // scores.set("physics", 95);
 // scores.set("chemistry", 80);
 
-// -HL LOOPing
+for (const key of scores) {
+  console.log(key);
+}
+
+// -HL LOOPing  --over itartable methods
 for (const key of scores.keys()) {
   console.log(key);
   console.log(scores.get(key));
@@ -20,6 +24,7 @@ for (const v of scores.values()) {
   console.log(v);
 }
 
+// destructed the entries!
 for (const [n, v] of scores.entries()) {
   console.log(n, v);
 }
