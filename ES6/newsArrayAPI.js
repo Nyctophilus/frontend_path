@@ -48,3 +48,16 @@ const saFruits = fruits.filter(
   (val) => val.startsWith("a") || val.startsWith("s")
 );
 console.log(saFruits);
+
+/*
+	ES7 features
+*/
+
+console.log([1, 23, 52, 2, 6, "as"].includes("as"));
+
+/*
+	ES9 features
+*/
+
+[1, 23, "a"].flat(1, 2, 3);
+[1, 23, "a"].flatMap((x) => [x, x * 2]);
