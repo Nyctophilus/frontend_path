@@ -1,7 +1,6 @@
 # <a>✨Front-End Learning Process <img src="https://raw.githubusercontent.com/aemmadi/aemmadi/master/wave.gif" width="30px" style="max-width: 100%;"></a>
+
 <h3>👀 A walkthrough my web development journey --Frontend </h3>
-
-
 
  <p>This repository serves as an online walkthrough of my web learning process.💫</p>
 
@@ -29,7 +28,7 @@
 	<li>Canvas API ✔️</li>
 	<li>CMDER ✔️</li>
 	<li>Git & GitFlow ✔️</li>
-	<li>ES6</li>
+	<li>ES6 ✔️</li>
 	<li>Jest.js</li>
 	<li>React</li>
 </menu>
@@ -38,5 +37,4 @@
 <br>
 <br>
 
-
-📫 Please hit me up at mohammed.yuossry@gmail.com if you have any feedback.  
+📫 Please hit me up at mohammed.yuossry@gmail.com if you have any feedback.
