@@ -1,5 +1,31 @@
 // classes acts as a buleprint template for infinite number of objects 'instances'
 
+/*
+	ES7
+*/
+
+class ES7 {
+  myProp = "Value";
+
+  myMethod = () => {
+    //...
+  };
+}
+
+class ES6 {
+  constructor() {
+    this.myProp = "Value";
+  }
+
+  myMethod() {
+    //...
+  }
+}
+
+/*
+	ES6
+*/
+
 class Passenger {
   constructor({ fn, ln }, id) {
     this.fn = fn;
