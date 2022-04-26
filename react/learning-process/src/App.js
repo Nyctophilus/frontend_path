@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import classes from "./App.module.css";
 import Radium, { StyleRoot } from "radium";
 import Person from "./Person/Person";
 
@@ -96,6 +96,7 @@ class App extends Component {
                 this.nameChangeHandler(event, person.id)
               }
               delete={this.deletePerson.bind(this, index)}
+              alt={this.state.show}
             >
               Hobby: Boxing X_X
             </Person>
@@ -138,15 +139,15 @@ class App extends Component {
     // -HL change class conditionallly
     let dynClass = [];
     if (this.state.people.length <= 2) {
-      dynClass.push("red");
+      dynClass.push(classes.red);
 
       if (this.state.people.length <= 1)
-        dynClass.push("bold");
+        dynClass.push(classes.bold);
     }
 
     return (
       <StyleRoot>
-        <div className="App">
+        <div className={classes.App}>
           <h1 className={dynClass.join(" ")}>
             Hellllllllo REACT!!!
           </h1>

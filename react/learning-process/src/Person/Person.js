@@ -11,17 +11,22 @@ const Person = (props) => {
 
   // -HL Styled Components
   const StyledPerson = styled.div`
-			width: 60%;
-			padding: 1rem;
-			margin-inline: auto;
-			box-shadow: 0 2px 3px #ccc;
-			border: 1px solid #eee;
-			text-align: center;
-			margin-block: 3rem;
+	width: 60%;
+	padding: 1rem;
+	margin-inline: auto;
+	box-shadow: 0 2px 3px #ccc;
+	border: 1px solid #eee;
+	text-align: center;
+	margin-block: 3rem;
+	color: ${(props) => (props.alt ? "#ccc" : "green")};
 
-		"@media (min-width: 50rem)": {
-				width: "45rem",
-				},
+	&:hover{
+		background-color: #eee;
+	}
+
+	"@media (min-width: 50rem)": {
+		width: "45rem",
+		},
 `;
 
   return (
