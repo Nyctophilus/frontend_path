@@ -4,14 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-import Ass1 from "./Assignment1/Assignment1";
+// import Ass1 from "./Assignment1/Assignment1";
+import Ass2 from "./Assignment2/assignment2";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
 );
 root.render(
   <React.StrictMode>
-    <Ass1 />
+    <Ass2 />
   </React.StrictMode>
 );
 

@@ -1,0 +1,11 @@
+.valiComp p {
+  font-weight: bold;
+}
+
+.valiComp p.short {
+  color: crimson;
+}
+
+.valiComp p.long {
+  color: limegreen;
+}

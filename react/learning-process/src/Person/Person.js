@@ -7,8 +7,12 @@ const Person = (props) => {
       <h3 onClick={props.click}>
         My name is {props.name} and I'm {props.age}
       </h3>
-      <p>{props.children}</p>
-      <input onChange={props.change} type="text" />
+      <p onClick={props.delete}>{props.children}</p>
+      <input
+        onChange={props.change}
+        type="text"
+        value={props.name}
+      />
     </div>
   );
 };
