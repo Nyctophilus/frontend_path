@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import classes from "./App.module.css";
 import Radium, { StyleRoot } from "radium";
 import Person from "./Person/Person";
+import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
 
 class App extends Component {
   // special Component.property called state
@@ -87,45 +88,24 @@ class App extends Component {
       persons = (
         <div>
           {this.state.people.map((person, index) => (
-            <Person
-              name={person.name}
-              age={person.age}
+            <ErrorBoundary
+              // FIXME has to be in the outer component it's the element we reduplicate
               // key to allow react keep track of individual elements to find out changes
               key={person.id}
-              change={(event) =>
-                this.nameChangeHandler(event, person.id)
-              }
-              delete={this.deletePerson.bind(this, index)}
-              alt={this.state.show}
             >
-              Hobby: Boxing X_X
-            </Person>
+              <Person
+                name={person.name}
+                age={person.age}
+                change={(event) =>
+                  this.nameChangeHandler(event, person.id)
+                }
+                delete={this.deletePerson.bind(this, index)}
+                alt={this.state.show}
+              >
+                Hobby: Boxing X_X
+              </Person>
+            </ErrorBoundary>
           ))}
-
-          {/* <Person
-            name={this.state.people[0].name}
-            age={this.state.people[0].age}
-          >
-            Hobby: Boxing
-          </Person>
-
-          <Person
-            name={this.state.people[1].name}
-            age={this.state.people[1].age}
-            click={
-              // can be less performanet, depends on the app size
-
-              () =>
-                this.switchNameHandler(
-                  "Muhammed ? less professiont"
-                )
-            }
-            change={this.switchChangeHandler}
-          />
-          <Person
-            name={this.state.people[2].name}
-            age={this.state.people[2].age}
-          /> */}
         </div>
       );
 
