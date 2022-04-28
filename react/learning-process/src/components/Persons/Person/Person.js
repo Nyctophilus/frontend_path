@@ -2,15 +2,8 @@ import React from "react";
 import "./Person.css";
 import styled from "styled-components";
 
-const Person = (props) => {
-  //   const style = {
-  //     "@media (min-width: 50rem)": {
-  //       width: "45rem",
-  //     },
-  //   };
-
-  // -HL Styled Components
-  const StyledPerson = styled.div`
+// -HL Styled Components
+const StyledPerson = styled.div`
 	width: 60%;
 	padding: 1rem;
 	margin-inline: auto;
@@ -18,7 +11,6 @@ const Person = (props) => {
 	border: 1px solid #eee;
 	text-align: center;
 	margin-block: 3rem;
-	color: ${(props) => (props.alt ? "#ccc" : "green")};
 
 	&:hover{
 		background-color: #eee;
@@ -28,6 +20,14 @@ const Person = (props) => {
 		width: "45rem",
 		},
 `;
+
+const Person = (props) => {
+  console.log(`[Person.js] rendering..`);
+  //   const style = {
+  //     "@media (min-width: 50rem)": {
+  //       width: "45rem",
+  //     },
+  //   };
 
   return (
     <StyledPerson>
