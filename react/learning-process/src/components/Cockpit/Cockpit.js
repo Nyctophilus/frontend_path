@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import classes from "./Cockpit.module.css";
 import Radium from "radium";
+import authContext from "../../context/auth-context";
 
 const Cockpit = (props) => {
   // it's a react hook not lifecycle hook, so u can add it into functional comp
   // use Effect combine all these hooks into it
+  // useEffect runs after jsx renders
 
   useEffect(
     // FIXME!!! by default takes func that runs at every render cycle
@@ -12,13 +14,13 @@ const Cockpit = (props) => {
       console.log(`[Cockpit.js] useEffect here`);
 
       // can use for HTTP request
-      const timer = setTimeout(() => {
-        alert("saved data to cloud!");
-      }, 1000);
+      //   const timer = setTimeout(() => {
+      //     alert("saved data to cloud!");
+      //   }, 1000);
 
-      // cleanup work in useEffect
+      // cleanup work in useEffect  --didMount alt
       return () => {
-        clearTimeout(timer);
+        // clearTimeout(timer);
         console.log(
           `[Cockpit.js] clean-up work can be done here, after the last render`
         );
@@ -56,11 +58,10 @@ const Cockpit = (props) => {
 
   // -HL change class conditionallly
   const dynClass = [];
-  if (props.people.length <= 2) {
+  if (props.peopleLen <= 2) {
     dynClass.push(classes.red);
 
-    if (props.people.length <= 1)
-      dynClass.push(classes.bold);
+    if (props.peopleLen <= 1) dynClass.push(classes.bold);
   }
 
   return (
@@ -72,8 +73,15 @@ const Cockpit = (props) => {
       <button style={btnStyling} onClick={props.toggler}>
         Toggle Names
       </button>
+      <authContext.Consumer>
+        {(context) => (
+          <button onClick={context.login}>Log in</button>
+        )}
+      </authContext.Consumer>
     </div>
   );
 };
 
-export default Radium(Cockpit);
+// React.memo stores snapshot and only if input changes will re-render it!
+// good at wrapping functional component that might not need to change every render
+export default React.memo(Radium(Cockpit));
