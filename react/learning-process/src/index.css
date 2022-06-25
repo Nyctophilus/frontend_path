@@ -10,6 +10,7 @@ body {
   letter-spacing: 3px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #dbe6e7;
 }
 
 section {
@@ -18,10 +19,16 @@ section {
     auto-fit,
     minmax(350px, 1fr)
   );
-  gap: 3rem;
+  align-items: start;
   border: 1px solid black;
 }
 
 article {
+  background-color: white;
   padding: 2rem;
+  margin: 2rem;
+}
+
+img {
+  width: 250px;
 }
