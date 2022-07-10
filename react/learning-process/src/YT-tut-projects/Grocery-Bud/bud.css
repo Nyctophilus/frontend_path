@@ -1,0 +1,114 @@
+body,
+input {
+  background-color: #e6f1fa;
+}
+
+.bud {
+  background-color: white;
+  width: fit-content;
+  margin: auto;
+  padding: 2rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.3rem;
+}
+
+input {
+  border-color: transparent;
+  padding: 0.25rem;
+  display: inline;
+  font-size: 1rem;
+}
+
+input:hover,
+input:focus {
+  outline-color: #8cb7d5;
+}
+
+input:not(input[type="submit"]) {
+  width: 20rem;
+}
+
+input[type="submit"] {
+  display: inline;
+  background-color: #a5d5f8;
+  flex: 0 0 5rem;
+  align-items: center;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  font-size: 0.85rem;
+  padding-inline: 0.8rem;
+  width: 6rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #49a6e9;
+  color: #fff;
+}
+
+.grocery-container {
+  margin-top: 1.5rem;
+}
+
+.grocery-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  transition: var(--transition);
+  padding: 0.25rem 1rem;
+  border-radius: var(--radius);
+}
+
+button {
+  border: none;
+}
+.btn-container {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.edit-btn {
+  color: #6be675;
+}
+.delete-btn {
+  color: #e66b6b;
+}
+
+.clear-btn {
+  text-transform: capitalize;
+  width: 10rem;
+  height: 1.5rem;
+  display: grid;
+  align-items: center;
+  color: var(--clr-red-light);
+  font-size: 0.85rem;
+  letter-spacing: var(--spacing);
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  margin: 1.25rem auto 0px;
+}
+
+.alert {
+  margin-bottom: 0.5rem;
+}
+
+.alert p {
+  color: #e6f1fa;
+}
+
+.success {
+  background-color: #6be67575;
+}
+
+.danger {
+  background-color: #df545475;
+}
