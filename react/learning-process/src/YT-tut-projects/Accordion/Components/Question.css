@@ -1,0 +1,27 @@
+.accor {
+  padding: 1rem;
+  box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h4 {
+  font-size: 1rem;
+  text-align: left;
+}
+p {
+  text-align: left;
+}
+
+button {
+  background-color: #ccc;
+  border-radius: 50%;
+  padding: 0.7rem;
+  border: none;
+}
+
+svg {
+  color: rgb(109, 56, 56);
+}
