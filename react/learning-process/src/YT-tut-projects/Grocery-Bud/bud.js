@@ -1,10 +1,16 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./bud.css";
 import Alert from "./alert";
 
+const getlocalStorage = () => {
+  const cart = localStorage.getItem("cart");
+  if (cart) return JSON.parse(cart);
+  else return [];
+};
+
 function Bud() {
   const [item, setItem] = useState("");
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(getlocalStorage());
   const [edit, setEdit] = useState("");
   const [alert, setAlert] = useState({
     show: false,
@@ -13,6 +19,10 @@ function Bud() {
   });
 
   const inputContainer = useRef(null);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const itemHandler = (e) => {
     setItem(e.target.value);
