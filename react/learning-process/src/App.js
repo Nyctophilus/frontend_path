@@ -1,7 +1,7 @@
 import React from "react";
 import Setup from "./tutorial/5-useRef/setup/1-useRef-basics";
 
-import Project from "./YT-tut-projects/Slider/App";
+import Project from "./YT-tut-projects/Color-Generator/App";
 
 function App() {
   return (
