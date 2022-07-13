@@ -6,16 +6,27 @@ class User {
     this.#c = card;
   }
 
-  #CCP=()=> {
-	const ccReg = /(-\d{4}-)/;
+  #CCP = () => {
+    const typeOfCard = typeof this.#c;
+    const cardNum = this.#c.toString();
 
+    let arrCard = cardNum.split("");
+    let counter = 0;
+    arrCard.forEach((n, i) => {
+      if (i && i % 4 === 0) {
+        if (n === "-") return;
 
+        arrCard.splice(i + counter++, 0, "-");
+      }
+    });
 
-	  return `${(this.#c).replace(/\d{4}/, ccReg)}`
-  }
+    return arrCard.join("");
+  };
 
- get showData(){
-	  return `Hello ${this.u}, Your Credit Card Number Is ${this.#CCP()}`
+  get showData() {
+    return `Hello ${
+      this.u
+    }, Your Credit Card Number Is ${this.#CCP()}`;
   }
 }
 
