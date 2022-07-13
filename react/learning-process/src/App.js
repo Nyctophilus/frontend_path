@@ -1,7 +1,7 @@
 import React from "react";
-import Setup from "./tutorial/5-useRef/setup/1-useRef-basics";
+import Setup from "./tutorial/8-useContext/setup/1-context-api";
 
-import Project from "./YT-tut-projects/Navbar/App";
+import Project from "./YT-tut-projects/Sidebar/App";
 
 function App() {
   return (
