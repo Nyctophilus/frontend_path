@@ -1,7 +1,7 @@
 import React from "react";
 import Setup from "./tutorial/8-useContext/setup/1-context-api";
 
-import Project from "./YT-tut-projects/Sidebar/App";
+import Project from "./YT-tut-projects/Stripe-Submenus/App";
 
 function App() {
   return (
