@@ -1,12 +1,12 @@
 import React from "react";
-import Setup from "./tutorial/8-useContext/setup/1-context-api";
+import Setup from "./tutorial/10-prop-types/setup";
 
 import Project from "./YT-tut-projects/Cart";
 
 function App() {
   return (
     <div className="container">
-      <Project />
+      <Setup />
     </div>
   );
 }
