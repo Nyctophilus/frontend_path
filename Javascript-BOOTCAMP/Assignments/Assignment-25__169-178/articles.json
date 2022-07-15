@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "section": "react",
+    "title": "Redux",
+    "content": "Designed to work with React's component model. You define how to extract the values your component needs from Redux, and your component updates automatically as needed."
+  },
+  {
+    "id": 2,
+    "section": "sass",
+    "title": "Utility Classes",
+    "content": "As front-end developers, we're always looking for ways to optimize our code and streamline our processes. CSS is no different. If you've spent a considerable amount of time working on projects you've most likely created a pattern library. Pattern libraries are essential in driving consistency across multiple products and streamlining development, but writing CSS for large codebases can be tricky and quite cumbersome."
+  },
+  {
+    "id": 3,
+    "section": "react",
+    "title": "React Router",
+    "content": "Closing in on a decade of client-side routing, React Router v6 takes the best features from previous versions—and its sister project."
+  },
+  {
+    "id": 4,
+    "section": "pug",
+    "title": "Pug Iteration",
+    "content": "Pug supports two primary methods of iteration: each and while."
+  },
+  {
+    "id": 5,
+    "section": "express",
+    "title": "Middleware",
+    "content": "Express is a routing and middleware web framework that has minimal functionality of its own: An Express application is essentially a series of middleware."
+  }
+]
