@@ -27,5 +27,5 @@ yarn-error.log*
 /scripts
 /config
 
-/src/tutorial
+/src/tutorial/**/Final/
 /src/assets/default-image.jpeg
