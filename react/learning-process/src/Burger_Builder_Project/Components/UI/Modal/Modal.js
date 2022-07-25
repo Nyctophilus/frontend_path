@@ -1,8 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import classes from "./Modal.module.css";
 import Backdrop from "../Backdrop/Backdrop";
 
 const Modal = ({ children, show, modalClosed }) => {
+  console.log(`modal rendering!`);
   return (
     <>
       <Backdrop show={show} clicked={modalClosed} />
@@ -21,4 +22,6 @@ const Modal = ({ children, show, modalClosed }) => {
   );
 };
 
-export default Modal;
+export default memo(Modal, (prevProps, nextProp) => {
+  return nextProp.show !== prevProps.show;
+});
