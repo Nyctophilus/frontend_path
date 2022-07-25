@@ -5,9 +5,7 @@ import axios from "axios";
 const FullPost = ({ id, title, body }) => {
   const deletePostHandler = () => {
     axios
-      .delete(
-        `https://jsonplaceholder.typicode.com/posts/${id}`
-      )
+      .delete(`/posts/${id}`)
       .then((res) => console.log(res));
   };
 
