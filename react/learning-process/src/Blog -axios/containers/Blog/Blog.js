@@ -1,70 +1,50 @@
 import React, { Component } from "react";
 
-// import axios from "axios";
-import axios from "../../../axios";
+import Posts from "../Posts/Posts";
+import NewPost from "../NewPost/NewPost";
 
-import Post from "../../components/Post/Post";
-import FullPost from "../../components/FullPost/FullPost";
-import NewPost from "../../components/NewPost/NewPost";
 import "./Blog.css";
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link,
+} from "react-router-dom";
+
 class Blog extends Component {
-  state = {
-    posts: [],
-    fullPost: null,
-    error: false,
-  };
-
-  componentDidMount() {
-    axios
-      .get("/posts")
-      .then((res) => {
-        const posts = res.data.slice(0, 4);
-        const updatedPosts = posts.map((post) => {
-          return {
-            ...post,
-            auther: "Fayad",
-          };
-        });
-        this.setState({ posts: updatedPosts });
-      })
-      .catch((err) => {
-        this.setState({ error: true });
-      });
-  }
-
-  clickPostHandler = (id) => {
-    axios
-      .get(`/posts/${id}`)
-      .then((res) => this.setState({ fullPost: res.data }));
-  };
-
   render() {
-    let posts = this.state.posts.map((post) => (
-      <Post
-        key={post.id}
-        {...post}
-        clicked={() => this.clickPostHandler(post.id)}
-      />
-    ));
-
-    if (this.state.error)
-      posts = (
-        <p style={{ textAlign: "center", color: "red" }}>
-          Something went wrong!
-        </p>
-      );
-
     return (
-      <div>
-        <section className="Posts">{posts}</section>
-        <section>
-          <FullPost {...this.state.fullPost} />
-        </section>
-        <section>
-          <NewPost />
-        </section>
-      </div>
+      <Router>
+        <div className="Blog">
+          <header>
+            <nav>
+              <ul>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  {/* -HL options of Router-Link */}
+                  <Link
+                    to={{
+                      pathname: "/new-post",
+                      hash: "#submit",
+                      search: "?quick-submit=true",
+                    }}
+                  >
+                    New Post
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </header>
+
+          <Routes>
+            <Route path="/" element={<Posts />} exact />
+            <Route path="/new-post" element={<NewPost />} />
+          </Routes>
+        </div>
+      </Router>
     );
   }
 }
