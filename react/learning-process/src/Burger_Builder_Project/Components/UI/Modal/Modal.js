@@ -22,6 +22,12 @@ const Modal = ({ children, show, modalClosed }) => {
   );
 };
 
-export default memo(Modal, (prevProps, nextProp) => {
-  return nextProp.show !== prevProps.show;
-});
+// function areEqual(prevProps, nextProps) {
+//   /*
+// 	return true if passing nextProps to render would return
+// 	the same result as passing prevProps to render,
+// 	otherwise return false
+// 	*/
+// }
+
+export default memo(Modal);
