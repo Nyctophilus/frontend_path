@@ -1,37 +1,79 @@
-import React from "react";
-import "./FullPost.css";
+import React, { Component } from "react";
 import axios from "axios";
 
-const FullPost = ({ id, title, body }) => {
-  const deletePostHandler = () => {
-    axios
-      .delete(`/posts/${id}`)
-      .then((res) => console.log(res));
+import "./FullPost.css";
+
+import { useLocation } from "react-router-dom";
+
+class FullPost extends Component {
+  state = {
+    loadedPost: null,
   };
 
-  let post;
-  if (!id)
-    post = (
+  componentDidMount() {
+    console.log(this.props);
+    this.loadData();
+  }
+
+  componentDidUpdate() {
+    this.loadData();
+  }
+
+  loadData() {
+    if (this.props.match.params.id) {
+      if (
+        !this.state.loadedPost ||
+        (this.state.loadedPost &&
+          this.state.loadedPost.id !==
+            +this.props.match.params.id)
+      ) {
+        axios
+          .get("/posts/" + this.props.match.params.id)
+          .then((response) => {
+            // console.log(response);
+            this.setState({ loadedPost: response.data });
+          });
+      }
+    }
+  }
+
+  deletePostHandler = () => {
+    axios
+      .delete("/posts/" + useLocation().match.params.id)
+      .then((response) => {
+        console.log(response);
+      });
+  };
+
+  render() {
+    let post = (
       <p style={{ textAlign: "center" }}>
         Please select a Post!
       </p>
     );
-  else
-    post = (
-      <div className="FullPost">
-        <h1>{title}</h1>
-        <p>{body}</p>
-        <div className="Edit">
-          <button
-            className="Delete"
-            onClick={deletePostHandler}
-          >
-            Delete
-          </button>
+    if (this.props.match.params.id) {
+      post = (
+        <p style={{ textAlign: "center" }}>Loading...!</p>
+      );
+    }
+    if (this.state.loadedPost) {
+      post = (
+        <div className="FullPost">
+          <h1>{this.state.loadedPost.title}</h1>
+          <p>{this.state.loadedPost.body}</p>
+          <div className="Edit">
+            <button
+              onClick={this.deletePostHandler}
+              className="Delete"
+            >
+              Delete
+            </button>
+          </div>
         </div>
-      </div>
-    );
-  return post;
-};
+      );
+    }
+    return post;
+  }
+}
 
 export default FullPost;

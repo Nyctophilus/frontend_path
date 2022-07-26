@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import Posts from "../Posts/Posts";
 import NewPost from "../NewPost/NewPost";
+import FullPost from "../FullPost/FullPost";
 
 import "./Blog.css";
 
@@ -9,7 +10,7 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Link,
+  NavLink,
 } from "react-router-dom";
 
 class Blog extends Component {
@@ -21,19 +22,36 @@ class Blog extends Component {
             <nav>
               <ul>
                 <li>
-                  <Link to="/">Home</Link>
+                  <NavLink
+                    to="/"
+                    // -HL Custom class,Style to NavLink
+                    className={({ isActive }) =>
+                      isActive ? "my-active" : null
+                    }
+                    style={({ isActive }) =>
+                      isActive
+                        ? {
+                            color: "red",
+                            textDecoration: "underline",
+                          }
+                        : null
+                    }
+                  >
+                    Home
+                  </NavLink>
                 </li>
                 <li>
                   {/* -HL options of Router-Link */}
-                  <Link
+                  <NavLink
                     to={{
-                      pathname: "/new-post",
+                      // ${this.props.match.url}
+                      pathname: `/new-post`,
                       hash: "#submit",
                       search: "?quick-submit=true",
                     }}
                   >
                     New Post
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </nav>
@@ -41,6 +59,10 @@ class Blog extends Component {
 
           <Routes>
             <Route path="/" element={<Posts />} exact />
+            <Route
+              path="/posts/:id"
+              element={<FullPost />}
+            />
             <Route path="/new-post" element={<NewPost />} />
           </Routes>
         </div>

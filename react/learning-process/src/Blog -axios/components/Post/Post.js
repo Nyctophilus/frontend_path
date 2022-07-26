@@ -1,8 +1,7 @@
 import React from "react";
-
 import "./Post.css";
 
-const post = ({ id, title, auther, clicked }) => (
+const post = ({ id, clicked, title, auther }) => (
   <article className="Post" onClick={clicked}>
     <h1>{title}</h1>
     <div className="Info">
