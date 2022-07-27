@@ -1,26 +1,39 @@
 import React, { Component } from "react";
-import axios from "axios";
+import axios from "../../../../axios";
+
+import { Navigate } from "react-router-dom";
 
 import "./NewPost.css";
 
 class NewPost extends Component {
   state = {
     title: "",
-    body: "",
+    content: "",
     author: "Medo",
+    submitted: false,
   };
 
-  postHandler = () => {
-    axios
-      .post("/posts", {
-        ...this.state,
-      })
-      .then((res) => console.log(res));
+  componentDidMount() {
+    console.log(this.props);
+  }
+
+  postDataHandler = () => {
+    const data = {
+      title: this.state.title,
+      body: this.state.content,
+      author: this.state.author,
+    };
+    axios.post("/posts", data).then((response) => {
+      console.log(response);
+    });
+
+    this.setState({ submitted: true });
   };
 
   render() {
     return (
       <div className="NewPost">
+        {this.state.submitted && <Navigate to="/" />}
         <h1>Add a Post</h1>
         <label>Title</label>
         <input
@@ -30,12 +43,12 @@ class NewPost extends Component {
             this.setState({ title: event.target.value })
           }
         />
-        <label>body</label>
+        <label>Content</label>
         <textarea
           rows="4"
-          value={this.state.body}
+          value={this.state.content}
           onChange={(event) =>
-            this.setState({ body: event.target.value })
+            this.setState({ content: event.target.value })
           }
         />
         <label>Author</label>
@@ -48,7 +61,9 @@ class NewPost extends Component {
           <option value="Medo">Medo</option>
           <option value="Max">Max</option>
         </select>
-        <button onClick={this.postHandler}>Add Post</button>
+        <button onClick={this.postDataHandler}>
+          Add Post
+        </button>
       </div>
     );
   }
