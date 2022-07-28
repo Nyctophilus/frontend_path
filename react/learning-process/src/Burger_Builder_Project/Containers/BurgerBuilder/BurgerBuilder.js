@@ -8,6 +8,8 @@ import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 
 import axios from "../../axios-orders";
 
+import withRouter from "../../hoc/withRouter/withRouter";
+
 const INGREDIENT_PRICES = {
   salad: 0.2,
   cheese: 0.5,
@@ -26,6 +28,7 @@ class BurgerBuilder extends Component {
   };
 
   componentDidMount() {
+    console.log(this.props.router);
     axios
       .get(
         "https://react-my-burger-e68ad-default-rtdb.europe-west1.firebasedatabase.app/ingredients.json"
@@ -93,40 +96,52 @@ class BurgerBuilder extends Component {
   };
   purchaseContinueHandler = () => {
     // alert("You continue!");
+    // this.setState({ loading: true });
+    // const order = {
+    //   ingredients: this.state.ingredients,
+    //   price: this.state.totalPrice,
+    //   customer: {
+    //     name: "Muhammed Fayad",
+    //     address: {
+    //       street: "sidi beshr",
+    //       zipCode: 52315,
+    //       country: "Egypt",
+    //     },
+    //     email: "mo@gmail.com",
+    //   },
+    //   deliveryMethod: "fastest",
+    // };
+    // axios
+    //   .post("/orders.json", order)
+    //   .then((res) => {
+    //     console.log(res);
+    //     this.setState({
+    //       loading: false,
+    //       purchasing: false,
+    //     });
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //     this.setState({
+    //       loading: false,
+    //       purchasing: false,
+    //     });
+    //   });
 
-    this.setState({ loading: true });
+    const params = [];
+    for (const ing in this.state.ingredients) {
+      //   console.log(ing, this.state.ingredients[ing]);
+      params.push(
+        `${encodeURIComponent(ing)}=${encodeURIComponent(
+          this.state.ingredients[ing]
+        )}`
+      );
+    }
 
-    const order = {
-      ingredients: this.state.ingredients,
-      price: this.state.totalPrice,
-      customer: {
-        name: "Muhammed Fayad",
-        address: {
-          street: "sidi beshr",
-          zipCode: 52315,
-          country: "Egypt",
-        },
-        email: "mo@gmail.com",
-      },
-      deliveryMethod: "fastest",
-    };
-
-    axios
-      .post("/orders.json", order)
-      .then((res) => {
-        console.log(res);
-        this.setState({
-          loading: false,
-          purchasing: false,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-        this.setState({
-          loading: false,
-          purchasing: false,
-        });
-      });
+    this.props.router.navigate({
+      pathname: "/checkout",
+      search: `?${params.join("&")}`,
+    });
   };
 
   render() {
@@ -186,4 +201,6 @@ class BurgerBuilder extends Component {
   }
 }
 
-export default withErrorHandler(BurgerBuilder, axios);
+export default withRouter(
+  withErrorHandler(BurgerBuilder, axios)
+);
