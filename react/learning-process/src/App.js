@@ -17,10 +17,7 @@ import Slider from "./YT-tut-projects/Slider/App";
 import StripeSubmenus from "./YT-tut-projects/Stripe-Submenus/App";
 import Tabs from "./YT-tut-projects/Tabs/App";
 import Tours from "./YT-tut-projects/tours/Tours";
-import Blog from "./Blog -axios/containers/Blog/Blog";
 import Pokemon from "./Pokemen/App";
-
-import BurgerProject from "./Burger_Builder_Project/App";
 
 import ExpenseCalculator from "./Expense_Calculator/App";
 
@@ -32,9 +29,7 @@ import {
 } from "react-router-dom";
 
 const projects = [
-  { BurgerProject: <BurgerProject /> },
   { GroceryBud: <GroceryBud /> },
-  { Blog: <Blog /> },
   { Accordion: <Accordion /> },
   { ColorGenerator: <ColorGenerator /> },
   { Cart: <Cart /> },

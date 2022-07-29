@@ -1,10 +1,12 @@
-import ExpenseItem from "./components/ExpenseItem/ExpenseItem";
+import classes from "./App.module.css";
+import ExpensesList from "./components/Expenses/ExpensesList/ExpensesList";
 
 const App = () => {
   return (
-    <div>
+    <div className={classes.Expense}>
       <h1>Hello React!</h1>
-      <ExpenseItem />
+
+      <ExpensesList />
     </div>
   );
 };
