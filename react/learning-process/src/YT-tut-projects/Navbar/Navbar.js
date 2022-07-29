@@ -20,7 +20,7 @@ const Navbar = () => {
   }, [showLinks]);
 
   return (
-    <nav>
+    <nav className="costom-nav">
       <div className="nav-center">
         <div className="nav-header">
           <img src={logo} alt="logo" />

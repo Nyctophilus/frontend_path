@@ -5,7 +5,7 @@ const Task = ({ id, name, done }) => {
   const { setDone } = useGlobalContext();
 
   return (
-    <div className="item">
+    <div className="item" style={{ textAlign: "center" }}>
       <label>
         <input
           type="checkbox"

@@ -9,7 +9,10 @@ const Tab = ({ title, dates, duties, company, order }) => {
       <p className="job-date">{dates}</p>
 
       {duties.map((duty) => (
-        <div className="job-desc">
+        <div
+          key={new Date().getMilliseconds() * Math.random()}
+          className="job-desc"
+        >
           <FaAngleDoubleRight className="job-icon" />
           <p>{duty}</p>
         </div>

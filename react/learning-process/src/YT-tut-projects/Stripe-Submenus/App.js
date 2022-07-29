@@ -9,10 +9,12 @@ import { AppProvider } from "./context";
 function App() {
   return (
     <AppProvider>
-      <Navbar />
-      <Sidebar />
-      <Hero />
-      <Submenu />
+      <div className="stripe">
+        <Navbar />
+        <Sidebar />
+        <Hero />
+        <Submenu />
+      </div>
     </AppProvider>
   );
 }

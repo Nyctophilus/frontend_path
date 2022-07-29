@@ -1,9 +1,4 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-body {
+.BookList {
   margin: 0;
   font-family: cursive;
   font-size: 25px;
@@ -13,7 +8,7 @@ body {
   background-color: #dbe6e7;
 }
 
-section {
+section.BookList {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
@@ -23,12 +18,12 @@ section {
   border: 1px solid black;
 }
 
-article {
+.BookList article {
   background-color: white;
   padding: 2rem;
   margin: 2rem;
 }
 
-img {
+.BookList img {
   width: 250px;
 }

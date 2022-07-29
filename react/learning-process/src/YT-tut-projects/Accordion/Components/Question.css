@@ -7,21 +7,21 @@
   justify-content: space-between;
   align-items: center;
 }
-h4 {
+.head h4 {
   font-size: 1rem;
   text-align: left;
 }
-p {
+.head p {
   text-align: left;
 }
 
-button {
+.head button {
   background-color: #ccc;
   border-radius: 50%;
   padding: 0.7rem;
   border: none;
 }
 
-svg {
+.head svg {
   color: rgb(109, 56, 56);
 }

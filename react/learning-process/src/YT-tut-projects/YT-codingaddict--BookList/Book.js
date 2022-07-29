@@ -7,6 +7,7 @@ const Book = ({ img, title, author, children }) => {
       <h2>{title}</h2>
       <h4>{author}</h4>
       <button
+        className="btn"
         type="button"
         onClick={() => console.log(title)}
       >

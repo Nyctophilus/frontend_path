@@ -36,17 +36,17 @@ const Tours = () => {
 
   if (!tours.length) {
     return (
-      <>
+      <main className="no-tours">
         <h1>No more tours left!🥺</h1>
         <button className="btn" onClick={fetchTours}>
           refresh
         </button>
-      </>
+      </main>
     );
   }
 
   return (
-    <main>
+    <main className="tours">
       <header>
         <h1>Our Tours</h1>
       </header>

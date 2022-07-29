@@ -34,7 +34,7 @@ function App() {
   }, [activeSlide]);
 
   return (
-    <section className="section">
+    <section className="section slider">
       <div className="title">
         <h2>
           <span>/</span>reviews

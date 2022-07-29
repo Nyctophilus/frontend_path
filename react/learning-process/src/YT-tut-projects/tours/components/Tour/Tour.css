@@ -7,9 +7,7 @@
   height: 20rem;
   object-fit: cover;
   border-top-right-radius: 0.25rem;
-  border-top-right-radius: var(--radius);
   border-top-left-radius: 0.25rem;
-  border-top-left-radius: var(--radius);
 }
 .tour .txt {
   padding: 1.3rem 2rem;
@@ -51,12 +49,12 @@
   border: none;
 }
 
-button {
+.tours button {
   background-color: transparent;
   cursor: pointer;
 }
 
-button.del-btn {
+.tours button.del-btn {
   border: 1.3px solid var(--clr-red-dark);
   color: var(--clr-red-dark);
   padding: 0.1rem 1.5rem;

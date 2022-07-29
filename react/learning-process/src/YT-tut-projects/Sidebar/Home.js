@@ -6,7 +6,7 @@ const Home = () => {
   const { openModal, openSidebar } = useGlobalContext();
 
   return (
-    <main>
+    <main className="silderProj">
       <button
         className="sidebar-toggle"
         onClick={openSidebar}

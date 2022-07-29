@@ -1,4 +1,6 @@
 import React from "react";
+import classes from "./index.css";
+
 import { useGlobalContext } from "./context";
 
 // components
@@ -18,7 +20,7 @@ function App() {
   }
 
   return (
-    <main>
+    <main className="Cart">
       <Navbar />
       <CartContainer />
     </main>

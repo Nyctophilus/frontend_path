@@ -13,7 +13,7 @@
   margin: 5rem auto 0;
 }
 
-p {
+.review p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
 }
@@ -96,7 +96,7 @@ p {
   color: var(--clr-primary-5);
 }
 
-button {
+.review button {
   border: none;
 }
 .img-container:before,

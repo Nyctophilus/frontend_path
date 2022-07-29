@@ -1,145 +1,9 @@
 /*
 =============== 
-Variables
-===============
-*/
-
-:root {
-  /* dark shades of primary color*/
-  --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-2: hsl(205, 77%, 27%);
-  --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%);
-  /* primary/main color */
-  --clr-primary-5: hsl(205, 78%, 60%);
-  /* lighter shades of primary color */
-  --clr-primary-6: hsl(205, 89%, 70%);
-  --clr-primary-7: hsl(205, 90%, 76%);
-  --clr-primary-8: hsl(205, 86%, 81%);
-  --clr-primary-9: hsl(205, 90%, 88%);
-  --clr-primary-10: hsl(205, 100%, 96%);
-  /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
-  /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-6: hsl(209, 23%, 60%);
-  --clr-grey-7: hsl(211, 27%, 70%);
-  --clr-grey-8: hsl(210, 31%, 80%);
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(210, 36%, 96%);
-  --clr-white: #fff;
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
-  --clr-black: #222;
-  --transition: all 0.3s linear;
-  --spacing: 0.1rem;
-  --radius: 0.25rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1170px;
-  --fixed-width: 620px;
-}
-/*
-=============== 
-Global Styles
-===============
-*/
-
-*,
-::after,
-::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
-  line-height: 1.5;
-  font-size: 0.875rem;
-}
-ul {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-}
-h1,
-h2,
-h3,
-h4 {
-  letter-spacing: var(--spacing);
-  text-transform: capitalize;
-  line-height: 1.25;
-  margin-bottom: 0.75rem;
-}
-h1 {
-  font-size: 3rem;
-}
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.25rem;
-}
-h4 {
-  font-size: 0.875rem;
-}
-p {
-  margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
-}
-@media screen and (min-width: 800px) {
-  h1 {
-    font-size: 4rem;
-  }
-  h2 {
-    font-size: 2.5rem;
-  }
-  h3 {
-    font-size: 1.75rem;
-  }
-  h4 {
-    font-size: 1rem;
-  }
-  body {
-    font-size: 1rem;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1;
-  }
-}
-/*  global classes */
-
-/* section */
-.section {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: var(--max-width);
-}
-
-@media screen and (min-width: 992px) {
-  .section {
-    width: 95vw;
-  }
-}
-
-/*
-=============== 
 Stripe Styles
 ===============
 */
-.nav {
+.stripe .nav {
   height: 5rem;
   display: flex;
   align-items: center;
@@ -148,16 +12,16 @@ Stripe Styles
   position: relative;
   z-index: 1;
 }
-.nav-center {
+.stripe .nav-center {
   width: 90vw;
   max-width: var(--max-width);
 }
-.nav-header {
+.stripe .nav-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.btn {
+.stripe .btn {
   font-size: 1rem;
   padding: 0.25rem 0.75rem;
   border-radius: var(--radius);
@@ -167,17 +31,17 @@ Stripe Styles
   cursor: pointer;
   transition: var(--transition);
 }
-.btn:hover {
+.stripe .btn:hover {
   background: var(--clr-grey-5);
 }
-.nav-links {
+.stripe .nav-links {
   display: none;
 }
-.signin-btn {
+.stripe .signin-btn {
   display: none;
 }
-.hero::before {
-  content: '';
+.stripe .hero::before {
+  content: "";
   position: absolute;
   width: 100%;
   height: 65%;
@@ -188,7 +52,7 @@ Stripe Styles
   background-repeat: no-repeat;
   z-index: -1;
 }
-.hero {
+.stripe .hero {
   position: relative;
   min-height: 100vh;
   margin-top: -5rem;
@@ -196,40 +60,40 @@ Stripe Styles
   grid-template-columns: 1fr;
   justify-items: center;
 }
-.hero-center {
+.stripe .hero-center {
   width: 90vw;
   max-width: var(--max-width);
   display: grid;
   align-items: center;
 }
 
-.hero-info h1 {
+.stripe .hero-info h1 {
   text-transform: none;
   max-width: 500px;
   margin-bottom: 2rem;
 }
-.hero-info p {
+.stripe .hero-info p {
   max-width: 35em;
   line-height: 1.8;
 }
-.hero-images {
+.stripe .hero-images {
   display: none;
 }
 
 /* nav media query */
 @media screen and (min-width: 800px) {
-  .nav-center {
+  .stripe .nav-center {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
   }
-  .toggle-btn {
+  .stripe .toggle-btn {
     display: none;
   }
-  .signin-btn {
+  .stripe .signin-btn {
     display: inline-block;
   }
-  .nav-links {
+  .stripe .nav-links {
     display: block;
     justify-self: center;
     display: grid;
@@ -239,10 +103,10 @@ Stripe Styles
     display: grid;
     align-items: center;
   }
-  .nav-links li {
+  .stripe .nav-links li {
     height: 100%;
   }
-  .link-btn {
+  .stripe .link-btn {
     height: 100%;
     background: transparent;
     border-color: transparent;
@@ -256,57 +120,57 @@ Stripe Styles
 
 /* hero media query */
 @media screen and (min-width: 800px) {
-  .hero::before {
+  .stripe .hero::before {
     background-size: contain;
     height: 100%;
   }
-  .hero-center {
+  .stripe .hero-center {
     grid-template-columns: 2fr 1fr;
   }
 
-  .hero-info h1 {
+  .stripe .hero-info h1 {
     font-size: 3rem;
   }
-  .hero-info p {
+  .stripe .hero-info p {
     font-size: 1.25rem;
   }
-  .hero-images {
+  .stripe .hero-images {
     display: block;
     justify-self: center;
   }
-  .phone-img {
+  .stripe .phone-img {
     width: 12rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .hero-center {
+  .stripe .hero-center {
     grid-template-columns: 2fr 1fr;
     align-items: end;
     padding-bottom: 12vh;
   }
-  .hero-info h1 {
+  .stripe .hero-info h1 {
     max-width: 100%;
     font-size: 5.5rem;
   }
-  .hero-images {
+  .stripe .hero-images {
     align-self: end;
   }
-  .phone-img {
+  .stripe .phone-img {
     width: 15rem;
   }
 }
 @media screen and (min-width: 1400px) {
-  .hero-center {
+  .stripe .hero-center {
     padding-bottom: 20vh;
   }
-  .phone-img {
+  .stripe .phone-img {
     width: 17rem;
   }
 }
 
 /* sidebar */
-.sidebar-wrapper {
+.stripe .sidebar-wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -320,12 +184,12 @@ Stripe Styles
   transform: scale(0);
   background: rgba(0, 0, 0, 0.5);
 }
-.sidebar-wrapper.show {
+.stripe .sidebar-wrapper.show {
   visibility: visible;
   z-index: 2;
   transform: scale(1);
 }
-.sidebar {
+.stripe .sidebar {
   width: 90vw;
   height: 95vh;
   max-width: var(--fixed-width);
@@ -335,7 +199,7 @@ Stripe Styles
   position: relative;
   padding: 4rem 2rem;
 }
-.close-btn {
+.stripe .close-btn {
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
@@ -345,34 +209,34 @@ Stripe Styles
   right: 1rem;
   cursor: pointer;
 }
-.sidebar article {
+.stripe .sidebar article {
   margin-bottom: 2rem;
 }
-.sidebar-sublinks {
+.stripe .sidebar-sublinks {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 0.25rem;
 }
-.sidebar-sublinks a {
+.stripe .sidebar-sublinks a {
   display: block;
   color: var(--clr-grey-1);
   text-transform: capitalize;
   display: flex;
   align-items: center;
 }
-.sidebar-sublinks svg {
+.stripe .sidebar-sublinks svg {
   color: var(--clr-grey-5);
   margin-right: 1rem;
 }
 
 @media screen and (min-width: 800px) {
-  .sidebar-wrapper {
+  .stripe .sidebar-wrapper {
     display: none;
   }
 }
 
 /* links */
-.submenu {
+.stripe .submenu {
   background: var(--clr-white);
   box-shadow: var(--dark-shadow);
   position: absolute;
@@ -385,8 +249,8 @@ Stripe Styles
   border-radius: var(--radius);
   transition: var(--transition);
 }
-.submenu::before {
-  content: '';
+.stripe .submenu::before {
+  content: "";
   display: block;
   width: 0;
   height: 0;
@@ -399,27 +263,27 @@ Stripe Styles
   transform: translateX(-50%);
 }
 
-.submenu.show {
+.stripe .submenu.show {
   display: block;
 }
 
-.submenu-center {
+.stripe .submenu-center {
   display: grid;
   gap: 0.25rem 2rem;
 }
-.col-2 {
+.stripe .col-2 {
   grid-template-columns: repeat(2, 1fr);
 }
-.col-3 {
+.stripe .col-3 {
   grid-template-columns: repeat(3, 1fr);
 }
-.col-4 {
+.stripe .col-4 {
   grid-template-columns: repeat(4, 1fr);
 }
-.submenu h4 {
+.stripe .submenu h4 {
   margin-bottom: 1.5rem;
 }
-.submenu-center a {
+.stripe .submenu-center a {
   width: 10rem;
   display: block;
   color: var(--clr-grey-1);
@@ -427,7 +291,7 @@ Stripe Styles
   display: flex;
   align-items: center;
 }
-.submenu-center svg {
+.stripe .submenu-center svg {
   color: var(--clr-grey-5);
   margin-right: 1rem;
 }
