@@ -1,7 +1,8 @@
 import React from "react";
 import Setup from "./tutorial/12-memo-useMemo-useCallback/setup";
 import Project from "./YT-tut-projects/Cocktails";
-import WDS from "./WDS-30m-learn/";
+
+import WdsTodo from "./WDS-30m-learn/";
 import BookList from "./YT-tut-projects/YT-codingaddict--BookList";
 import Cart from "./YT-tut-projects/Cart/";
 import Accordion from "./YT-tut-projects/Accordion/Accordion";
@@ -20,6 +21,7 @@ import Tours from "./YT-tut-projects/tours/Tours";
 import Pokemon from "./Pokemen/App";
 
 import ExpenseCalculator from "./Expense_Calculator/App";
+import CourseGoal from "./CourseGoal/App";
 
 import {
   BrowserRouter as Router,
@@ -42,11 +44,12 @@ const projects = [
   { StripeSubmenus: <StripeSubmenus /> },
   { Tabs: <Tabs /> },
   { Tours: <Tours /> },
-  { WDS: <WDS /> },
+  { WdsTodo: <WdsTodo /> },
   { BookList: <BookList /> },
   { Pokemon: <Pokemon /> },
   { BasicCocktails: <BasicCocktails /> },
   { ExpenseCalculator: <ExpenseCalculator /> },
+  { CourseGoal: <CourseGoal /> },
 ];
 
 function App() {
@@ -121,13 +124,18 @@ const Navigators = () => (
           .join("-")
           .toLowerCase();
 
+        const projectName = [...Object.keys(project)]
+          .toString()
+          .split(/(?=[A-Z])/)
+          .join(" ");
+
         return (
           <Link key={pathname} to={pathname}>
             <button
               className="btn"
               style={{ width: "unset" }}
             >
-              {[...Object.keys(project)].toString()}
+              {projectName}
             </button>
           </Link>
         );
