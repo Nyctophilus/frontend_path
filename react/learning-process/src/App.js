@@ -22,6 +22,7 @@ import Pokemon from "./Pokemen/App";
 
 import ExpenseCalculator from "./Expense_Calculator/App";
 import CourseGoal from "./CourseGoal/App";
+import SimpleValidateForm from "./SimpleValidateForm/App";
 
 import {
   BrowserRouter as Router,
@@ -50,6 +51,7 @@ const projects = [
   { BasicCocktails: <BasicCocktails /> },
   { ExpenseCalculator: <ExpenseCalculator /> },
   { CourseGoal: <CourseGoal /> },
+  { SimpleValidateForm: <SimpleValidateForm /> },
 ];
 
 function App() {

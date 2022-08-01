@@ -1,0 +1,13 @@
+.Button {
+  text-transform: capitalize;
+  border: none;
+  padding: 0.5rem 1rem;
+  background-color: #6f0981;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.Button:hover {
+  background-color: #6f09813c;
+  color: #4b0857;
+}

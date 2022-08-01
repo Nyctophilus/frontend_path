@@ -1,0 +1,21 @@
+.Modal {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+
+.cardModal {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.Modal h2 {
+  background-color: #6f0981;
+  color: white;
+  margin-bottom: 0;
+  padding: 1rem 0.8rem;
+  border-top-right-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
+}

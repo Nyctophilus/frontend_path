@@ -1,0 +1,18 @@
+.Card {
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  padding: 1.5rem;
+  box-shadow: 5px 5px 15px #474747;
+  border-radius: 0.8rem;
+}
+
+@media (min-width: 55rem) {
+  .Card {
+    width: 50vw;
+  }
+}
+
+.Card:not(:last-child) {
+  margin-bottom: 5rem;
+}
