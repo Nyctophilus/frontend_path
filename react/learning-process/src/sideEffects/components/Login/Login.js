@@ -1,12 +1,17 @@
 import React, {
+  useContext,
   useEffect,
   useReducer,
+  useRef,
   useState,
 } from "react";
 
 import Card from "../UI/Card/Card";
 import classes from "./Login.module.css";
 import Button from "../UI/Button/Button";
+import Input from "../UI/Input/Input";
+
+import AuthContext from "../../context/auth-context";
 
 const formReducer = (prevState, action) => {
   if (action.type === "EMAIL_INPUT") {
@@ -52,21 +57,21 @@ const formReducer = (prevState, action) => {
   return new Error("not handled action!");
 };
 
-const Login = (props) => {
+const Login = () => {
   const [formState, formDispather] = useReducer(
     formReducer,
     {
-      email: { value: "", isvalid: true },
-      password: { value: "", isvalid: true },
+      email: { value: "", isvalid: null },
+      password: { value: "", isvalid: null },
     }
   );
 
-  //   const [enteredEmail, setEnteredEmail] = useState("");
-  //   const [emailIsValid, setEmailIsValid] = useState();
-  //   const [enteredPassword, setEnteredPassword] =
-  //     useState("");
-  //   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
+
+  const authCtx = useContext(AuthContext);
+
+  const mailRef = useRef();
+  const pwRef = useRef();
 
   useEffect(() => {
     console.log(`effect running!`);
@@ -122,55 +127,54 @@ const Login = (props) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    props.onLogin(
-      formState.email.value,
-      formState.password.value
-    );
+
+    if (formIsValid) {
+      authCtx.loginHandler(
+        formState.email.value,
+        formState.password.value
+      );
+    } else if (!emValid) {
+      mailRef.current.active();
+    } else if (!pwValid) {
+      pwRef.current.active();
+    }
   };
 
-  return (
-    <Card className={classes.login}>
-      <form onSubmit={submitHandler}>
-        <div
-          className={`${classes.control} ${
-            emValid ? "" : classes.invalid
-          }`}
-        >
-          <label htmlFor="email">E-Mail</label>
-          <input
-            type="email"
-            id="email"
-            value={formState.email.value}
-            onChange={emailChangeHandler}
-            onBlur={validateEmailHandler}
+  if (!authCtx.isLoggedIn)
+    return (
+      <Card className={classes.login}>
+        <form onSubmit={submitHandler}>
+          <Input
+            ref={mailRef}
+            {...{
+              type: "email",
+              label: "E-Mail",
+              val: formState.email.value,
+              isValid: emValid,
+              changeHandler: emailChangeHandler,
+              validateHandler: validateEmailHandler,
+            }}
           />
-        </div>
-        <div
-          className={`${classes.control} ${
-            pwValid ? "" : classes.invalid
-          }`}
-        >
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            value={formState.password.value}
-            onChange={passwordChangeHandler}
-            onBlur={validatePasswordHandler}
+          <Input
+            ref={pwRef}
+            {...{
+              type: "password",
+              label: "Password",
+              val: formState.password.value,
+              isValid: pwValid,
+              changeHandler: passwordChangeHandler,
+              validateHandler: validatePasswordHandler,
+            }}
           />
-        </div>
-        <div className={classes.actions}>
-          <Button
-            type="submit"
-            className={classes.btn}
-            disabled={!formIsValid}
-          >
-            Login
-          </Button>
-        </div>
-      </form>
-    </Card>
-  );
+
+          <div className={classes.actions}>
+            <Button type="submit" className={classes.btn}>
+              Login
+            </Button>
+          </div>
+        </form>
+      </Card>
+    );
 };
 
 export default Login;
