@@ -24,6 +24,7 @@ import ExpenseCalculator from "./Expense_Calculator/App";
 import CourseGoal from "./CourseGoal/App";
 import SimpleValidateForm from "./SimpleValidateForm/App";
 import SideEffects from "./sideEffects/App";
+import StarwarsMovies from "./FetchMovies--http/App";
 
 import {
   BrowserRouter as Router,
@@ -54,6 +55,7 @@ const projects = [
   { CourseGoal: <CourseGoal /> },
   { SimpleValidateForm: <SimpleValidateForm /> },
   { SideEffects: <SideEffects /> },
+  { StarwarsMovies: <StarwarsMovies /> },
 ];
 
 function App() {

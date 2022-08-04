@@ -8,6 +8,17 @@ import "./App.css";
 import DemoList from "./components/Demo/DemoList";
 import Button from "./components/UI/Button/Button";
 
+/*
+	-HL Virtual DOM 
+
+	it's just js objects {
+		type: 'div',
+		content: 'this is div content',
+	}
+
+	till then we say render , real dom element created with these info
+*/
+
 /* -HL React vs ReactDOM
 
  - React reEvaluate the components when state changes only (props, context)... doesnt know about the dom
