@@ -25,6 +25,7 @@ import CourseGoal from "./CourseGoal/App";
 import SimpleValidateForm from "./SimpleValidateForm/App";
 import SideEffects from "./sideEffects/App";
 import StarwarsMovies from "./FetchMovies--http/App";
+import CustomHooks from "./CustomHooks/App";
 
 import {
   BrowserRouter as Router,
@@ -56,6 +57,7 @@ const projects = [
   { SimpleValidateForm: <SimpleValidateForm /> },
   { SideEffects: <SideEffects /> },
   { StarwarsMovies: <StarwarsMovies /> },
+  { CustomHooks: <CustomHooks /> },
 ];
 
 function App() {
