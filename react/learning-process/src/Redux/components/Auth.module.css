@@ -27,3 +27,12 @@
   padding: 0.25rem;
   border: 1px solid #ccc;
 }
+
+.invalid input {
+  border-color: red;
+  outline: red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.txt-error {
+  color: red;
+}
