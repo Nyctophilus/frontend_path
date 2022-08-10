@@ -28,6 +28,7 @@ import StarwarsMovies from "./FetchMovies--http/App";
 import CustomHooks from "./CustomHooks/App";
 import AddTasks from "./CustomHooks--AddTasks/App";
 import FormsAndValidation from "./Forms&Validation/App";
+import Redux from "./Redux";
 
 import {
   BrowserRouter as Router,
@@ -62,6 +63,7 @@ const projects = [
   { CustomHooks: <CustomHooks /> },
   { AddTasks: <AddTasks /> },
   { FormsAndValidation: <FormsAndValidation /> },
+  { Redux: <Redux /> },
 ];
 
 function App() {
