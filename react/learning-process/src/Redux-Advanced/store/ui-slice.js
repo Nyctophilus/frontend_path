@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { show: false };
+const initialState = { show: false, notification: null };
 
 const UIslice = createSlice({
   name: "ui",
@@ -9,9 +9,14 @@ const UIslice = createSlice({
     toggle(state) {
       state.show = !state.show;
     },
+    showNotification(state, action) {
+      state.notification = {
+        ...action.payload,
+      };
+    },
   },
 });
 
-export const { toggle } = UIslice.actions;
+export const { toggle, showNotification } = UIslice.actions;
 
 export default UIslice.reducer;
