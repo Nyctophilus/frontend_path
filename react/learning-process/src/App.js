@@ -29,6 +29,7 @@ import CustomHooks from "./CustomHooks/App";
 import AddTasks from "./CustomHooks--AddTasks/App";
 import FormsAndValidation from "./Forms&Validation/App";
 import Redux from "./Redux";
+import AdvancedRedux from "./Redux-Advanced";
 
 import {
   BrowserRouter as Router,
@@ -64,6 +65,7 @@ const projects = [
   { AddTasks: <AddTasks /> },
   { FormsAndValidation: <FormsAndValidation /> },
   { Redux: <Redux /> },
+  { AdvancedRedux: <AdvancedRedux /> },
 ];
 
 function App() {
