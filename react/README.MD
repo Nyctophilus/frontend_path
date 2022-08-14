@@ -22,5 +22,8 @@
 		<li>Deploying</li>
 		<li>Authentication</li>
 		<li>Next.js</li>
+		<li>Animating React Apps</li>
+		<li>Testing</li>
+		<li>React + TypeScript</li>
 	</ol>
 </menu>
