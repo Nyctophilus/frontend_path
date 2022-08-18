@@ -30,6 +30,7 @@ import AddTasks from "./CustomHooks--AddTasks/App";
 import FormsAndValidation from "./Forms&Validation/App";
 import Redux from "./Redux";
 import AdvancedRedux from "./Redux-Advanced";
+import Authentication from "./Authentication";
 
 import {
   BrowserRouter as Router,
@@ -99,6 +100,11 @@ function App() {
             );
           })}
           <Route path="/" element={<Navigators />} />
+
+          <Route
+            path="Authentication/*"
+            element={<Authentication />}
+          />
         </Routes>
 
         <Link to="/">
@@ -156,6 +162,11 @@ const Navigators = () => (
           </Link>
         );
       })}
+      <Link to="Authentication">
+        <button className="btn" style={{ width: "unset" }}>
+          Authentication
+        </button>
+      </Link>
     </ul>
   </section>
 );
