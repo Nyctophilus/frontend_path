@@ -29,3 +29,4 @@ yarn-error.log*
 
 /src/tutorial/**/Final/
 /src/assets/default-image.jpeg
+.env
