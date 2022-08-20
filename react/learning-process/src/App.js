@@ -31,6 +31,7 @@ import FormsAndValidation from "./Forms&Validation/App";
 import Redux from "./Redux";
 import AdvancedRedux from "./Redux-Advanced";
 import Authentication from "./Authentication";
+import Animations from "./Animations/App";
 
 import {
   BrowserRouter as Router,
@@ -67,6 +68,7 @@ const projects = [
   { FormsAndValidation: <FormsAndValidation /> },
   { Redux: <Redux /> },
   { AdvancedRedux: <AdvancedRedux /> },
+  { Animations: <Animations /> },
 ];
 
 function App() {
