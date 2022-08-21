@@ -3,7 +3,7 @@ import Modal from "./components/Modal/Modal";
 import Backdrop from "./components/Backdrop/Backdrop";
 import List from "./components/List/List";
 
-import Transition from "react-transition-group/Transition";
+import { Transition } from "react-transition-group";
 
 const App = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -26,6 +26,12 @@ const App = () => {
         timeout={1000}
         mountOnEnter
         unmountOnExit
+        onEnter={() => console.log(`onEnter`)}
+        onEntering={() => console.log(`onEntering`)}
+        onEntered={() => console.log(`onEntered`)}
+        onExit={() => console.log(`onExit`)}
+        onExiting={() => console.log(`onExiting`)}
+        onExited={() => console.log(`onExited`)}
       >
         {(state) => (
           <div
@@ -41,16 +47,7 @@ const App = () => {
         )}
       </Transition>
 
-      <Transition
-        in={modalIsOpen}
-        mountOnEnter
-        unmountOnExit
-        timeout={400}
-      >
-        {(state) => (
-          <Modal show={state} closed={closeModal} />
-        )}
-      </Transition>
+      <Modal show={modalIsOpen} closed={closeModal} />
 
       {modalIsOpen && <Backdrop show={modalIsOpen} />}
       <br />

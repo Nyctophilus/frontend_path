@@ -20,3 +20,18 @@
 .ListItem:active {
   background-color: #ccc;
 }
+
+.start {
+  opacity: 0;
+}
+.fadeIn {
+  opacity: 1;
+  transition: opacity 300ms ease-out;
+}
+.end {
+  opacity: 1;
+}
+.fadeOut {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}

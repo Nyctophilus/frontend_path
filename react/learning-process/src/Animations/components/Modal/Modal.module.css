@@ -24,7 +24,19 @@
 .close {
   /* opacity: 0;
 	transform: translateY(-100%); */
-  animation: closeModal 400ms ease-in-out forwards;
+  animation: closeModal 1000ms ease-in-out forwards;
+}
+
+.fade-slide-enter {
+}
+.fade-slide-enter-active {
+  animation: openModal 400ms ease-in-out forwards;
+}
+
+.fade-slide-exit {
+}
+.fade-slide-exit-active {
+  animation: closeModal 1000ms ease-in-out forwards;
 }
 
 @keyframes openModal {
