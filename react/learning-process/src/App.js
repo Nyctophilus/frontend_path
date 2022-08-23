@@ -32,6 +32,7 @@ import Redux from "./Redux";
 import AdvancedRedux from "./Redux-Advanced";
 import Authentication from "./Authentication";
 import Animations from "./Animations/App";
+import FavItem from "./ReplaceRedux-useContext--FavItem/App";
 
 import {
   BrowserRouter as Router,
@@ -107,6 +108,11 @@ function App() {
             path="Authentication/*"
             element={<Authentication />}
           />
+
+          <Route
+            path="/favorite-item/*"
+            element={<FavItem />}
+          />
         </Routes>
 
         <Link to="/">
@@ -167,6 +173,12 @@ const Navigators = () => (
       <Link to="Authentication">
         <button className="btn" style={{ width: "unset" }}>
           Authentication
+        </button>
+      </Link>
+
+      <Link to="favorite-item">
+        <button className="btn" style={{ width: "unset" }}>
+          Favorite Item
         </button>
       </Link>
     </ul>
