@@ -4,7 +4,10 @@ import Navigation from "./components/Nav/Navigation";
 import Products from "./containers/Products";
 import FavoritesPage from "./containers/Favorites";
 
-import ProductsProvider from "./context/products-context";
+// import ProductsProvider from "./context/products-context";
+import configureStore from "./hooks-store/products-store";
+// -HL custom replace of state -mgmt
+configureStore();
 
 const App = (props) => {
   return (
