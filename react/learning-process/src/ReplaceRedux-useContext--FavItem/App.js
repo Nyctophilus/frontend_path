@@ -11,7 +11,8 @@ configureStore();
 
 const App = (props) => {
   return (
-    <ProductsProvider>
+    // <ProductsProvider>
+    <>
       <Navigation />
       <main>
         <Routes>
@@ -22,7 +23,8 @@ const App = (props) => {
           />
         </Routes>
       </main>
-    </ProductsProvider>
+    </>
+    // </ProductsProvider>
   );
 };
 
