@@ -33,6 +33,7 @@ import AdvancedRedux from "./Redux-Advanced";
 import Authentication from "./Authentication";
 import Animations from "./Animations/App";
 import FavItem from "./ReplaceRedux-useContext--FavItem/App";
+import TypeScript from "./TypeScript/App.tsx";
 
 import {
   BrowserRouter as Router,
@@ -70,6 +71,7 @@ const projects = [
   { Redux: <Redux /> },
   { AdvancedRedux: <AdvancedRedux /> },
   { Animations: <Animations /> },
+  { TypeScript: <TypeScript /> },
 ];
 
 function App() {
